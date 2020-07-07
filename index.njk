@@ -1,0 +1,8 @@
+---
+title: Today
+layout: base-layout.njk
+---
+{% set post = collections.post | reverse | first %}
+<h1 class="post-title">{{ post.data.title }}</h1>
+<div class="post-meta tymargins-off"><time class="post-date" datetime="{{ post.data.date | dateIso }}">{{ post.data.date | dateReadable }}</time> <span class="post-location">{{ post.data.location }}</span></div>
+{{ post.templateContent | safe }}

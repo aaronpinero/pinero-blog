@@ -1,0 +1,22 @@
+{
+  "name": "pinero-blog",
+  "version": "1.0.0",
+  "description": "My statically generated blog",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "keywords": [
+    "blog",
+    "11ty"
+  ],
+  "author": "Aaron Pinero",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "moment": "^2.27.0",
+    "node-sass": "^4.14.1"
+  }
+}

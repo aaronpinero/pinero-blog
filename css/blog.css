@@ -1,0 +1,46 @@
+body {
+  background-color:lightgoldenrodyellow;
+}
+body,
+h1, h2, h3, h4, h5, h6 {
+  font-family:'Red Hat Text',helvetica,arial,sans-serif;
+}
+body > header {
+  padding:2rem;
+}
+body > main {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:40rem;
+  padding:0 2rem;
+}
+body > footer {
+  padding:2rem;
+}
+
+h1.post-title {
+  text-align:center;
+  background:linear-gradient(45deg,red, blue);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+div.post-meta {
+  background:linear-gradient(135deg,red, blue);
+  border-radius:1rem;
+  color:white;
+  display:table;
+  font-style:italic;
+  font-weight:bold;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:2.5;
+  padding:0 1rem;
+  text-align:center;
+  width:auto;
+}
+div.post-meta .post-location {
+  border-left:1px solid rgba(255,255,255,0.5);
+  display:inline-block;
+  margin-left:0.75rem;
+  padding-left:0.75rem;
+}
