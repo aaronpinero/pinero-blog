@@ -1,23 +1,35 @@
 body {
   background-color:lightgoldenrodyellow;
+  font-family:'Bitter',Georgia,serif;
 }
-body,
 h1, h2, h3, h4, h5, h6 {
-  font-family:'Red Hat Text',helvetica,arial,sans-serif;
+  font-family:'Changa One',helvetica,arial,sans-serif;
+  font-weight:400;
 }
 body > header {
   padding:2rem;
 }
 body > main {
-  margin-left:auto;
-  margin-right:auto;
-  max-width:40rem;
   padding:0 2rem;
 }
 body > footer {
   padding:2rem;
 }
 
+article.home-post,
+article.single-post,
+article.single-page {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:40rem;
+}
+
+h1.page-title {
+  text-align:center;
+  background:linear-gradient(45deg,darkgreen, blue);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 h1.post-title {
   text-align:center;
   background:linear-gradient(45deg,red, blue);
@@ -29,8 +41,9 @@ div.post-meta {
   border-radius:1rem;
   color:white;
   display:table;
+  font-family:'Changa One',helvetica,arial,sans-serif;
   font-style:italic;
-  font-weight:bold;
+  font-weight:400;
   margin-left:auto;
   margin-right:auto;
   line-height:2.5;
