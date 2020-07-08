@@ -1,5 +1,6 @@
 body {
   background-color:lightgoldenrodyellow;
+  color:black;
   font-family:'Bitter',Georgia,serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -7,15 +8,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:400;
 }
 body > header {
-  align-items:center;
-  display:flex;
-  justify-content:space-between;
   padding:2rem;
+  text-align:center;
+}
+body > header h1 {
+  background:none;
+  -webkit-background-clip:none;
+  -webkit-text-fill-color:var(--tycolor-fg);
+  color:var(--tycolor-fg);
+  font-family:'Bitter',Georgia,serif;
+  font-weight:400;
+  margin-bottom:0.5rem;
+  text-align:center;
 }
 body > header > nav > ul {
-  display:grid;
+  display:inline-grid;
   grid-gap:1rem;
   grid-template-columns:auto auto auto;
+  padding:0;
 }
 body > header > nav > ul li {
   display:block;
@@ -26,7 +36,9 @@ body > main {
   padding:0 2rem;
 }
 body > footer {
-  padding:2rem;
+  font-style:italic;
+  padding:4rem 2rem 2rem;
+  text-align:center;
 }
 .archive {
   display:grid;
@@ -36,13 +48,16 @@ body > footer {
   margin-right:auto;
   max-width:60rem;
 }
-.archive article {
-  border:0.5rem rgba(0,0,0,0.15) solid;
-  border-radius:1rem;
-  padding:1rem 1.5rem;
-}
 .archive article * + * {
-  margin-top:0.5rem;
+  margin-top:0.25rem;
+}
+.archive article h1.post-title {
+  text-align:left;
+}
+.archive article time,
+.archive article .more {
+  font-family:'Changa',helvetica,arial,sans-serif;
+  font-weight:700;
 }
 article.home-post,
 article.single-post,
@@ -53,19 +68,16 @@ article.single-page {
 }
 h1.page-title {
   text-align:center;
-  background:linear-gradient(45deg,darkgreen, blue);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
 }
 h1.post-title {
   text-align:center;
-  background:linear-gradient(45deg,red, blue);
+  background:linear-gradient(45deg,var(--tycolor-link-active), var(--tycolor-link-default));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 div.post-meta {
-  background:linear-gradient(135deg,red, blue);
-  border-radius:1rem;
+  background:linear-gradient(135deg,var(--tycolor-link-active), var(--tycolor-link-default));
+  border-radius:0.5rem;
   color:white;
   display:table;
   font-family:'Changa',helvetica,arial,sans-serif;
@@ -82,4 +94,22 @@ div.post-meta .post-location {
   display:inline-block;
   margin-left:0.75rem;
   padding-left:0.75rem;
+}
+.dropcap {
+  color:var(--tycolor-link-active);
+}
+@media (min-width:640px) {
+  body > header {
+    align-items:center;
+    display:flex;
+    justify-content:space-between;
+    text-align:left;
+  }
+  body > header h1 {
+    margin-bottom:0;
+    text-align:left;
+  }
+  body > header > nav > ul {
+    display:grid;
+  }
 }
