@@ -15,4 +15,5 @@ module.exports = function (eleventyConfig) {
     return coll;
   });
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("fontawesome-subset");
 };

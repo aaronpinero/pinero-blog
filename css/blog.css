@@ -54,10 +54,27 @@ body > footer {
 .archive article h1.post-title {
   text-align:left;
 }
-.archive article time,
-.archive article .more {
+.archive article time {
   font-family:'Changa',helvetica,arial,sans-serif;
   font-weight:700;
+}
+.archive article .more {
+  display:inline-block;
+  height:1.75rem;
+  overflow:hidden;
+  text-indent:-100em;
+  vertical-align:bottom;
+  width:1rem;
+}
+.archive article .more::before {
+  content:"\f105";
+  display:block;
+  font-family:'Font Awesome 5 Pro';
+  font-style:normal;
+  font-weight:400;
+  text-align:center;
+  text-indent:0;
+  width:1rem;
 }
 article.home-post,
 article.single-post,
