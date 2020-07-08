@@ -12,7 +12,7 @@ Now I’ll go back to blogging.
 
 ## The Static Site Generation of Blogging
 
-SSG is cool right now. I always wanted to be one of the cool kids, so I’m going to <a href="https://css-tricks.com/?s=eleventy&orderby=relevance&post_type=post%2Cpage%2Cguide">copycat CSS-Tricks’ Chris Coyier</a> and start working with <a href="https://www.11ty.dev">Eleventy</a>. I can use GitHub and Eleventy to publish by blog on GitHub Pages.
+SSG is cool right now. I always wanted to be one of the cool kids, so I’m going to <a href="https://css-tricks.com/?s=eleventy&orderby=relevance&post_type=post%2Cpage%2Cguide">copycat CSS-Tricks’ Chris Coyier</a> and start working with <a href="https://www.11ty.dev">Eleventy</a>. A statically generated site can be served from basically anywhere.
 
 ## Fast Blog Design
 
