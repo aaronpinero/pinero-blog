@@ -1,6 +1,9 @@
 ---
 layout: page-layout.njk
 title: About Blogging
+eleventyNavigation:
+  key: About Blogging
+  order: 2
 ---
 <span class="dropcap">I</span>’ve been on Facebook and with Twitter for a long time. I used to see a lot of value in being able to connect with people through social media, but these platforms have become a cancer inside civil society. They are megaphones for lies. The allow hate to erode the foundations of decency. Rumors, innuendo, and conspiracy theories are allowed to stand on equal footing with the truth.
 

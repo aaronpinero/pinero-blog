@@ -1,5 +1,7 @@
 body {
   background-color:lightgoldenrodyellow;
+  background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210px%22%20height%3D%2220px%22%20viewBox%3D%220%200%2010%2020%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cline%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%2210%22%20y2%3D%2220%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.15%29%22%20%2F%3E%3C%2Fsvg%3E');
+  background-repeat:repeat;
   color:black;
   font-family:'Bitter',Georgia,serif;
 }
@@ -32,8 +34,26 @@ body > header > nav > ul li {
   font-family:'Changa',helvetica,arial,sans-serif;
   font-weight:700;
 }
+body > header > nav > ul li.active a[href] {
+  color:var(--tycolor-fg);
+  border-bottom:4px var(--tycolor-fg) solid;
+}
 body > main {
   padding:0 2rem;
+}
+body > main::after {
+  background:linear-gradient(120deg,var(--tycolor-link-active), var(--tycolor-link-default));
+  border-radius:50%;
+  color:white;
+  content:"\f672";
+  display:block;
+  font-family:'Font Awesome 5 Pro';
+  font-size:1.5rem;
+  line-height:2.667;
+  height:4rem;
+  margin:4rem auto 0 auto;
+  text-align:center;
+  width:4rem;
 }
 body > footer {
   font-style:italic;

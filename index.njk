@@ -1,8 +1,12 @@
 ---
 title: Recently
 layout: home-layout.njk
+eleventyNavigation:
+  key: Recently
+  order: 0
 ---
 {% set post = collections.post | reverse | first %}
 <h1 class="post-title">{{ post.data.title }}</h1>
 <div class="post-meta tymargins-off"><time class="post-date" datetime="{{ post.data.date | dateIso }}">{{ post.data.date | dateReadable }}</time> <span class="post-location">{{ post.data.location }}</span></div>
 {{ post.templateContent | safe }}
+<svg width="10px" height="20px" viewBox="0 0 10 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><line x1="0" y1="0" x2="10" y2="20" stroke="rgba(0,0,0,0.15)" /></svg>

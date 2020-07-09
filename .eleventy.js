@@ -1,7 +1,7 @@
 const moment = require('moment');
- 
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation"); 
 moment.locale('en');
- 
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('dateIso', date => {
     return moment(date).toISOString();
@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
     var removed = coll.shift()
     return coll;
   });
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fontawesome-subset");
 };
