@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight:400;
 }
 body > header {
-  padding:2rem;
+  padding:1.75rem 1.75rem 3.5rem 1.75rem;
   text-align:center;
 }
 body > header h1 {
@@ -20,12 +20,12 @@ body > header h1 {
   color:var(--tycolor-fg);
   font-family:'Bitter',Georgia,serif;
   font-weight:400;
-  margin-bottom:0.5rem;
+  margin-bottom:0.4375rem;
   text-align:center;
 }
 body > header > nav > ul {
   display:inline-grid;
-  grid-gap:1rem;
+  grid-gap:0.875rem;
   grid-template-columns:auto auto auto;
   padding:0;
 }
@@ -39,7 +39,7 @@ body > header > nav > ul li.active a[href] {
   border-bottom:4px var(--tycolor-fg) solid;
 }
 body > main {
-  padding:0 2rem;
+  padding:0 1.75rem;
 }
 body > main::after {
   background:linear-gradient(120deg,var(--tycolor-link-active), var(--tycolor-link-default));
@@ -48,21 +48,21 @@ body > main::after {
   content:"\f672";
   display:block;
   font-family:'Font Awesome 5 Pro';
-  font-size:1.5rem;
-  line-height:2.667;
-  height:4rem;
-  margin:4rem auto 0 auto;
+  font-size:1.25rem;
+  line-height:2.8;
+  height:3.5rem;
+  margin:3.5rem auto 0 auto;
   text-align:center;
-  width:4rem;
+  width:3.5rem;
 }
 body > footer {
   font-style:italic;
-  padding:4rem 2rem 2rem;
+  padding:3.5rem 1.75rem 1.75rem;
   text-align:center;
 }
 .archive {
   display:grid;
-  grid-gap:2rem;
+  grid-gap:1.75rem;
   grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
   margin-left:auto;
   margin-right:auto;
@@ -113,27 +113,14 @@ h1.post-title {
   -webkit-text-fill-color:transparent;
 }
 div.post-meta {
-  background:linear-gradient(135deg,var(--tycolor-link-active), var(--tycolor-link-default));
-  border-radius:0.5rem;
-  color:white;
-  display:table;
   font-family:'Changa',helvetica,arial,sans-serif;
   font-weight:700;
-  margin-left:auto;
-  margin-right:auto;
-  line-height:2.5;
-  padding:0 1rem;
   text-align:center;
-  width:auto;
-}
-div.post-meta .post-location {
-  border-left:1px solid rgba(255,255,255,0.5);
-  display:inline-block;
-  margin-left:0.75rem;
-  padding-left:0.75rem;
 }
 .dropcap {
   color:var(--tycolor-link-active);
+  font-family:'Changa One',helvetica,arial,sans-serif;
+  font-weight:400;
 }
 @media (min-width:640px) {
   body > header {

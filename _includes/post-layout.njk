@@ -3,7 +3,7 @@ layout: base-layout.njk
 ---
 <article class="single-post links-underlined">
   <h1 class="post-title">{{ title }}</h1> 
-  <div class="post-meta tymargins-off"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>  <span class="post-location">{{ location }}</span></div>
+  <div class="post-meta tymargins-off"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></div>
   
   {{ content | safe }}
 </article>
