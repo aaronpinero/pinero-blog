@@ -1,12 +1,12 @@
 body {
-  background-color:lightgoldenrodyellow;
-  background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%226px%22%20height%3D%2212px%22%20viewBox%3D%220%200%206%2012%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cline%20x1%3D%226%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%2212%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.1%29%22%20%2F%3E%3C%2Fsvg%3E');
+  background-color:#eeeee6;
+  background-image:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%226px%22%20height%3D%2212px%22%20viewBox%3D%220%200%206%2012%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cline%20x1%3D%226%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%2212%22%20stroke%3D%22rgba%280%2C0%2C0%2C0.05%29%22%20%2F%3E%3C%2Fsvg%3E');
   background-repeat:repeat;
   color:black;
-  font-family:'Bitter',Georgia,serif;
+  font-family:'Texturina',Georgia,serif;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family:'Changa One',helvetica,arial,sans-serif;
+  font-family:'Changa',helvetica,arial,sans-serif;
   font-weight:400;
 }
 body > header {
@@ -18,8 +18,8 @@ body > header h1 {
   -webkit-background-clip:none;
   -webkit-text-fill-color:var(--tycolor-fg);
   color:var(--tycolor-fg);
-  font-family:'Bitter',Georgia,serif;
-  font-weight:400;
+  font-family:'Changa',helvetica,arial,sans-serif;
+  font-weight:500;
   margin-bottom:0.4375rem;
   text-align:center;
 }
@@ -118,9 +118,11 @@ div.post-meta {
   text-align:center;
 }
 .dropcap {
-  color:var(--tycolor-link-active);
-  font-family:'Changa One',helvetica,arial,sans-serif;
-  font-weight:400;
+  background:linear-gradient(45deg,var(--tycolor-link-active), var(--tycolor-link-default));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-family:'Texturina',Georgia,serif;
+  font-weight:700;
 }
 .nobreak {
   white-space:nowrap;
