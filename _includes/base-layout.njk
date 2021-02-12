@@ -4,9 +4,10 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@700&family=Texturina:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/fontawesome-subset/css/fontawesome.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/fontawesome-subset/css/regular.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/league/stylesheet.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/tyfy.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/blog.css' | url }}">
     <title>What I Learned - {{ title }}</title> 
@@ -19,7 +20,7 @@
         <ul>
         {%- for entry in navPages %}
           <li{% if entry.url == page.url %} class="active"{% endif %}>
-            <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+            <a href="{{ entry.url | url }}" class="tyfont-size-h4">{{ entry.title }}</a>
           </li>
         {%- endfor %}
         </ul>

@@ -15,9 +15,9 @@ pagination:
 {% for post in posts %}
   {% if not loop.first %}
     <article>
-      <h1 class="post-title tyfont-size-h3"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h1>
+      <h1 class="post-title tyfont-size-h2"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h1>
       <div><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></div>
-      <p>{{ post.data.excerpt }} <a class="more" href="{{ post.url | url }}">Continue reading</a></p>
+      <p>{{ post.data.excerpt }}</p>
     </article>
   {% endif %}
 {% endfor %}

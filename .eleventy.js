@@ -17,6 +17,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fontawesome-subset");
+  eleventyConfig.addPassthroughCopy("league");
   return {
     pathPrefix: "/learned/"
   };
