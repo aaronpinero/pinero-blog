@@ -12,3 +12,5 @@ It has only become worse since the COVID-19 pandemic. I cannot in good conscienc
 I had a blog – years ago, before work and family began to take up more time. It was a fun project and it gave me the opportunity to practice developing with WordPress. Blogging also exercised my writing skills. When I gave up my blog it was under the assumption that social media would provide a replacement outlet for my ideas and writing – without all the extra code. For a little while, it did.
 
 Now I’ll go back to blogging.
+
+This blog is going to be dedicated to interesting information. I should always be learning, so there should always be concepts, ideas, trivia or experiences for me to share. For a more personal, LiveJournal-style blog, I am going to try using [Hey World](https://world.hey.com/aaronpinero). Between these two outlets, I will get plenty of writing practice.

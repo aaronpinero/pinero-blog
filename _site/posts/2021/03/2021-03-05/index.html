@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/learned/league/stylesheet.css">
     <link rel="stylesheet" href="/learned/css/tyfy.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned - Recently</title> 
+    <title>What I Learned - About Pseudo-Fields in Drupal</title> 
   </head> 
   <body class="tymargins-skip"> 
     <header class="tymargins-off">
@@ -18,7 +18,7 @@
       <nav>
         
         <ul>
-          <li class="active">
+          <li>
             <a href="/learned/" class="tyfont-size-h4">Recently</a>
           </li>
           <li>
@@ -31,11 +31,11 @@
       </nav>
     </header> 
     <main> 
-      <article class="home-post links-underlined">
+      <article class="single-post links-underlined">
+  <h1 class="post-title">About Pseudo-Fields in Drupal</h1> 
+  <div class="post-meta tymargins-off"><time datetime="2021-03-05T00:00:00.000Z">March 5, 2021</time></div>
   
-<h1 class="post-title">About Pseudo-Fields in Drupal</h1>
-<div class="post-meta tymargins-off"><time class="post-date" datetime="2021-03-05T00:00:00.000Z">March 5, 2021</time> <span class="post-location"></span></div>
-<p><span class="dropcap">I</span>n my current job, I have become more of a Drupal developer than ever. My last position was in a team where I focused on, among other things, front-end development. But now, as a development team of one, I have to wear all the hats. It has been a different kind of learning experience. Previously, the challenges were more about client interactions and project management. Now my challenges are technical. How can I create the requested features, and how can I provide the best possible user experience?</p>
+  <p><span class="dropcap">I</span>n my current job, I have become more of a Drupal developer than ever. My last position was in a team where I focused on, among other things, front-end development. But now, as a development team of one, I have to wear all the hats. It has been a different kind of learning experience. Previously, the challenges were more about client interactions and project management. Now my challenges are technical. How can I create the requested features, and how can I provide the best possible user experience?</p>
 <p>Very early on in my role, I was asked if I could indicate, for each article on our website, the reading time. This is a feature I have seen on Medium. There are at least two contributed modules that supposedly provide this. I tried the <a href="https://www.drupal.org/project/read_time">Read Time</a> module, but it was buggy and either did not work properly or crashed the website. The module has not been updated in 2 years and is only used by a couple hundred sites, so maybe I should not be surprised. The other option, <a href="https://www.drupal.org/project/issues/search/node_read_time">Node Read Time</a> has been more recently updated, but is also not used on very many websites.</p>
 <p>I was able to create a display of read time for articles using a <code>hook_preprocess_node</code> function in my theme based on <a href="https://medium.com/drupal-trix/trick-calculate-the-reading-time-of-a-node-using-views-drupal-7-3c79da225964">an example I found online</a>. This worked fine, but it was clumsy. I wanted a way to insert this read time indicator into my node display as neatly as I could any other field in the content type. I forget exactly what it is I tried to Google, but I stumbled on an article describing <a href="https://www.webomelette.com/creating-pseudo-fields-drupal-8">how to create a pseudo-field</a>.</p>
 <p>The pseudo-field option is exactly what I was looking for. It allows me to insert information into the node display like any other entity field and I can designate a theme file for it. If I wanted to get really fancy, I could probably provide some configuration options to adjust the read time calculation, the field being used for the calculation, and the content types on which to display the information. But for now, enough is enough. I was able to write yet another simple custom module that gave me exactly what I needed. That is enough of a win.</p>
