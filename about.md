@@ -13,4 +13,4 @@ I had a blog – years ago, before work and family began to take up more time. I
 
 Now I’ll go back to blogging.
 
-This blog is going to be dedicated to interesting information. I should always be learning, so there should always be concepts, ideas, trivia or experiences for me to share. For a more personal, LiveJournal-style blog, I am going to try using [Hey World](https://world.hey.com/aaronpinero). Between these two outlets, I will get plenty of writing practice.
+This blog is going to be dedicated to interesting information. I should always be learning, so there should always be concepts, ideas, trivia or experiences for me to share.
