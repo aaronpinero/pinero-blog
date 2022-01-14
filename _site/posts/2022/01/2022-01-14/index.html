@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/learned/league/stylesheet.css">
     <link rel="stylesheet" href="/learned/css/tyfy.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned - Recently</title> 
+    <title>What I Learned - About Authorization and Authentication</title> 
   </head> 
   <body class="tymargins-skip"> 
     <header class="tymargins-off">
@@ -18,7 +18,7 @@
       <nav>
         
         <ul>
-          <li class="active">
+          <li>
             <a href="/learned/" class="tyfont-size-h4">Recently</a>
           </li>
           <li>
@@ -31,11 +31,11 @@
       </nav>
     </header> 
     <main> 
-      <article class="home-post links-underlined">
+      <article class="single-post links-underlined">
+  <h1 class="post-title">About Authorization and Authentication</h1> 
+  <div class="post-meta tymargins-off"><time datetime="2022-01-14T00:00:00.000Z">January 14, 2022</time></div>
   
-<h1 class="post-title">About Authorization and Authentication</h1>
-<div class="post-meta tymargins-off"><time class="post-date" datetime="2022-01-14T00:00:00.000Z">January 14, 2022</time> <span class="post-location"></span></div>
-<p><span class="dropcap">T</span>his week I feel a bit like <a href="https://robocop.fandom.com/wiki/Bob_Morton">Bob Morton</a>, delving in to a lot of security concepts and not fully understanding what I’m in for.</p>
+  <p><span class="dropcap">T</span>his week I feel a bit like <a href="https://robocop.fandom.com/wiki/Bob_Morton">Bob Morton</a>, delving in to a lot of security concepts and not fully understanding what I’m in for.</p>
 <p>It started with a desire to integrate a Drupal website with Google Analytics so that the site can display a list of popular resources. The Google Analytics data will be used to determine what’s popular. Google has an <a href="https://developers.google.com/analytics/devguides/reporting/core/v4">Analytics Reporting API</a>, but getting access to the API is not easy. First, as with many systems, I had to have a project or ‘app’ that gets registered with the provider.</p>
 <p>Once I registered my project with Google, I had to create a special service account within the project. This was not very clear. With many APIs, the assumption is I’m trying to access data associated with an account that I’ve created with that system. I’m trying to access <em>my data</em>. For some reason, Google’s default use case involves creating an app that will access <em>other Google users’ data</em>. In order to access your own data, a service account is needed. That service account will have an authorization key associated with it. That key is used to access the API.</p>
 <p>But I was still not done. With other APIs I’ve used, I have a client ID and client secret that are passed to the API for authorization. The API returns a bearer token that I can use when making requests for data. With Google, the authorization request is performed using a JSON Web Token (JWT). Before this week I had never even heard of JWT. Constructing a JWT is not complicated in retrospect, but it does require specific software libraries. I could not figure out how to create a JWT in JavaScript without relying on a third party library that I don’t know if I can trust (not a good thing when dealing with information security). I used PHP instead, which provides <a href="https://www.php.net/manual/en/book.openssl.php">openssl</a> functions needed to sign the JWT.</p>
