@@ -11,6 +11,39 @@ pagination:
   alias: posts
 ---
 <h1 class="page-title">Previously</h1>
+
+<nav class="pagination" aria-labelledby="archive-pagination-top">
+  <h2 id="archive-pagination-top" class="visually-hidden">Archive Pages</h2>
+  <ul class="list-nobullet list-flex list-flex-center">
+    <li>
+      {% if page.url != pagination.href.first %}
+        <a href="/learned{{ pagination.href.first }}" title="First"><span class="tyicons tyicons-angle-left"></span> <span class="visually-hidden">First</span></a>
+      {% else %}
+        <span class="light"><span class="tyicons tyicons-angle-left"></span> <span class="visually-hidden">First</span></span>
+      {% endif %}
+    </li>
+  
+    {% for pageEntry in pagination.pages %}
+      <li>
+        <a
+          href="/learned{{ pagination.hrefs[ loop.index0 ] }}"
+          {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}
+        >
+          <span class="visually-hidden">Page </span>{{ loop.index }}
+        </a>
+      </li>
+    {% endfor %}
+    
+    <li>
+      {% if page.url != pagination.href.last %}
+        <a href="/learned{{ pagination.href.last }}" title="Last"><span class="tyicons tyicons-angle-right"></span> <span class="visually-hidden">Last</span></a>
+      {% else %}
+        <span class="light"><span class="tyicons tyicons-angle-right"></span> <span class="visually-hidden">Last</span></span>
+      {% endif %}
+    </li>
+  </ul>
+</nav>
+
 <div class="archive tymargins-off">
 {% for post in posts %}
   {% if not loop.first %}
@@ -22,3 +55,35 @@ pagination:
   {% endif %}
 {% endfor %}
 </div>
+
+<nav class="pagination" aria-labelledby="archive-pagination-bottom">
+  <h2 id="archive-pagination-bottom" class="visually-hidden">Archive Pages</h2>
+  <ul class="list-nobullet list-flex list-flex-center">
+    <li>
+      {% if page.url != pagination.href.first %}
+        <a href="/learned{{ pagination.href.first }}" title="First"><span class="tyicons tyicons-angle-left"></span> <span class="visually-hidden">First</span></a>
+      {% else %}
+        <span class="light"><span class="tyicons tyicons-angle-left"></span> <span class="visually-hidden">First</span></span>
+      {% endif %}
+    </li>
+  
+    {% for pageEntry in pagination.pages %}
+      <li>
+        <a
+          href="/learned{{ pagination.hrefs[ loop.index0 ] }}"
+          {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}
+        >
+          <span class="visually-hidden">Page </span>{{ loop.index }}
+        </a>
+      </li>
+    {% endfor %}
+    
+    <li>
+      {% if page.url != pagination.href.last %}
+        <a href="/learned{{ pagination.href.last }}" title="Last"><span class="tyicons tyicons-angle-right"></span> <span class="visually-hidden">Last</span></a>
+      {% else %}
+        <span class="light"><span class="tyicons tyicons-angle-right"></span> <span class="visually-hidden">Last</span></span>
+      {% endif %}
+    </li>
+  </ul>
+</nav>

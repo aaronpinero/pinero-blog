@@ -27,7 +27,7 @@ body > header h1 {
 body > header > nav > ul {
   display:inline-grid;
   grid-gap:0.875rem;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:auto auto;
   padding:0;
 }
 body > header > nav > ul li {
@@ -147,4 +147,27 @@ div.post-meta {
   body > header > nav > ul {
     display:grid;
   }
+}
+.visually-hidden {
+  position: absolute!important;
+  width: 1px!important;
+  height: 1px!important;
+  padding: 0!important;
+  margin: -1px!important;
+  overflow: hidden!important;
+  clip: rect(0,0,0,0)!important;
+  white-space: nowrap!important;
+  border: 0!important;
+}
+.pagination .tyicons {
+  vertical-align: text-bottom; 
+}
+.pagination li > * {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.pagination a[aria-current="page"] {
+  color: var(--tycolor-fg);
+  border-bottom: 4px var(--tycolor-fg) solid;
 }
