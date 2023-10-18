@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/learned/fontawesome-subset/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/learned/fontawesome-subset/css/regular.min.css">
+    <link rel="stylesheet" href="/learned/league/stylesheet.css">
+    <link rel="stylesheet" href="/learned/css/tyfy.css">
+    <link rel="stylesheet" href="/learned/css/blog.css">
+    <title>What I Learned - About How :focus-within Doesn&#39;t Quite Work in Safari</title> 
+  </head> 
+  <body class="tymargins-skip"> 
+    <header class="tymargins-off">
+      <h1 class="tyfont-size-h3">What I Learned</h1>
+      <nav>
+        
+        <ul>
+          <li>
+            <a href="/learned/" class="tyfont-size-h4">Recently</a>
+          </li>
+          <li>
+            <a href="/learned/archive/" class="tyfont-size-h4">Previously</a>
+          </li>
+        </ul>
+      </nav>
+    </header> 
+    <main> 
+      <article class="single-post links-underlined">
+  <h1 class="post-title">About How :focus-within Doesn&#39;t Quite Work in Safari</h1> 
+  <div class="post-meta tymargins-off"><time datetime="2023-02-02T00:00:00.000Z">February 2, 2023</time></div>
+  
+  <p><span class="dropcap">I</span>t has been a long, long time since I implemented drop-down menus for a website. In my last job, all the websites had them and there was well-used code that we applied to this problem. But that was in the <em>before times</em>. In 2023, how does one go about creating drop-down (fly-out, some say) menus for a website if you’re not automatically going to fall back on a framework or a library?</p>
+<p>I remember, several years back, one of the developers I worked with attempted to do this with no/minimal JavaScript by using the <code>:focus-within</code> pseudo-class. At the time, this was a relatively new approach that was not supported in all cases. The attempt was abandoned in favor of our “tried-and-true” implementation, but I did not forget the attractiveness of a possible CSS-only solution. Today, with the pending need for dropdown menus on websites in my current job, I decided to give it another go.</p>
+<p>My initial attempt was as shown in the CodePen below. The website for which I am developing this menu is based on Drupal, so the HTML for the menu is an unordered list of links inside a <code>&lt;nav&gt;</code> element. Drop-down menus are nested unordered lists. Clicking on a top level option places the focus on the link; CSS styles for the list item containing the link use the <code>:focus-within</code> pseudo-class to display the nested unordered list which is hidden by default.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="RwBEeda" data-user="aaronpinero" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/aaronpinero/pen/RwBEeda">
+  CSS-Only Dropdown Menu with :focus-within (part 1)</a> by Aaron Pinero (<a href="https://codepen.io/aaronpinero">@aaronpinero</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p>In Firefox, this simple implementation works fine. However, it fails in Safari, and I cannot figure out why. In Safari v16, if you open the developer tools and force the :focus-within state on the list item, the dropdown will appear. But either the link will not capture focus when clicked or the focus on the link does not trigger the :focus-within state on the list item.</p>
+<p>There is a fix for this. If I add the attribute <code>tabindex=&quot;-1&quot;</code> to the link, then everything functions correctly.</p>
+<hr>
+<p>I wish that had been the end of the story.</p>
+<p>Accessibility of this approach is a concern. I want to make sure that our website have accessible dropdown menus. A brief Google search resulted in a few articles describing how to create accessible dropdown menus:</p>
+<ul>
+<li><a href="https://a11y-guidelines.orange.com/en/articles/dropdown-menu/">Dropdown menu example</a> from Orange Digital Accessibility</li>
+<li><a href="https://moderncss.dev/css-only-accessible-dropdown-navigation-menu/">CSS-Only Accessible Dropdown Navigation Menu</a> by Stephanie Eckles</li>
+<li><a href="https://codepen.io/srirachachacha/pen/VPKjjx">Accessible Dropdown Menus</a> by Tristan Wilson</li>
+</ul>
+<p>These examples of accessible dropdowns all use a <code>&lt;button&gt;</code> element as the trigger for the menu. As I understand it, a button is more semantically correct in this instance and provides a better user experience to users browsing with the help of various assistive technologies. So I replaced the link in my example with a button.</p>
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="xxJmmzp" data-user="aaronpinero" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/aaronpinero/pen/xxJmmzp">
+  CSS-Only Dropdown Menu with :focus-within (part 2)</a> by Aaron Pinero (<a href="https://codepen.io/aaronpinero">@aaronpinero</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<p>Unfortunately, Safari once again has a problem. Here I thought a button element should be more agreeable for capturing focus and triggering the <code>:focus-within</code> state on the parent list item element. Instead, the situation is worse. I cannot get the button to show the dropdown in Safari, no matter what attributes I add.</p>
+<p>For now, I am going to try using a link with the <code>tabindex=&quot;-1&quot;</code> and <code>role=&quot;button&quot;</code> attributes to see if that will provide the desired level of accessibility. However, it would be nice if Safari would simply handle the <code>:focus-within</code> state as well as Firefox does.</p>
+<p>And no, I have not even tried Chrome yet. *sigh*</p>
+
+</article>
+    </main> 
+    <footer class="tymargins-off">
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span></div>
+      <div>Built with <a href="https://www.11ty.dev">Eleventy</a> &amp; <a href="http://aaronpinero.com/tyfy/docs/index.html">TYFY</a></div>
+    </footer> 
+  </body> 
+</html>
