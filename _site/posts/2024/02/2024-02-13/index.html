@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/learned/fontawesome-subset/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/learned/fontawesome-subset/css/regular.min.css">
+    <link rel="stylesheet" href="/learned/league/stylesheet.css">
+    <link rel="stylesheet" href="/learned/css/tyfy.css">
+    <link rel="stylesheet" href="/learned/css/blog.css">
+    <title>What I Learned - About Scopus search results</title> 
+  </head> 
+  <body class="tymargins-skip"> 
+    <header class="tymargins-off">
+      <h1 class="tyfont-size-h3">What I Learned</h1>
+      <nav>
+        
+        <ul>
+          <li>
+            <a href="/learned/" class="tyfont-size-h4">Recently</a>
+          </li>
+          <li>
+            <a href="/learned/archive/" class="tyfont-size-h4">Previously</a>
+          </li>
+        </ul>
+      </nav>
+    </header> 
+    <main> 
+      <article class="single-post links-underlined">
+  <h1 class="post-title">About Scopus search results</h1> 
+  <div class="post-meta tymargins-off"><time datetime="2024-02-13T00:00:00.000Z">February 13, 2024</time></div>
+  
+  <p><span class="dropcap">F</span>or those of you who are not familiar with Scopus, here is a short description courtesy of ChatGPT:</p>
+<blockquote>
+  “Scopus is a comprehensive abstract and citation database that covers a wide range of disciplines. It includes peer-reviewed journals, conference proceedings, trade publications, and patents. Scopus provides tools for tracking, analyzing, and visualizing research output and impact, making it a valuable resource for researchers, institutions, and policymakers.”
+</blockquote>
+<p>I use Scopus to provide supplemental search results when seeking scholarly journal articles on a particular biomedical topic.</p>
+<p><a href="https://www.scopus.com">Scopus</a> is one of many products and services offered by <a href="https://www.elsevier.com/">Elsevier</a>. There are two ways to query Scopus. The first is to use the web interface. Large educational institutions provide access to Scopus for their students, faculty, and staff. The second way is to use the Scopus Search API. The API allows applications to query the Scopus database. Unfortunately, neither is not a perfect product.</p>
+<p>The <a href="https://dev.elsevier.com/documentation/SCOPUSSearchAPI.wadl">Scopus Search API</a> provides somewhat limited information for each result matching a search query. Notably, raw affiliation information for authors is missing. The API instead associates each author with an code (a unique key) for an institution that Scopus has recognized. Scopus only recognizes major institutions (a university) or schools (major units within an institution). Detailed or granular affiliation information (such as department or division) is stripped out of the results provided by the API This information is, however, available if you review search results on the web.</p>
+<p>When you use the web interface to query Scopus, there is a way to export search results. There are several format options for export including CSV. The data is configurable; you can select the data (roughly the specific fields) you want to include in your export. That includes the raw affiliation information for each author that is missing from the data provided by the API. However, in a frustrating move, Scopus omits publication dates for publications matching your search query! This information appears in the data returned from the Scopus Search API but cannot be included in exported search results from the web.</p>
+<p>This means that, in order to compile a complete record of a publication from Scopus search results, it would be necessary to combine information from the API with information exported from the web. Not an ideal situation.</p>
+<p>Right now, I don't know of another way to retrieve search results from Scopus that includes both raw affiliation data and publication dates. I'm going to contact Elsevier about this problem, but I don't expect this is something they could easily fix. I have to imagine Scopus is a complicated beast.</p>
+
+</article>
+    </main> 
+    <footer class="tymargins-off">
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span></div>
+      <div>Built with <a href="https://www.11ty.dev">Eleventy</a> &amp; <a href="http://aaronpinero.com/tyfy/docs/index.html">TYFY</a></div>
+    </footer> 
+  </body> 
+</html>
