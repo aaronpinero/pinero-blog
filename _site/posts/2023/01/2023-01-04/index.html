@@ -4,6 +4,7 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
+    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
     <title>What I Learned… About SVG Sprites</title> 
@@ -11,7 +12,6 @@
   <body> 
     <header class="blog-header">
       <h1>What I Learned…</h1>
-      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         
         <ul>
@@ -25,15 +25,11 @@
       </nav>
     </header> 
     <main> 
-      <article class="single-post links-underlined">
+      <article class="single-post">
   <header>
-    <h1 class="post-title">
-      <span class="prefix">What I learned...</span>
-      About SVG Sprites
-    </h1> 
-    <div class="post-meta tymargins-off"><time datetime="2023-01-04T00:00:00.000Z">January 4, 2023</time></div>
+    <div class="post-meta">What I Learned On <time datetime="2023-01-04T00:00:00.000Z">January 4, 2023</time></div>
+    <h1 class="post-title">About SVG Sprites</h1> 
   </header>
-  
   <p><span class="dropcap">I</span> responded to a message in the HighEdWeb Slack today from someone who was having trouble editing an SVG. According to the poster, the SVG file had shape information in it but appeared empty when opened in Adobe Illustrator. After some back-and-forth, the person shared a link to the file.</p>
 <p>I was able to inspect the file and it indeed contained shape information. Lots of shape information. It was an SVG sprite! It contained multiple icon shapes and a few variations of a logo.</p>
 <p>It's been a very long time since I used a sprite file for anything. Since web fonts – especially icon fonts – became common, I found an icon font to be easier to use and more flexible. Icons from a font can be used in CSS pseudoelements; they can be easily colored and resized. However, I wonder if there is some performance advantage to using a sprite over a subsetted font.</p>
@@ -42,8 +38,7 @@
 </article>
     </main> 
     <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>

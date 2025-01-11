@@ -7,11 +7,7 @@ eleventyNavigation:
 ---
 {% set post = collections.post | reverse | first %}
 <header>
-  <div class="post-meta">
-    <span class="prefix">What I Learned Recently</span>
-  </div>
-  <h1 class="post-title">
-    {{ post.data.title }}
-  </h1>
+  <div class="post-meta">What I Learned Recently</div>
+  <h1 class="post-title">{{ post.data.title }}</h1>
 </header>
 {{ post.templateContent | safe }}

@@ -4,6 +4,7 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
+    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
     <title>What I Learned… About Making a Responsive CSS Grid</title> 
@@ -11,7 +12,6 @@
   <body> 
     <header class="blog-header">
       <h1>What I Learned…</h1>
-      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         
         <ul>
@@ -25,15 +25,11 @@
       </nav>
     </header> 
     <main> 
-      <article class="single-post links-underlined">
+      <article class="single-post">
   <header>
-    <h1 class="post-title">
-      <span class="prefix">What I learned...</span>
-      About Making a Responsive CSS Grid
-    </h1> 
-    <div class="post-meta tymargins-off"><time datetime="2020-05-03T00:00:00.000Z">May 3, 2020</time></div>
+    <div class="post-meta">What I Learned On <time datetime="2020-05-03T00:00:00.000Z">May 3, 2020</time></div>
+    <h1 class="post-title">About Making a Responsive CSS Grid</h1> 
   </header>
-  
   <p><span class="dropcap">I</span> stumbled across <a href="https://www.youtube.com/watch?v=2zxWEeBkjk0&amp;">this video</a> by British web developer Rachel Andrew. I don’t know what it is about developers from Britian, but they are a super-intelligent and crafty lot. The video is excellent but I’ll skip to the point and share the most useful CSS declaration I think I’ve ever seen:</p>
 <p><code>grid-template-columns:repeat(auto-fit,minmax(100px,1fr));</code></p>
 <p>This declaration for columns in a CSS grid will make up a responsive grid of cells that are at least 100px wide and filling the available horizontal space, wrapping to the next row when necessary.</p>
@@ -42,8 +38,7 @@
 </article>
     </main> 
     <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>

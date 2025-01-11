@@ -4,6 +4,7 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
+    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
     <title>What I Learned… Previously</title> 
@@ -11,7 +12,6 @@
   <body> 
     <header class="blog-header">
       <h1>What I Learned…</h1>
-      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         
         <ul>
@@ -25,46 +25,46 @@
       </nav>
     </header> 
     <main> 
-      <h1 class="page-title">Previously</h1>
-
-<nav class="pagination" aria-labelledby="archive-pagination-top">
-  <h2 id="archive-pagination-top" class="visually-hidden">Archive Pages</h2>
-  <div class="status"> Showing 1—20 of 29 previous posts</div>
-  <div class="spacer" role="presentation">&nbsp;</div>
-  <ul>
-    <li>
-      
-        <span class="light"><span class="tyicons tyicons-angle-left"></span> <span class="visually-hidden">First</span></span>
-      
-    </li>
-  
-    
+      <header class="archive-header">
+  <h1 class="page-title">Previous Posts</h1>
+  <div class="status"> Showing 1—20 of 29</div>
+  <nav class="pagination" aria-labelledby="archive-pagination-top">
+    <h2 id="archive-pagination-top" class="visually-hidden">Archive Pages</h2>
+    <ul>
       <li>
-        <a
-          href="/learned/archive/"
-           aria-current="page"
-        >
-          <span class="visually-hidden">Page </span>1
-        </a>
+        
+          <span class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></span>
+        
       </li>
     
+      
+        <li>
+          <a
+            href="/learned/archive/"
+             aria-current="page"
+          >
+            <span class="visually-hidden">Page </span>1
+          </a>
+        </li>
+      
+        <li>
+          <a
+            href="/learned/archive/1/"
+            
+          >
+            <span class="visually-hidden">Page </span>2
+          </a>
+        </li>
+      
+      
       <li>
-        <a
-          href="/learned/archive/1/"
-          
-        >
-          <span class="visually-hidden">Page </span>2
-        </a>
+        
+          <a href="/learned/archive/1/" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
+        
       </li>
-    
-    
-    <li>
-      
-        <a href="/learned/archive/1/" title="Last"><span class="tyicons tyicons-angle-right"></span> <span class="visually-hidden">Last</span></a>
-      
-    </li>
-  </ul>
-</nav>
+    </ul>
+  </nav>
+</header>
 
 <div class="archive">
 
@@ -190,10 +190,48 @@
 
 </div>
 
+<footer class="archive-footer">
+  <nav class="pagination" aria-labelledby="archive-pagination-bottom">
+    <h2 id="archive-pagination-bottom" class="visually-hidden">Archive Pages</h2>
+    <ul>
+      <li>
+        
+          <span class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></span>
+        
+      </li>
+    
+      
+        <li>
+          <a
+            href="/learned/archive/"
+             aria-current="page"
+          >
+            <span class="visually-hidden">Page </span>1
+          </a>
+        </li>
+      
+        <li>
+          <a
+            href="/learned/archive/1/"
+            
+          >
+            <span class="visually-hidden">Page </span>2
+          </a>
+        </li>
+      
+      
+      <li>
+        
+          <a href="/learned/archive/1/" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
+        
+      </li>
+    </ul>
+  </nav>
+</footer>
+
     </main> 
     <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>

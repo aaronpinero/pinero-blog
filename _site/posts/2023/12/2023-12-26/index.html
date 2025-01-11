@@ -4,6 +4,7 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
+    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
     <title>What I Learned… About GSAP</title> 
@@ -11,7 +12,6 @@
   <body> 
     <header class="blog-header">
       <h1>What I Learned…</h1>
-      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         
         <ul>
@@ -25,15 +25,11 @@
       </nav>
     </header> 
     <main> 
-      <article class="single-post links-underlined">
+      <article class="single-post">
   <header>
-    <h1 class="post-title">
-      <span class="prefix">What I learned...</span>
-      About GSAP
-    </h1> 
-    <div class="post-meta tymargins-off"><time datetime="2023-12-26T00:00:00.000Z">December 26, 2023</time></div>
+    <div class="post-meta">What I Learned On <time datetime="2023-12-26T00:00:00.000Z">December 26, 2023</time></div>
+    <h1 class="post-title">About GSAP</h1> 
   </header>
-  
   <p><span class="dropcap">T</span>his week’s<a href="https://codepen.io/challenges/2023/december/"> Codepen challenge</a> theme is Hot/Cold. When I read this, my first thought was to create a pen that had something to do with current weather conditions. Then, while I was browsing the the example/inspiration pens, I saw the <a href="https://codepen.io/owlypixel/pen/QGPNBN">animated water heater</a> created by <a href="https://codepen.io/owlypixel">owlypixel</a>. The dials in this pen are animated using <a href="https://gsap.com">GSAP animation library</a>. They made me think of the heater/AC dials in older automobiles. Making a pen that recreates one of these dials seemed like a good fit for the Challenge theme.</p>
 <p><a href="https://gsap.com/docs/v3/Plugins/Draggable">Draggable</a> is the name of the specific GSAP plugin that was used in the animated water heater example. The plugin is part of the GSAP free tier, is easy to implement and configure, and has some very cool options – like the liveSnap option that makes the dial rotate more like the knob in an automobile rather than with a smooth motion.</p>
 <p>The rest of the dial was very easy to make. The outer design of the dial, indicating hot or cold temperature with blue and red, was inspired by my childhood memories and drawn using <a href="https://affinity.serif.com/en-us/designer/">Affinity Designer</a> and exported to SVG. I then included the SVG code in JavaScript so it could be converted to base64 and applied to the dial background. The dial itself is just a <code>&lt;div&gt;</code> element with a gradient background and a clip path.</p>
@@ -50,8 +46,7 @@
 </article>
     </main> 
     <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>

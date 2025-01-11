@@ -7,6 +7,7 @@
   --color-secondary-saturation: 10%;
   
   --font-ui: system-ui, sans-serif;
+  --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
   --font-monospace: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --font-league: "League Gothic";
 }
@@ -14,16 +15,36 @@
 body {
   background-color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 90%);
   color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 25%);
-  font-family: var(--font-ui);
+  font-family: var(--font-serif);
   font-size: 1.25rem;
   line-height: 1.5;
+  &::before,
+  &::after {
+    background-image: repeating-linear-gradient(-45deg, hsla(var(--color-primary-hue), var(--color-primary-sat-high), 25%, 0.33) 0px, hsla(var(--color-primary-hue), var(--color-primary-sat-high), 25%, 0.33) 1px, transparent 0px, transparent 50%);
+    background-repeat: repeat;
+    background-size: 8px 8px;
+    border-radius: 4px;
+    content: "";
+    display: block;
+    height: 2rem;
+  }
+  &::before {
+    margin: 2rem 2rem 0 2rem;
+  }
+  &::after {
+    margin: 0 2rem 2rem 2rem;
+  }
 }
 
 h1 {
   font-family: var(--font-league);
   font-weight: 400;
   line-height: 1.1;
-  text-transform: uppercase;  
+  text-transform: uppercase;
+  &.page-title {
+    font-size: 4.5rem;
+    text-align: center;
+  }
 }
 
 code {
@@ -46,56 +67,51 @@ a[href] {
   }
 }
 
+.dropcap {
+  color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
+  display: block;
+  float: left;
+  font-family: "League Gothic";
+  font-size: 6rem;
+  line-height: 1;
+  padding: 0 1rem 0 0;
+}
+
 .nobreak {
   white-space: nowrap;
 }
 
 .visually-hidden {
-  position:  absolute!important;
-  width:  1px!important;
-  height:  1px!important;
-  padding:  0!important;
-  margin:  -1px!important;
-  overflow:  hidden!important;
-  clip:  rect(0,0,0,0)!important;
-  white-space:  nowrap!important;
-  border:  0!important;
+  position: absolute!important;
+  width: 1px!important;
+  height: 1px!important;
+  padding: 0!important;
+  margin: -1px!important;
+  overflow: hidden!important;
+  clip: rect(0,0,0,0)!important;
+  white-space: nowrap!important;
+  border: 0!important;
 }
 
-.spacer {
-  display: none;
-  background-image: repeating-linear-gradient(-45deg, hsla(var(--color-primary-hue), var(--color-primary-sat-high), 25%, 0.33) 0px, hsla(var(--color-primary-hue), var(--color-primary-sat-high), 25%, 0.33) 1px, transparent 0px, transparent 50%);
-  background-repeat: repeat;
-  background-size: 8px 8px;
-  border-radius: 4px;
-  flex-grow: 1;
-  @media (min-width: 640px) {
-    display: block;
-  }
-}
-
-.blog-header {
+body > header {
   color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 40%);
   font-family: var(--font-league);
-  margin: 0 0 2rem 0;
-  padding: 2rem;
+  padding: 1rem 2rem 4rem 2rem;
   text-align: center;
   @media (min-width: 640px) {
     align-items: center;
     column-gap: 2rem;
     display: flex;
+    justify-content: space-between;
   }
   h1 {
     font-size: 3rem;
     font-style: italic;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
     margin-top: 0;
     @media (min-width: 640px) {
       margin-bottom: 0;
     }
-  }
-  .spacer {
-    height: 2rem;
   }
   nav {
     ul {
@@ -118,108 +134,104 @@ a[href] {
   }
 }
 
-
 body > main {
   padding: 0 2rem;
-}
-
-body > main::after {
-  color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
-  content: "…";
-  display: block;
-  font-family: var(--font-league);
-  font-size: 4rem;
-  line-height: 1;
-  margin: 0 auto;
-  text-align: center;
-  width: 2rem;
 }
 
 body > footer {
   color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 40%);
   font-family: var(--font-league);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: italic;
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 4rem 2rem 1rem 2rem;
   text-align: center;
   text-transform: uppercase;
 }
 
+.archive-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-league);
+  text-transform: uppercase;
+  .status {
+    color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
+    font-size: 1.5rem;
+    font-style: italic;
+    order: -1;
+  }
+  h1.page-title {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
 .archive {
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
+  margin: 2rem auto;
   max-width: 60rem;
+  article {
+    text-align: center;
+    h1.post-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+    }
+    .post-meta {
+      color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 40%);
+      font-family: var(--font-league);
+      font-size: 1.5rem;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+    p {
+      line-height: 1.25;
+      margin: 0;
+    }
+  }
 }
-.archive article {
-  text-align: center;
-}
-.archive article h1.post-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-}
-.archive article .post-meta {
-  color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
-  font-family: var(--font-league);
-  font-size: 1.5rem;
-  font-style: italic;
-  text-transform: uppercase;
-}
-.archive article p {
-  font-size: 1.125rem;
-  line-height: 1.25;
-  margin: 0;
+.archive-footer {
+  display: flex;
 }
 
-article.home-post,
-article.single-post,
-article.single-page {
+.home-post,
+.single-post {
   margin-left: auto;
   margin-right: auto;
   max-width: 45rem;
-}
-h1.page-title {
-  font-size: 4.5rem;
-  text-align: center;
-}
-
-.home-post header,
-.single-post header {
-  font-family: var(--font-league);
-  text-align: center;
-  text-transform: uppercase;
-  h1.post-title {
-    font-size: 4.5rem;
-    margin: 0;
+  header {
+    font-family: var(--font-league);
+    text-align: center;
+    text-transform: uppercase;
+    h1.post-title {
+      font-size: 4.5rem;
+      margin: 0;
+    }
+    .post-meta {
+      color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-top: 0.25rem;
+    }
   }
-  .post-meta {
+  &::after {
     color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-top: 0.25rem;
+    content: "…";
+    display: block;
+    font-family: var(--font-league);
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0 auto;
+    text-align: center;
+    width: 2rem;
   }
-}
-
-.dropcap {
-  color: hsl(var(--color-primary-hue), var(--color-primary-sat-high), 40%);
-  display: block;
-  float: left;
-  font-family: "League Gothic";
-  font-size: 6rem;
-  line-height: 1;
-  padding: 0 1rem 0 0;
 }
 
 .pagination {
   font-family: var(--font-league);
   font-size: 1.5rem;
-  padding: 1rem;
   margin: 0 auto;
-  max-width: 60rem;
   text-align: center;
   text-transform: uppercase;
   @media (min-width: 640px) {
@@ -241,10 +253,17 @@ h1.page-title {
     padding: 0;
     li {
       display: block;
+      a[href] {
+        text-decoration: none;
+      }
       a[href][aria-current] {
         color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 40%);
         font-style: italic;
         text-decoration-line: none;
+      }
+      .previous .picons-regular-angle {
+        display: inline-block;
+        transform: rotateY(180deg);
       }
     }
   }

@@ -4,6 +4,7 @@
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="{{ '/fonts/leaguegothic.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/picons-regular.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/normalize.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/blog.css' | url }}">
     <title>What I Learned… {{ title }}</title> 
@@ -11,7 +12,6 @@
   <body> 
     <header class="blog-header">
       <h1>What I Learned…</h1>
-      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         {% set navPages = collections.all | eleventyNavigation %}
         <ul>
@@ -27,8 +27,7 @@
       {{ content | safe }}
     </main> 
     <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>
