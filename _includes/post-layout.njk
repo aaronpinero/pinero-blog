@@ -8,24 +8,26 @@ layout: base-layout.njk
   </header>
   {{ content | safe }}
 </article>
+<hr class="stripes">
 
 {% if collections.post %}
   {% set previousPost = collections.post | getPreviousCollectionItem %}
   {% set nextPost = collections.post | getNextCollectionItem %}
   {% if nextPost or previousPost %}
-    <ul class="postnav{% if nextPost %} hasNext{% endif %}{% if previousPost %} hasPrevious{% endif %}">
+    <ul class="postnav">
       {% if previousPost %}
         <li class="previous">
-          <span class="label">Previous</span>
-          <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+          <span class="label">What I Learned Previously</span>
+          <span class="post-title"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></span>
         </li>
       {% endif %}
       {% if nextPost %}
         <li class="next">
-          <span class="label">Next</span>
-          <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+          <span class="label">What I Learned Next</span>
+          <span class="post-title"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></span>
         </li>
       {% endif %}
     </ul>
+    <hr class="stripes">
   {% endif %}
 {% endif %}
