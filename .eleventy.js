@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection('postArchive', function(collectionApi) {
     var coll = collectionApi.getFilteredByTag("post");
-    var removed = coll.shift();
+    coll.pop();
     return coll;
   });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
