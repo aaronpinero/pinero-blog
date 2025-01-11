@@ -2,8 +2,13 @@
 layout: base-layout.njk
 ---
 <article class="single-post links-underlined">
-  <h1 class="post-title">{{ title }}</h1> 
-  <div class="post-meta tymargins-off"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></div>
+  <header>
+    <h1 class="post-title">
+      <span class="prefix">What I learned...</span>
+      {{ title }}
+    </h1> 
+    <div class="post-meta tymargins-off"><time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></div>
+  </header>
   
   {{ content | safe }}
 </article>

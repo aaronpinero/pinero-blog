@@ -11,13 +11,12 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection('postArchive', function(collectionApi) {
     var coll = collectionApi.getFilteredByTag("post");
-    var removed = coll.shift()
+    var removed = coll.shift();
     return coll;
   });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("fontawesome-subset");
-  eleventyConfig.addPassthroughCopy("league");
+  eleventyConfig.addPassthroughCopy("fonts");
   return {
     pathPrefix: "/learned/"
   };

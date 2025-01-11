@@ -15,11 +15,8 @@
   "author": "Aaron Pinero",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "moment": "^2.29.4"
-  },
-  "dependencies": {
-    "@11ty/eleventy-upgrade-help": "^2.0.5"
+    "moment": "^2.30.1"
   }
 }

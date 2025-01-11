@@ -3,18 +3,15 @@
   <head> 
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/fontawesome-subset/css/fontawesome.min.css' | url }}">
-    <link rel="stylesheet" href="{{ '/fontawesome-subset/css/regular.min.css' | url }}">
-    <link rel="stylesheet" href="{{ '/league/stylesheet.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/tyfy.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/leaguegothic.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/normalize.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/blog.css' | url }}">
-    <title>What I Learned - {{ title }}</title> 
+    <title>What I Learned… {{ title }}</title> 
   </head> 
-  <body class="tymargins-skip"> 
-    <header class="tymargins-off">
-      <h1 class="tyfont-size-h3">What I Learned</h1>
+  <body> 
+    <header class="blog-header">
+      <h1>What I Learned…</h1>
+      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         {% set navPages = collections.all | eleventyNavigation %}
         <ul>
@@ -29,9 +26,9 @@
     <main> 
       {{ content | safe }}
     </main> 
-    <footer class="tymargins-off">
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span></div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a> &amp; <a href="http://aaronpinero.com/tyfy/docs/index.html">TYFY</a></div>
+    <footer>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
+      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>

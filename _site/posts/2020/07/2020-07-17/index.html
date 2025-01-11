@@ -3,18 +3,15 @@
   <head> 
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/learned/fontawesome-subset/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/learned/fontawesome-subset/css/regular.min.css">
-    <link rel="stylesheet" href="/learned/league/stylesheet.css">
-    <link rel="stylesheet" href="/learned/css/tyfy.css">
+    <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
+    <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned - About SVG Images in Drupal</title> 
+    <title>What I Learned… About SVG Images in Drupal</title> 
   </head> 
-  <body class="tymargins-skip"> 
-    <header class="tymargins-off">
-      <h1 class="tyfont-size-h3">What I Learned</h1>
+  <body> 
+    <header class="blog-header">
+      <h1>What I Learned…</h1>
+      <div role="presentation" class="spacer">&nbsp;</div>
       <nav>
         
         <ul>
@@ -29,17 +26,22 @@
     </header> 
     <main> 
       <article class="single-post links-underlined">
-  <h1 class="post-title">About SVG Images in Drupal</h1> 
-  <div class="post-meta tymargins-off"><time datetime="2020-07-17T00:00:00.000Z">July 17, 2020</time></div>
+  <header>
+    <h1 class="post-title">
+      <span class="prefix">What I learned...</span>
+      About SVG Images in Drupal
+    </h1> 
+    <div class="post-meta tymargins-off"><time datetime="2020-07-17T00:00:00.000Z">July 17, 2020</time></div>
+  </header>
   
   <p><span class="dropcap">I</span> am surprised and disappointed that, in 2020, the Drupal CMS doesn’t support SVG images by default. The image field in Drupal’s core only allows for the usual image suspects: JPEG, GIF, and PNG. Annoyingly, Drupal will let you specify, for an image field, that files with the SVG extension are allowed. But it won’t actually respect this setting or allow you to upload SVG images.</p>
 <p>Fortunately, the generous folks at Third and Grove published <a href="https://www.thirdandgrove.com/insights/svg-images-drupal-8/">this very brief and helpful article</a> on how to modify your Drupal theme to utilize a File field for SVG images. It works like a charm.</p>
 
 </article>
     </main> 
-    <footer class="tymargins-off">
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span></div>
-      <div>Built with <a href="https://www.11ty.dev">Eleventy</a> &amp; <a href="http://aaronpinero.com/tyfy/docs/index.html">TYFY</a></div>
+    <footer>
+      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a> in the age of <span class="nobreak">COVID-19</span>.</div>
+      <div>Built with <a href="https://www.11ty.dev">Eleventy</a>.</div>
     </footer> 
   </body> 
 </html>
