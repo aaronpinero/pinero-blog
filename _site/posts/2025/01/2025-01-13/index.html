@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned… Recently</title> 
+    <title>What I Learned… About Styling Placeholder Text</title> 
   </head> 
   <body> 
     <header class="blog-header">
@@ -15,7 +15,7 @@
       <nav>
         
         <ul>
-          <li class="active">
+          <li>
             <a href="/learned/" class="tyfont-size-h4">Recently</a>
           </li>
           <li>
@@ -25,11 +25,10 @@
       </nav>
     </header> 
     <main> 
-      
-<article class="home-post">
+      <article class="single-post">
   <header>
-    <div class="post-meta">What I Learned Recently</div>
-    <h1 class="post-title">About Styling Placeholder Text</h1>
+    <div class="post-meta">What I Learned On <time datetime="2025-01-13T00:00:00.000Z">January 13, 2025</time></div>
+    <h1 class="post-title">About Styling Placeholder Text</h1> 
   </header>
   <p><span class="dropcap">A</span>n accessibility audit of one of my websites turned up an interesting problem. I have placeholder text in a form input. When the viewport is small, the placeholder text is cut off. This was reported as a failure of <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">success criterion 1.4.4 - Resizing text</a>.</p>
 <p>My first thought was to see if there was some way to make the placeholder text fit into the small space available inside the input at small viewport sizes. I was able to make this happen – sort of – in Chrome and Safari. It wouldn't work in Firefox (which is the browser the auditor is using). After some searching, I found a very helpful guide posted by Samantha Ming about <a href="https://www.samanthaming.com/tidbits/57-styling-css-placeholder/">Styling Placeholder Text with CSS</a>. The big takeaway from this article is the list of supported styles for placeholder text:</p>
@@ -49,21 +48,23 @@
 <p>As you can see, position and text wrap are not among the available options. Looks like I will need to replace the placeholder text with some other sort of description – perhaps an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role">accessible tooltip</a>.</p>
 
 </article>
-
 <hr class="stripes">
 
 
   
   
+  
     <ul class="postnav">
-      <li class="previous">
-        <span class="label">What I Learned Previously</span>
-        <span class="post-title"><a href="/learned/posts/2024/04/2024-04-17/">About CSS Color Scheme and Safari</a></span>
-      </li>
+      
+        <li class="previous">
+          <span class="label">What I Learned Previously</span>
+          <span class="post-title"><a href="/learned/posts/2024/04/2024-04-17/">About CSS Color Scheme and Safari</a></span>
+        </li>
+      
+      
     </ul>
     <hr class="stripes">
   
-
 
     </main> 
     <footer>
