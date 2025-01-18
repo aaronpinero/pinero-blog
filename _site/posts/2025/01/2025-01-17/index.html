@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned… Recently</title> 
+    <title>What I Learned… When Revisiting Colors in CSS</title> 
   </head> 
   <body> 
     <header class="blog-header">
@@ -15,7 +15,7 @@
       <nav>
         
         <ul>
-          <li class="active">
+          <li>
             <a href="/learned/" class="tyfont-size-h4">Recently</a>
           </li>
           <li>
@@ -25,11 +25,10 @@
       </nav>
     </header> 
     <main> 
-      
-<article class="home-post">
+      <article class="single-post">
   <header>
-    <div class="post-meta">What I Learned Recently</div>
-    <h1 class="post-title">When Revisiting Colors in CSS</h1>
+    <div class="post-meta">What I Learned On <time datetime="2025-01-17T00:00:00.000Z">January 17, 2025</time></div>
+    <h1 class="post-title">When Revisiting Colors in CSS</h1> 
   </header>
   <p><span class="dropcap">I</span>n working on my <a href="http://aaronpinero.net/tyfy/docs/index.html">Tyfy</a> framework, I've rediscovered the <code>color-scheme</code> property in CSS. I wrote about this back in April of ’24. I was frustrated that this very useful feature could not be used for developing dark mode in my custom Drupal themes because Safari didn't support the property – and was actively breaking the stylesheet if you tried to use it instead of simply ignoring it.</p>
 <p>Happy to say that it now works. This makes me giddy. I can remove duplicate color declarations for dark mode colors – and stop using <code>prefers-color-scheme</code> media queries – and write color definitions like this:</p>
@@ -42,21 +41,23 @@
 <p>Go figure.</p>
 
 </article>
-
 <hr class="stripes">
 
 
   
   
+  
     <ul class="postnav">
-      <li class="previous">
-        <span class="label">What I Learned Previously</span>
-        <span class="post-title"><a href="/learned/posts/2025/01/2025-01-15/">About Math in CSS</a></span>
-      </li>
+      
+        <li class="previous">
+          <span class="label">What I Learned Previously</span>
+          <span class="post-title"><a href="/learned/posts/2025/01/2025-01-15/">About Math in CSS</a></span>
+        </li>
+      
+      
     </ul>
     <hr class="stripes">
   
-
 
     </main> 
     <footer>

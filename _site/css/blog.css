@@ -308,3 +308,8 @@ body > footer {
     }
   }
 }
+
+pre {
+  overflow: auto;
+  width: 100%;
+}
