@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>What I Learned – Aaron Pinero</title>
+    <link>http://aaronpinero.net/learned/</link>
+    <description>Things that I've discovered along the way.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Jan 2025 16:22:11 GMT</lastBuildDate>
+
+    
+      <item>
+        <title>When Using SVG as a CSS Background</title>
+        <link>http://aaronpinero.net/learned/posts/2025/01/2025-01-17/</link>
+        <guid>http://aaronpinero.net/learned/posts/2025/01/2025-01-17/</guid>
+        <pubDate>Fri Jan 24 2025 00:00:00 GMT+0000</pubDate>
+        <description>Another CSS property that has gained wide support.</description>
+      </item>
+    
+      <item>
+        <title>When Revisiting Colors in CSS</title>
+        <link>http://aaronpinero.net/learned/posts/2025/01/2025-01-24/</link>
+        <guid>http://aaronpinero.net/learned/posts/2025/01/2025-01-24/</guid>
+        <pubDate>Fri Jan 17 2025 00:00:00 GMT+0000</pubDate>
+        <description>Safari is finally coming around… sort of.</description>
+      </item>
+    
+      <item>
+        <title>About Math in CSS</title>
+        <link>http://aaronpinero.net/learned/posts/2025/01/2025-01-15/</link>
+        <guid>http://aaronpinero.net/learned/posts/2025/01/2025-01-15/</guid>
+        <pubDate>Wed Jan 15 2025 00:00:00 GMT+0000</pubDate>
+        <description>CSS has its limits but also its power.</description>
+      </item>
+    
+      <item>
+        <title>About Styling Placeholder Text</title>
+        <link>http://aaronpinero.net/learned/posts/2025/01/2025-01-13/</link>
+        <guid>http://aaronpinero.net/learned/posts/2025/01/2025-01-13/</guid>
+        <pubDate>Mon Jan 13 2025 00:00:00 GMT+0000</pubDate>
+        <description>There are limits to what CSS can do, even in 2025.</description>
+      </item>
+    
+      <item>
+        <title>About CSS Color Scheme and Safari</title>
+        <link>http://aaronpinero.net/learned/posts/2024/04/2024-04-17/</link>
+        <guid>http://aaronpinero.net/learned/posts/2024/04/2024-04-17/</guid>
+        <pubDate>Wed Apr 17 2024 00:00:00 GMT+0000</pubDate>
+        <description>Another way Safari is holding me back.</description>
+      </item>
+    
+      <item>
+        <title>About Scopus search results</title>
+        <link>http://aaronpinero.net/learned/posts/2024/02/2024-02-13/</link>
+        <guid>http://aaronpinero.net/learned/posts/2024/02/2024-02-13/</guid>
+        <pubDate>Tue Feb 13 2024 00:00:00 GMT+0000</pubDate>
+        <description>Some data assembly required.</description>
+      </item>
+    
+      <item>
+        <title>About GSAP</title>
+        <link>http://aaronpinero.net/learned/posts/2023/12/2023-12-26/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/12/2023-12-26/</guid>
+        <pubDate>Tue Dec 26 2023 00:00:00 GMT+0000</pubDate>
+        <description>Quickly making a draggable interface element.</description>
+      </item>
+    
+      <item>
+        <title>About Using a Rack Bag on My Brompton</title>
+        <link>http://aaronpinero.net/learned/posts/2023/10/2023-10-17/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/10/2023-10-17/</guid>
+        <pubDate>Tue Oct 17 2023 00:00:00 GMT+0000</pubDate>
+        <description>Including a review of Vincita Big Nash Bag.</description>
+      </item>
+    
+      <item>
+        <title>About How :focus-within Doesn&#39;t Quite Work in Safari</title>
+        <link>http://aaronpinero.net/learned/posts/2023/02/2023-02-02/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/02/2023-02-02/</guid>
+        <pubDate>Thu Feb 02 2023 00:00:00 GMT+0000</pubDate>
+        <description>This seems to be a long-unaddressed issue.</description>
+      </item>
+    
+      <item>
+        <title>About Google Sites</title>
+        <link>http://aaronpinero.net/learned/posts/2023/01/2023-01-07/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/01/2023-01-07/</guid>
+        <pubDate>Sat Jan 07 2023 00:00:00 GMT+0000</pubDate>
+        <description>Another free site building option for people in the Google ecosystem.</description>
+      </item>
+    
+      <item>
+        <title>About SVG Sprites</title>
+        <link>http://aaronpinero.net/learned/posts/2023/01/2023-01-04/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/01/2023-01-04/</guid>
+        <pubDate>Wed Jan 04 2023 00:00:00 GMT+0000</pubDate>
+        <description>Never seen one in the wild before today.</description>
+      </item>
+    
+      <item>
+        <title>About My Old Laptop</title>
+        <link>http://aaronpinero.net/learned/posts/2023/01/2023-01-01/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/01/2023-01-01/</guid>
+        <pubDate>Mon Jan 02 2023 00:00:00 GMT+0000</pubDate>
+        <description>Might be time for that great Apple Store in the sky.</description>
+      </item>
+    
+      <item>
+        <title>About Life After Twitter</title>
+        <link>http://aaronpinero.net/learned/posts/2023/01/2023-01-02/</link>
+        <guid>http://aaronpinero.net/learned/posts/2023/01/2023-01-02/</guid>
+        <pubDate>Sun Jan 01 2023 00:00:00 GMT+0000</pubDate>
+        <description>I almost forgot that was a thing.</description>
+      </item>
+    
+      <item>
+        <title>About Medical Advice</title>
+        <link>http://aaronpinero.net/learned/posts/2022/02/2022-02-05/</link>
+        <guid>http://aaronpinero.net/learned/posts/2022/02/2022-02-05/</guid>
+        <pubDate>Sat Feb 05 2022 00:00:00 GMT+0000</pubDate>
+        <description>Based on the information they have at the time.</description>
+      </item>
+    
+      <item>
+        <title>About Scholarly Research on User Experience</title>
+        <link>http://aaronpinero.net/learned/posts/2022/01/2022-01-29/</link>
+        <guid>http://aaronpinero.net/learned/posts/2022/01/2022-01-29/</guid>
+        <pubDate>Sat Jan 29 2022 00:00:00 GMT+0000</pubDate>
+        <description>There’s a whole world out there I am only now discovering.</description>
+      </item>
+    
+      <item>
+        <title>About Bookmarks</title>
+        <link>http://aaronpinero.net/learned/posts/2022/01/2022-01-22/</link>
+        <guid>http://aaronpinero.net/learned/posts/2022/01/2022-01-22/</guid>
+        <pubDate>Sat Jan 22 2022 00:00:00 GMT+0000</pubDate>
+        <description>Time to embrace an old internet concept.</description>
+      </item>
+    
+      <item>
+        <title>About Authorization and Authentication</title>
+        <link>http://aaronpinero.net/learned/posts/2022/01/2022-01-14/</link>
+        <guid>http://aaronpinero.net/learned/posts/2022/01/2022-01-14/</guid>
+        <pubDate>Fri Jan 14 2022 00:00:00 GMT+0000</pubDate>
+        <description>Is it secret? Is it safe?</description>
+      </item>
+    
+      <item>
+        <title>About Wegmans</title>
+        <link>http://aaronpinero.net/learned/posts/2021/06/2021-06-27/</link>
+        <guid>http://aaronpinero.net/learned/posts/2021/06/2021-06-27/</guid>
+        <pubDate>Sun Jun 27 2021 00:00:00 GMT+0000</pubDate>
+        <description>The supermarket of my childhood has grown up.</description>
+      </item>
+    
+      <item>
+        <title>About How COVID is Worse Than Influenza</title>
+        <link>http://aaronpinero.net/learned/posts/2021/05/2021-05-21/</link>
+        <guid>http://aaronpinero.net/learned/posts/2021/05/2021-05-21/</guid>
+        <pubDate>Fri May 21 2021 00:00:00 GMT+0000</pubDate>
+        <description>The pandemic-era public health measures were very, very effective.</description>
+      </item>
+    
+      <item>
+        <title>About Pseudo-Fields in Drupal</title>
+        <link>http://aaronpinero.net/learned/posts/2021/03/2021-03-05/</link>
+        <guid>http://aaronpinero.net/learned/posts/2021/03/2021-03-05/</guid>
+        <pubDate>Fri Mar 05 2021 00:00:00 GMT+0000</pubDate>
+        <description>More adventures in developing custom modules.</description>
+      </item>
+    
+      <item>
+        <title>About Dark Mode</title>
+        <link>http://aaronpinero.net/learned/posts/2021/02/2021-02-21/</link>
+        <guid>http://aaronpinero.net/learned/posts/2021/02/2021-02-21/</guid>
+        <pubDate>Sun Feb 21 2021 00:00:00 GMT+0000</pubDate>
+        <description>Don’t underestimate the power of the dark side.</description>
+      </item>
+    
+      <item>
+        <title>About local web development on Apple M1 Macs</title>
+        <link>http://aaronpinero.net/learned/posts/2020/12/2020-12-09/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/12/2020-12-09/</guid>
+        <pubDate>Wed Dec 09 2020 00:00:00 GMT+0000</pubDate>
+        <description>I step into the brave new world of ARM-based Macs.</description>
+      </item>
+    
+      <item>
+        <title>About placeholder text in Firefox</title>
+        <link>http://aaronpinero.net/learned/posts/2020/12/2020-12-04/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/12/2020-12-04/</guid>
+        <pubDate>Fri Dec 04 2020 00:00:00 GMT+0000</pubDate>
+        <description>Browser behavior fragmentation continues in 2020.</description>
+      </item>
+    
+      <item>
+        <title>About the history of cannabis sativa</title>
+        <link>http://aaronpinero.net/learned/posts/2020/11/2020-11-27/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/11/2020-11-27/</guid>
+        <pubDate>Fri Nov 27 2020 00:00:00 GMT+0000</pubDate>
+        <description>Preparing for legal sin semilla.</description>
+      </item>
+    
+      <item>
+        <title>About Algorithmic Layout on the Web</title>
+        <link>http://aaronpinero.net/learned/posts/2020/08/2020-08-07/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/08/2020-08-07/</guid>
+        <pubDate>Fri Aug 07 2020 00:00:00 GMT+0000</pubDate>
+        <description>My crush on Heydon Pickering is renewed.</description>
+      </item>
+    
+      <item>
+        <title>About Cheap Imitations of the Real Thing</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-18/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-18/</guid>
+        <pubDate>Sat Jul 18 2020 00:00:00 GMT+0000</pubDate>
+        <description>If something is cheap, there’s usually a reason.</description>
+      </item>
+    
+      <item>
+        <title>About SVG Images in Drupal</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-17/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-17/</guid>
+        <pubDate>Fri Jul 17 2020 00:00:00 GMT+0000</pubDate>
+        <description>How is it that we can’t have SVG images in 2020?</description>
+      </item>
+    
+      <item>
+        <title>About 毽子</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-12/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-12/</guid>
+        <pubDate>Sun Jul 12 2020 00:00:00 GMT+0000</pubDate>
+        <description>And how it might be the perfect sort of stay-at-home activity.</description>
+      </item>
+    
+      <item>
+        <title>About Pedestrian Fatalities in NYC</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-09/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-09/</guid>
+        <pubDate>Thu Jul 09 2020 00:00:00 GMT+0000</pubDate>
+        <description>Am I surprised it’s not worse than it is?</description>
+      </item>
+    
+      <item>
+        <title>About COVID-19 That Makes Me Afraid</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-08/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-08/</guid>
+        <pubDate>Wed Jul 08 2020 00:00:00 GMT+0000</pubDate>
+        <description>I’ve never been a gambler, and I have no intention of becoming one now.</description>
+      </item>
+    
+      <item>
+        <title>About Documentation Being Hard</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-07/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-07/</guid>
+        <pubDate>Tue Jul 07 2020 00:00:00 GMT+0000</pubDate>
+        <description>I don’t envy anyone who has the task, but I wish they did a better job.</description>
+      </item>
+    
+      <item>
+        <title>About Why I’m Not Doing That</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-06/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-06/</guid>
+        <pubDate>Mon Jul 06 2020 00:00:00 GMT+0000</pubDate>
+        <description>Why would you complicate your life by trying to statically generate a site with Nuxt?</description>
+      </item>
+    
+      <item>
+        <title>About Webflow Being a Thing</title>
+        <link>http://aaronpinero.net/learned/posts/2020/07/2020-07-03/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/07/2020-07-03/</guid>
+        <pubDate>Fri Jul 03 2020 00:00:00 GMT+0000</pubDate>
+        <description>Everyone wants to build a better Squarespace.</description>
+      </item>
+    
+      <item>
+        <title>About Making a Responsive CSS Grid</title>
+        <link>http://aaronpinero.net/learned/posts/2020/05/2020-05-03/</link>
+        <guid>http://aaronpinero.net/learned/posts/2020/05/2020-05-03/</guid>
+        <pubDate>Sun May 03 2020 00:00:00 GMT+0000</pubDate>
+        <description>One of the most useful lines of CSS ever.</description>
+      </item>
+    
+
+  </channel>
+</rss>

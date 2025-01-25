@@ -1,0 +1,24 @@
+---
+permalink: /rss.xml 
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>What I Learned – Aaron Pinero</title>
+    <link>http://aaronpinero.net/learned/</link>
+    <description>Things that I've discovered along the way.</description>
+    <language>en-us</language>
+    <lastBuildDate>{% now %}</lastBuildDate>
+
+    {% for post in collections.post | reverse %}
+      <item>
+        <title>{{ post.data.title }}</title>
+        <link>http://aaronpinero.net{{ post.url | url }}</link>
+        <guid>http://aaronpinero.net{{ post.url | url }}</guid>
+        <pubDate>{{ post.data.date | dateFeed }}</pubDate>
+        <description>{{ post.data.excerpt }}</description>
+      </item>
+    {% endfor %}
+
+  </channel>
+</rss>
