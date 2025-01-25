@@ -29,17 +29,13 @@
 <article class="home-post">
   <header>
     <div class="post-meta">What I Learned Recently</div>
-    <h1 class="post-title">When Revisiting Colors in CSS</h1>
+    <h1 class="post-title">When Using SVG as a CSS Background</h1>
   </header>
-  <p><span class="dropcap">I</span>n working on my <a href="http://aaronpinero.net/tyfy/docs/index.html">Tyfy</a> framework, I've rediscovered the <code>color-scheme</code> property in CSS. I wrote about this back in April of ’24. I was frustrated that this very useful feature could not be used for developing dark mode in my custom Drupal themes because Safari didn't support the property – and was actively breaking the stylesheet if you tried to use it instead of simply ignoring it.</p>
-<p>Happy to say that it now works. This makes me giddy. I can remove duplicate color declarations for dark mode colors – and stop using <code>prefers-color-scheme</code> media queries – and write color definitions like this:</p>
-<pre><code>:root {
-  --bg-color: light-dark(white, black);
-}
-</code></pre>
-<p>🤩🤩🤩</p>
-<p>In addition to the color-scheme goodness, I learned about another color property today: <code>accent-color</code>. This property affects the color applied to checkboxes, radio buttons, range sliders, and <code>&lt;progress&gt;</code> elements. I have yet to try it but I see on MDN that this property does not fully work with Safari.</p>
-<p>Go figure.</p>
+  <p><span class="dropcap">F</span>or a long time I have struggled to use SVG images in CSS for background images. I like this approach because it allows me to use a background image to place an icon without relying on an icon font. But the biggest issue has always been color. An SVG in CSS as a background image will have whatever color is coded into the SVG. If I want to change that color in response to user interaction or color mode preference, I have relied on either a media query or CSS compiled with SASS so that I could use a color variable in the SVG code.</p>
+<p>This year, I am being stubborn about abandoning SASS or any other sort of compiled CSS. It’s 2025 and there should be ways to do things with plain CSS.</p>
+<p>So last night I was puzzing over how I am going to style a select element with a custom icon that will change color based on color mode preference. I don’t want to use SASS and I don’t want to rely on a media query.</p>
+<p>Then I stumbled upon <code>background-blend-mode</code>. I have a vague recollection of using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode">this property</a> before, but that was a long time ago, and I had forgotten about it. With blend mode, I can have the color of the custom icon on my select element change according to the background on which it appears. The background color of my select element is already responding to the preferred color mode using the <code>light-dark()</code> color function. With the <code>background-blend-mode: exclusion</code>, I am able to select a color for the icon that will work on either a light or dark background.</p>
+<p>This property has been widely supported for some years now, so no worries about cross-browser compatibility.</p>
 
 </article>
 
@@ -51,7 +47,7 @@
     <ul class="postnav">
       <li class="previous">
         <span class="label">What I Learned Previously</span>
-        <span class="post-title"><a href="/learned/posts/2025/01/2025-01-15/">About Math in CSS</a></span>
+        <span class="post-title"><a href="/learned/posts/2025/01/2025-01-24/">When Revisiting Colors in CSS</a></span>
       </li>
     </ul>
     <hr class="stripes">
