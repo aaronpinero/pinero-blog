@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
     <link rel="stylesheet" href="/learned/css/normalize.css">
     <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned… Recently</title> 
+    <title>What I Learned… About the @import Rule in CSS</title> 
   </head> 
   <body> 
     <header class="blog-header">
@@ -15,7 +15,7 @@
       <nav>
         
         <ul>
-          <li class="active">
+          <li>
             <a href="/learned/" class="tyfont-size-h4">Recently</a>
           </li>
           <li>
@@ -25,11 +25,10 @@
       </nav>
     </header> 
     <main> 
-      
-<article class="home-post">
+      <article class="single-post">
   <header>
-    <div class="post-meta">What I Learned Recently</div>
-    <h1 class="post-title">About the @import Rule in CSS</h1>
+    <div class="post-meta">What I Learned On <time datetime="2025-02-06T00:00:00.000Z">February 6, 2025</time></div>
+    <h1 class="post-title">About the @import Rule in CSS</h1> 
   </header>
   <p><span class="dropcap">I</span> have previously mentioned my effort to move away from compiled CSS (using SASS) toward plain CSS. CSS has become capable enough that most of what used to require SASS can now be done without it. This eliminates a dependency in my front-end development toolset.</p>
 <p>One challenge I failed to consider until today is the difference between the use of the <code>@import</code> rule when using SASS versus CSS. This difference is summed up quite nicely by <a href="https://stackoverflow.com/questions/40976874/what-is-the-difference-between-css-import-and-sass-scss-import">a StackOverflow post I found</a>:</p>
@@ -53,21 +52,23 @@
 <p>The code even handles <code>@import</code> rules where the imported code is assigned to a CSS cascade layer!</p>
 
 </article>
-
 <hr class="stripes">
 
 
   
   
+  
     <ul class="postnav">
-      <li class="previous">
-        <span class="label">What I Learned Previously</span>
-        <span class="post-title"><a href="/learned/posts/2025/01/2025-01-17/">When Using SVG as a CSS Background</a></span>
-      </li>
+      
+        <li class="previous">
+          <span class="label">What I Learned Previously</span>
+          <span class="post-title"><a href="/learned/posts/2025/01/2025-01-17/">When Using SVG as a CSS Background</a></span>
+        </li>
+      
+      
     </ul>
     <hr class="stripes">
   
-
 
     </main> 
     <footer>

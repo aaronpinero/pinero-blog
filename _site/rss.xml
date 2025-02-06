@@ -5,8 +5,16 @@
     <link>http://aaronpinero.net/learned/</link>
     <description>Things that I've discovered along the way.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jan 2025 16:22:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2025 22:46:42 GMT</lastBuildDate>
 
+    
+      <item>
+        <title>About the @import Rule in CSS</title>
+        <link>http://aaronpinero.net/learned/posts/2025/02/2025-02-06/</link>
+        <guid>http://aaronpinero.net/learned/posts/2025/02/2025-02-06/</guid>
+        <pubDate>Thu Feb 06 2025 00:00:00 GMT+0000</pubDate>
+        <description>There are some hurdles to moving away from SASS.</description>
+      </item>
     
       <item>
         <title>When Using SVG as a CSS Background</title>

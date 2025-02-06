@@ -12,6 +12,10 @@
   --font-league: "League Gothic";
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 body {
   background-color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 90%);
   color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 25%);
