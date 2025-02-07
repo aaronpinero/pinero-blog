@@ -52,7 +52,10 @@ h1 {
 }
 
 code {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  color: hsl(var(--color-primary-hue), var(--color-primary-sat-low), 0%);
   font-family: var(--font-monospace);
+  font-size-adjust: ex-height 0.46;
 }
 
 a[href] {
