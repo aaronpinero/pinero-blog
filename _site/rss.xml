@@ -5,8 +5,16 @@
     <link>http://aaronpinero.net/learned/</link>
     <description>Things that I've discovered along the way.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Feb 2025 01:49:22 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Mar 2025 16:10:21 GMT</lastBuildDate>
 
+    
+      <item>
+        <title>About OKLCH Colors</title>
+        <link>http://aaronpinero.net/learned/posts/2025/03/2025-02-06/</link>
+        <guid>http://aaronpinero.net/learned/posts/2025/03/2025-02-06/</guid>
+        <pubDate>Mon Mar 10 2025 00:00:00 GMT+0000</pubDate>
+        <description>This blows my mind and changes how I will do things.</description>
+      </item>
     
       <item>
         <title>About the @import Rule in CSS</title>
