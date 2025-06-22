@@ -20,7 +20,13 @@ module.exports = function (eleventyConfig) {
     coll.pop();
     return coll;
   });
+  eleventyConfig.addCollection('allPosts', function(collectionApi) {
+    return collectionApi.getFilteredByTag("post").sort(function (a, b) {
+      return b.date - a.date;
+    });
+  });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPassthroughCopy("resources");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
   return {

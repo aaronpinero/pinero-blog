@@ -1,0 +1,20 @@
+.fab,
+.fa-brands {
+  font-weight: 400;
+}
+
+:root, :host {
+  --fa-style-family-brands: 'Font Awesome 6 Brands';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands'; }
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype"); }
+
+.fa-codepen { --fa: "\f1cb"; --fa--fa: "\f1cb\f1cb"; }
+.fa-drupal { --fa: "\f1a9"; --fa--fa: "\f1a9\f1a9"; }
+.fa-github { --fa: "\f09b"; --fa--fa: "\f09b\f09b"; }
+.fa-linkedin { --fa: "\f08c"; --fa--fa: "\f08c\f08c"; }

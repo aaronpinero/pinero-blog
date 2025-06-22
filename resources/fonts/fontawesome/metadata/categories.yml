@@ -1,0 +1,14 @@
+---
+coding:
+  icons:
+    - bars
+  label: Coding
+editing:
+  icons:
+    - bars
+    - xmark
+  label: Editing
+mathematics:
+  icons:
+    - xmark
+  label: Mathematics

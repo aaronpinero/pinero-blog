@@ -1,0 +1,49 @@
+---
+codepen:
+  changes:
+    - 4.1.0
+    - 5.0.0
+  label: Codepen
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1cb
+  voted: false
+drupal:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.0.0-beta1
+  label: Drupal Logo
+  search:
+    terms: []
+  styles:
+    - brands
+  unicode: f1a9
+  voted: false
+github:
+  changes:
+    - 2.0.0
+    - 5.0.0
+  label: GitHub
+  search:
+    terms:
+      - octocat
+  styles:
+    - brands
+  unicode: f09b
+  voted: false
+linkedin:
+  changes:
+    - 1.0.0
+    - 5.0.0
+  label: LinkedIn
+  search:
+    terms:
+      - linkedin-square
+      - linkin
+  styles:
+    - brands
+  unicode: f08c
+  voted: false

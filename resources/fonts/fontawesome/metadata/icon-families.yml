@@ -1,0 +1,170 @@
+---
+bars:
+  aliases:
+    names:
+      - navicon
+    unicodes:
+      secondary:
+        - 10f0c9
+  changes:
+    - 2.0.0
+    - 5.0.0
+    - 6.0.0-beta1
+    - 6.0.0-beta3
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+  familyStylesByLicense:
+    free: []
+    pro:
+      - family: sharp
+        style: regular
+  label: Bars
+  search:
+    terms:
+      - checklist
+      - drag
+      - hamburger
+      - list
+      - menu
+      - nav
+      - navigation
+      - ol
+      - reorder
+      - settings
+      - todo
+      - ul
+  unicode: f0c9
+  voted: false
+codepen:
+  changes:
+    - 4.1.0
+    - 5.0.0
+  familyStylesByLicense:
+    free:
+      - family: classic
+        style: brands
+    pro:
+      - family: classic
+        style: brands
+  label: Codepen
+  search:
+    terms: []
+  unicode: f1cb
+  voted: false
+drupal:
+  changes:
+    - 4.1.0
+    - 5.0.0
+    - 6.0.0-beta1
+  familyStylesByLicense:
+    free:
+      - family: classic
+        style: brands
+    pro:
+      - family: classic
+        style: brands
+  label: Drupal Logo
+  search:
+    terms: []
+  unicode: f1a9
+  voted: false
+github:
+  changes:
+    - 2.0.0
+    - 5.0.0
+  familyStylesByLicense:
+    free:
+      - family: classic
+        style: brands
+    pro:
+      - family: classic
+        style: brands
+  label: GitHub
+  search:
+    terms:
+      - octocat
+  unicode: f09b
+  voted: false
+linkedin:
+  changes:
+    - 1.0.0
+    - 5.0.0
+  familyStylesByLicense:
+    free:
+      - family: classic
+        style: brands
+    pro:
+      - family: classic
+        style: brands
+  label: LinkedIn
+  search:
+    terms:
+      - linkedin-square
+      - linkin
+  unicode: f08c
+  voted: false
+xmark:
+  aliases:
+    names:
+      - close
+      - multiply
+      - remove
+      - times
+    unicodes:
+      composite:
+        - 1f5d9
+        - '2715'
+        - '2716'
+        - 274c
+        - d7
+      secondary:
+        - 10f00d
+  changes:
+    - 1.0.0
+    - 5.0.0
+    - 5.0.13
+    - 5.11.0
+    - 5.11.1
+    - 6.0.0-beta1
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+  familyStylesByLicense:
+    free: []
+    pro:
+      - family: sharp
+        style: regular
+  label: Xmark
+  search:
+    terms:
+      - Cancellation X
+      - Multiplication Sign
+      - Multiplication X
+      - cancel
+      - close
+      - cross
+      - cross mark
+      - error
+      - exit
+      - incorrect
+      - mark
+      - multiplication
+      - multiply
+      - notice
+      - notification
+      - notify
+      - problem
+      - sign
+      - uncheck
+      - wrong
+      - x
+      - ×
+  unicode: f00d
+  voted: false
