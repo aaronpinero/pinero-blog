@@ -2,7 +2,7 @@
 title: Posts
 description: "Posts by Aaron Pinero."
 keywords: "design, graphic design, web development, front-end development, web design"
-theme: "slate-orange"
+theme: "green-pink"
 layout: base.njk
 eleventyNavigation:
   key: Posts
@@ -12,8 +12,6 @@ pagination:
   size: 20
   alias: allposts
 ---
-<header class="archive-header">
-  <h1 class="page-title">Previous Posts</h1>
   <div class="status"> Showing {{ (pagination.pageNumber * pagination.size) + 1 }}—{{ (pagination.pageNumber * pagination.size) + pagination.items.length }} of {{ collections.allPosts.length }}</div>
   <nav class="pagination" aria-labelledby="archive-pagination-top">
     <h2 id="archive-pagination-top" class="visually-hidden">Archive Pages</h2>
@@ -46,24 +44,24 @@ pagination:
       </li>
     </ul>
   </nav>
-</header>
 
-<div class="archive">
+<div class="allposts">
   {% for post in allposts %}
-    <article>
-      {% if post.data.title %}
+    {% if post.data.title %}
+      <article class="post article">
         <div class="post-meta">What I Learned On <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time></div>
-        <h1 class="post-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h1>
+        <h2 class="post-title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
         <p>{{ post.data.excerpt }}</p>
-      {% else %}
+      </article>
+    {% else %}
+      <article class="post micro">
         <div class="post-meta">Posted <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time> – {{ post.data.time }}</div>
         {{ post.content | safe }}
-      {% endif %}
-    </article>
+      </article>
+    {% endif %}
   {% endfor %}
 </div>
 
-<footer class="archive-footer">
   <nav class="pagination" aria-labelledby="archive-pagination-bottom">
     <h2 id="archive-pagination-bottom" class="visually-hidden">Archive Pages</h2>
     <ul>
@@ -95,4 +93,3 @@ pagination:
       </li>
     </ul>
   </nav>
-</footer>
