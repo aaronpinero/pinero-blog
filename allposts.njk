@@ -12,9 +12,9 @@ pagination:
   size: 20
   alias: allposts
 ---
-  <div class="status"> Showing {{ (pagination.pageNumber * pagination.size) + 1 }}—{{ (pagination.pageNumber * pagination.size) + pagination.items.length }} of {{ collections.allPosts.length }}</div>
-  <nav class="pagination" aria-labelledby="archive-pagination-top">
-    <h2 id="archive-pagination-top" class="visually-hidden">Archive Pages</h2>
+  <div class="status">Posts {{ (pagination.pageNumber * pagination.size) + 1 }} — {{ (pagination.pageNumber * pagination.size) + pagination.items.length }} of {{ collections.allPosts.length }}</div>
+  <nav class="pagination" aria-labelledby="posts-pagination-top">
+    <h2 id="posts-pagination-top" class="visually-hidden">Posts Pages</h2>
     <ul>
       <li>
         {% if page.url != pagination.href.first %}
@@ -55,7 +55,7 @@ pagination:
       </article>
     {% else %}
       <article class="post micro">
-        <div class="post-meta">Posted <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time> – {{ post.data.time }}</div>
+        <div class="post-meta"><time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time> – {{ post.data.time }}</div>
         {{ post.content | safe }}
       </article>
     {% endif %}
