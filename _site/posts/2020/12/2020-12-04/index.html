@@ -1,71 +1,105 @@
 <!DOCTYPE html> 
 <html lang="en"> 
   <head> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
-    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
-    <link rel="stylesheet" href="/learned/css/normalize.css">
-    <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned… About placeholder text in Firefox</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About placeholder text in Firefox</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/learned/resources/css/main.css">
   </head> 
-  <body> 
-    <header class="blog-header">
-      <h1>What I Learned…</h1>
-      <nav>
-        
-        <ul>
-          <li>
-            <a href="/learned/" class="tyfont-size-h4">Recently</a>
-          </li>
-          <li>
-            <a href="/learned/allposts/" class="tyfont-size-h4">Posts</a>
-          </li>
-          <li>
-            <a href="/learned/archive/" class="tyfont-size-h4">Previously</a>
-          </li>
-        </ul>
-      </nav>
-    </header> 
-    <main> 
-      <article class="single-post">
-  <header>
-    <div class="post-meta">What I Learned On <time datetime="2020-12-04T00:00:00.000Z">December 4, 2020</time></div>
-    <h1 class="post-title">About placeholder text in Firefox</h1> 
-  </header>
-  <p><span class="dropcap">S</span>earch is an important function of the website I support as Web Services Manager. Recently, several colleages were telling me that the placeholder text in the search bar of our website was really very light – maybe too light. I knew the color probably didn’t meet the WCAG color contrast standard, but I felt it was still legible on both my laptop and my crummy old Dell external display.</p>
+  <body class="green-pink"> 
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="fa-regular fa-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/learned/">Recently</a>
+            </li>
+            <li>
+              <a href="/learned/allposts/">Posts</a>
+            </li>
+            <li>
+              <a href="/learned/archive/">Previously</a>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="fa-sharp fa-regular fa-xmark"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/index.html">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/allposts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About placeholder text in Firefox</h1>
+        <div class="post-meta">What I Learned On <time datetime="2020-12-04T00:00:00.000Z">December 4, 2020</time></div>
+      </header>
+      
+      <p><span class="dropcap">S</span>earch is an important function of the website I support as Web Services Manager. Recently, several colleages were telling me that the placeholder text in the search bar of our website was really very light – maybe too light. I knew the color probably didn’t meet the WCAG color contrast standard, but I felt it was still legible on both my laptop and my crummy old Dell external display.</p>
 <p>Still, in respect for their opinion and the fact that search is very important to us, I decided to increase the contrast to a minimally acceptable level for accessibility – a contrast ratio of about 3:1. In addition, I made an effort to review the updated color in several browsers. I didn’t think this was strictly necessary – all browsers should display color in the same way on the same screen, right?</p>
 <p>Right?</p>
 <p>To my surprise, the placeholder text in the search bar was much, much lighter in Firefox. The color defined in our stylesheet is <code>#7a7f85</code>, but the color being displayed in Firefox (as checked by inspecting a screen capture in Pixelmator Pro) was more like <code>#b7babd</code>. That’s a huge difference, particularly for accessibility. What is up with that? I did a quick search for information about color display difference between Firefox and other browsers, but came up empty. Then I searched specifically for Firefox placeholder text color. The result was <a href="https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox">this Stack Overflow question</a>. For some reason, the default opacity of placeholder text in a Firefox input field is not equal to 1. You have to specify <code>opacity:1</code> in your stylesheet to make placeholder text in Firefox match appearance with that in Edge or Safari.</p>
 <p>This is a really annoying quirk of Firefox.</p>
 
-</article>
-<hr class="stripes">
 
+      <hr class="stripes">
 
-  
-  
-  
-    <ul class="postnav">
       
-        <li class="previous">
-          <span class="label">What I Learned Previously</span>
-          <span class="post-title"><a href="/learned/posts/2020/11/2020-11-27/">About the history of cannabis sativa</a></span>
-        </li>
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/learned/posts/2020/11/2020-11-27/">About the history of cannabis sativa</a></span>
+              </li>
+            
+            
+              <li class="next">
+                <span class="label">What I Learned Next</span>
+                <span class="post-title"><a href="/learned/posts/2020/12/2020-12-09/">About local web development on Apple M1 Macs</a></span>
+              </li>
+            
+          </ul>
+          <hr class="stripes">
+        
       
-      
-        <li class="next">
-          <span class="label">What I Learned Next</span>
-          <span class="post-title"><a href="/learned/posts/2020/12/2020-12-09/">About local web development on Apple M1 Macs</a></span>
-        </li>
-      
-    </ul>
-    <hr class="stripes">
-  
 
     </main> 
-    <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>. Subscribe via <a href="rss.xml">RSS</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
-    </footer> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2025 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
   </body> 
 </html>

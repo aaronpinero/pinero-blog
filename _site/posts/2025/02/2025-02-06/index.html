@@ -1,39 +1,55 @@
 <!DOCTYPE html> 
 <html lang="en"> 
   <head> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
-    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
-    <link rel="stylesheet" href="/learned/css/normalize.css">
-    <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned… About the @import Rule in CSS</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About the @import Rule in CSS</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/learned/resources/css/main.css">
   </head> 
-  <body> 
-    <header class="blog-header">
-      <h1>What I Learned…</h1>
-      <nav>
-        
-        <ul>
-          <li>
-            <a href="/learned/" class="tyfont-size-h4">Recently</a>
-          </li>
-          <li>
-            <a href="/learned/allposts/" class="tyfont-size-h4">Posts</a>
-          </li>
-          <li>
-            <a href="/learned/archive/" class="tyfont-size-h4">Previously</a>
-          </li>
-        </ul>
-      </nav>
-    </header> 
-    <main> 
-      <article class="single-post">
-  <header>
-    <div class="post-meta">What I Learned On <time datetime="2025-02-06T00:00:00.000Z">February 6, 2025</time></div>
-    <h1 class="post-title">About the @import Rule in CSS</h1> 
-  </header>
-  <p><span class="dropcap">I</span> have previously mentioned my effort to move away from compiled CSS (using SASS) toward plain CSS. CSS has become capable enough that most of what used to require SASS can now be done without it. This eliminates a dependency in my front-end development toolset.</p>
+  <body class="green-pink"> 
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="fa-regular fa-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/learned/">Recently</a>
+            </li>
+            <li>
+              <a href="/learned/allposts/">Posts</a>
+            </li>
+            <li>
+              <a href="/learned/archive/">Previously</a>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="fa-sharp fa-regular fa-xmark"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/index.html">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/allposts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About the @import Rule in CSS</h1>
+        <div class="post-meta">What I Learned On <time datetime="2025-02-06T00:00:00.000Z">February 6, 2025</time></div>
+      </header>
+      
+      <p><span class="dropcap">I</span> have previously mentioned my effort to move away from compiled CSS (using SASS) toward plain CSS. CSS has become capable enough that most of what used to require SASS can now be done without it. This eliminates a dependency in my front-end development toolset.</p>
 <p>One challenge I failed to consider until today is the difference between the use of the <code>@import</code> rule when using SASS versus CSS. This difference is summed up quite nicely by <a href="https://stackoverflow.com/questions/40976874/what-is-the-difference-between-css-import-and-sass-scss-import">a StackOverflow post I found</a>:</p>
 <blockquote>
 <p><strong>@import in CSS</strong>: CSS has an import option that lets you split your CSS into smaller, more maintainable portions.</p>
@@ -54,33 +70,51 @@
 </ul>
 <p>The code even handles <code>@import</code> rules where the imported code is assigned to a CSS cascade layer!</p>
 
-</article>
-<hr class="stripes">
 
+      <hr class="stripes">
 
-  
-  
-  
-    <ul class="postnav">
       
-        <li class="previous">
-          <span class="label">What I Learned Previously</span>
-          <span class="post-title"><a href="/learned/micro/2025/02/2025-02-01/"></a></span>
-        </li>
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/learned/micro/2025/02/2025-02-01/"></a></span>
+              </li>
+            
+            
+              <li class="next">
+                <span class="label">What I Learned Next</span>
+                <span class="post-title"><a href="/learned/micro/2025/02/2025-02-07/"></a></span>
+              </li>
+            
+          </ul>
+          <hr class="stripes">
+        
       
-      
-        <li class="next">
-          <span class="label">What I Learned Next</span>
-          <span class="post-title"><a href="/learned/micro/2025/02/2025-02-07/"></a></span>
-        </li>
-      
-    </ul>
-    <hr class="stripes">
-  
 
     </main> 
-    <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>. Subscribe via <a href="rss.xml">RSS</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
-    </footer> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2025 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
   </body> 
 </html>

@@ -1,39 +1,55 @@
 <!DOCTYPE html> 
 <html lang="en"> 
   <head> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/learned/fonts/leaguegothic.css">
-    <link rel="stylesheet" href="/learned/fonts/picons-regular.css">
-    <link rel="stylesheet" href="/learned/css/normalize.css">
-    <link rel="stylesheet" href="/learned/css/blog.css">
-    <title>What I Learned… About local web development on Apple M1 Macs</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About local web development on Apple M1 Macs</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/learned/resources/css/main.css">
   </head> 
-  <body> 
-    <header class="blog-header">
-      <h1>What I Learned…</h1>
-      <nav>
-        
-        <ul>
-          <li>
-            <a href="/learned/" class="tyfont-size-h4">Recently</a>
-          </li>
-          <li>
-            <a href="/learned/allposts/" class="tyfont-size-h4">Posts</a>
-          </li>
-          <li>
-            <a href="/learned/archive/" class="tyfont-size-h4">Previously</a>
-          </li>
-        </ul>
-      </nav>
-    </header> 
-    <main> 
-      <article class="single-post">
-  <header>
-    <div class="post-meta">What I Learned On <time datetime="2020-12-09T00:00:00.000Z">December 9, 2020</time></div>
-    <h1 class="post-title">About local web development on Apple M1 Macs</h1> 
-  </header>
-  <p><span class="dropcap">A</span>fter several months of using my personal computer to work remotely during the pandemic, my employer has provided me a work computer: a brand new MacBook Pro with the Apple M1 SoC.</p>
+  <body class="green-pink"> 
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="fa-regular fa-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/learned/">Recently</a>
+            </li>
+            <li>
+              <a href="/learned/allposts/">Posts</a>
+            </li>
+            <li>
+              <a href="/learned/archive/">Previously</a>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="fa-sharp fa-regular fa-xmark"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/index.html">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/allposts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About local web development on Apple M1 Macs</h1>
+        <div class="post-meta">What I Learned On <time datetime="2020-12-09T00:00:00.000Z">December 9, 2020</time></div>
+      </header>
+      
+      <p><span class="dropcap">A</span>fter several months of using my personal computer to work remotely during the pandemic, my employer has provided me a work computer: a brand new MacBook Pro with the Apple M1 SoC.</p>
 <p>As a tech enthusiast, I am thrilled by this. My personal machine is a 7 year old MacBook Pro. While it is still a capable machine – perhaps the finest laptop I’ve ever owned – it is definitely showing its age. I have to be careful not to run too many apps at once. The webcam is completely unusable except in the best lighting conditions. Bluetooth connectivity is suspect. It is not supported by the latest version of macOS.</p>
 <p>In comparison to my humble laptop, the new MacBook Pro is incredible. It is strangely silent. I’m sometimes not sure it’s doing anything. It does not mind if I open a dozen apps at once. The screen is incredible and the webcam is respectable. It did very well for me today in really poor (cloudy winter afternoon) lighting. The battery just goes on and on – I don’t need to keep it plugged in all the time.</p>
 <p>I even like the Touch Bar although it will take some acclimation.</p>
@@ -46,33 +62,51 @@
 <p>So that’s it? Well, for the xAMP stack it is. I installed composer and the developer command line tools for macOS. I was able to create my MySQL server, import my databases, adjust my Drupal sites’ settings, start Apache, and access the locally cloned copies of my websites from Safari. There are a few quirks with file permissions, but those are solvable.</p>
 <p>The remaining hurdle is going to be my build tools. At the very least, I will need to be able to install node.js and npm packages. But for now I want to enjoy my victory. I’ll leave these other challenges for tomorrow.</p>
 
-</article>
-<hr class="stripes">
 
+      <hr class="stripes">
 
-  
-  
-  
-    <ul class="postnav">
       
-        <li class="previous">
-          <span class="label">What I Learned Previously</span>
-          <span class="post-title"><a href="/learned/posts/2020/12/2020-12-04/">About placeholder text in Firefox</a></span>
-        </li>
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/learned/posts/2020/12/2020-12-04/">About placeholder text in Firefox</a></span>
+              </li>
+            
+            
+              <li class="next">
+                <span class="label">What I Learned Next</span>
+                <span class="post-title"><a href="/learned/posts/2021/02/2021-02-21/">About Dark Mode</a></span>
+              </li>
+            
+          </ul>
+          <hr class="stripes">
+        
       
-      
-        <li class="next">
-          <span class="label">What I Learned Next</span>
-          <span class="post-title"><a href="/learned/posts/2021/02/2021-02-21/">About Dark Mode</a></span>
-        </li>
-      
-    </ul>
-    <hr class="stripes">
-  
 
     </main> 
-    <footer>
-      <div>Written by <a href="http://aaronpinero.com">Aaron Pinero</a>. Subscribe via <a href="rss.xml">RSS</a>.<br>Built using what I learned about <a href="https://www.11ty.dev">Eleventy</a>.</div>
-    </footer> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2025 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
   </body> 
 </html>

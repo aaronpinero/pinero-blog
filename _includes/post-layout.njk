@@ -1,33 +1,44 @@
 ---
-layout: base-layout.njk
+layout: base.njk
+theme: "green-pink"
 ---
-<article class="single-post">
-  <header>
-    <div class="post-meta">What I Learned On <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></div>
-    <h1 class="post-title">{{ title }}</h1> 
-  </header>
-  {{ content | safe }}
-</article>
-<hr class="stripes">
+      <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/index.html">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/allposts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>{{ title }}</h1>
+        <div class="post-meta">What I Learned On <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time></div>
+      </header>
+      
+      {{ content | safe }}
 
-{% if collections.post %}
-  {% set previousPost = collections.post | getPreviousCollectionItem %}
-  {% set nextPost = collections.post | getNextCollectionItem %}
-  {% if nextPost or previousPost %}
-    <ul class="postnav">
-      {% if previousPost %}
-        <li class="previous">
-          <span class="label">What I Learned Previously</span>
-          <span class="post-title"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></span>
-        </li>
+      <hr class="stripes">
+
+      {% if collections.post %}
+        {% set previousPost = collections.post | getPreviousCollectionItem %}
+        {% set nextPost = collections.post | getNextCollectionItem %}
+        {% if nextPost or previousPost %}
+          <ul class="postnav">
+            {% if previousPost %}
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></span>
+              </li>
+            {% endif %}
+            {% if nextPost %}
+              <li class="next">
+                <span class="label">What I Learned Next</span>
+                <span class="post-title"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></span>
+              </li>
+            {% endif %}
+          </ul>
+          <hr class="stripes">
+        {% endif %}
       {% endif %}
-      {% if nextPost %}
-        <li class="next">
-          <span class="label">What I Learned Next</span>
-          <span class="post-title"><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></span>
-        </li>
-      {% endif %}
-    </ul>
-    <hr class="stripes">
-  {% endif %}
-{% endif %}
