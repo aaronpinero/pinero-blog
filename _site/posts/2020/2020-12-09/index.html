@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About local web development on Apple M1 Macs</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/learned/resources/css/main.css">
+  </head> 
+  <body class="green-pink"> 
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="fa-regular fa-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/learned/">Recently</a>
+            </li>
+            <li>
+              <a href="/learned/allposts/">Posts</a>
+            </li>
+            <li>
+              <a href="/learned/archive/">Previously</a>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="fa-sharp fa-regular fa-xmark"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/index.html">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/allposts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About local web development on Apple M1 Macs</h1>
+        <div class="post-meta">What I Learned On <time datetime="2020-12-09T00:00:00.000Z">December 9, 2020</time></div>
+      </header>
+      
+      <p><span class="dropcap">A</span>fter several months of using my personal computer to work remotely during the pandemic, my employer has provided me a work computer: a brand new MacBook Pro with the Apple M1 SoC.</p>
+<p>As a tech enthusiast, I am thrilled by this. My personal machine is a 7 year old MacBook Pro. While it is still a capable machine – perhaps the finest laptop I’ve ever owned – it is definitely showing its age. I have to be careful not to run too many apps at once. The webcam is completely unusable except in the best lighting conditions. Bluetooth connectivity is suspect. It is not supported by the latest version of macOS.</p>
+<p>In comparison to my humble laptop, the new MacBook Pro is incredible. It is strangely silent. I’m sometimes not sure it’s doing anything. It does not mind if I open a dozen apps at once. The screen is incredible and the webcam is respectable. It did very well for me today in really poor (cloudy winter afternoon) lighting. The battery just goes on and on – I don’t need to keep it plugged in all the time.</p>
+<p>I even like the Touch Bar although it will take some acclimation.</p>
+<p>As a web developer, the new MacBook Pro presents a challenge. I develop Drupal websites. I use things like Docker, MAMP, and Acquia Dev Desktop to run local copies of the websites I am developing. I use composer to manage dependencies and git for version control. I use Node.js to facilitate front-end development. How am I going to do all of that now? It may be a month before Docker is compatible with ARM-based Macs. MAMP doesn’t offer any information about when support will be extended to macOS Big Sur or ARM. There are some people who have tried to make it work with varying results. Acquia has also not published any information about upcoming support, and I can verify that Dev Desktop does not work on the new machine.</p>
+<p>Some developers seem to have had some luck installing a xAMP stack using Homebrew, but even that sees to have problems; not everyone who has tried it was able to get it to work. And I personally don’t have the time to go hunting through Stack Overflow forever for solutions.</p>
+<p>So, what is the xAMP stack needed for running local copies of Drupal websites?</p>
+<p>Let's start with the P. That’s PHP. Fortunately, macOS comes with PHP. When checking the PHP version installed in macOS, there is a note that says it will be removed in future versions of the operating system, but for now it's still there. And it's still PHP 7, so that will work.</p>
+<p>Consider the A next. That’s Apache, the web server. macOS comes with that too! I was even able to locate a number of articles about configuring Apache on the Mac to create multiple virtual hosts. Instructions that were provided for older versions of macOS, like High Sierra, still have useful information. I was able to update Apache’s config file, define my virtual hosts, update my hosts file, and serve a basic website (just an HTML page) from a local folder. So now I'm 2 for 3.</p>
+<p>What about the M? MySQL is tricky. The documentation from MySQL state that they only support Intel-based Macs running macOS 10.13, 10.14, or 10.15. Nothing about macOS 11 or ARM-based Macs. Again, Homebrew is an option for installing MySQL, but a check of the current state of compatibility published by the developers suggests there may still be some issues with the MySQL cask. However, in my explorations I came across a free app called <a href="https://dbngin.com">DBngin</a>. This app allows users to create one or more local database servers without the need for installing any code dependencies. The db servers created with DBngin are accessible through the mysql CLI or by using an app like the freely-available <a href="https://github.com/Sequel-Ace/Sequel-Ace">Sequel Ace</a>. Sequel Ace basically does for DBngin what PHPMyAdmin does for a traditional MySQL service. I can create database, import database dumps from my remote, and examine the database tables. With a little help, I was able to get Drupal to recognize the DBngin MySQL server and talk to its database.</p>
+<p>So that’s it? Well, for the xAMP stack it is. I installed composer and the developer command line tools for macOS. I was able to create my MySQL server, import my databases, adjust my Drupal sites’ settings, start Apache, and access the locally cloned copies of my websites from Safari. There are a few quirks with file permissions, but those are solvable.</p>
+<p>The remaining hurdle is going to be my build tools. At the very least, I will need to be able to install node.js and npm packages. But for now I want to enjoy my victory. I’ll leave these other challenges for tomorrow.</p>
+
+
+      <hr class="stripes">
+
+      
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/learned/posts/2020/2020-12-04/">About placeholder text in Firefox</a></span>
+              </li>
+            
+            
+              <li class="next">
+                <span class="label">What I Learned Next</span>
+                <span class="post-title"><a href="/learned/posts/2021/2021-02-21/">About Dark Mode</a></span>
+              </li>
+            
+          </ul>
+          <hr class="stripes">
+        
+      
+
+    </main> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2025 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </body> 
+</html>

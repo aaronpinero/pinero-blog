@@ -1,0 +1,156 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About CSS Color Scheme and Safari</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/learned/resources/css/main.css">
+  </head> 
+  <body class="green-pink"> 
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="fa-regular fa-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/learned/">Recently</a>
+            </li>
+            <li>
+              <a href="/learned/allposts/">Posts</a>
+            </li>
+            <li>
+              <a href="/learned/archive/">Previously</a>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="fa-sharp fa-regular fa-xmark"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/index.html">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/allposts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About CSS Color Scheme and Safari</h1>
+        <div class="post-meta">What I Learned On <time datetime="2024-04-17T00:00:00.000Z">April 17, 2024</time></div>
+      </header>
+      
+      <p><span class="dropcap">T</span>he CSS color-scheme property and the associated light-dark() function can significantly ease the creation of light and dark color schemes for your website.</p>
+<p>That is, if you don't care about the Safari browser.</p>
+<p>Not only has Safari not yet implemented support for the light-dark() function, but using it in certain ways can break Safari. Here's one example:</p>
+<pre><code>:root {
+  color-scheme: light dark;
+  --background: light-dark(pink, black);
+}
+body {
+  background-color: var(--background, pink);
+}
+</code></pre>
+<p>This seems to be a logical approach to implementing light and dark modes for a design while specifying a fallback color for browsers that don't support the light-dark() function.I tested this in Codepen and it worked in Firefox and Chrome. It also seems to work in Opera and Edge (even though the internet claims there isn't support for it yet). But this completely fails in Safari. Not only does Safari not understand the light-dark() function, but it fails to apply the fallback color pink. In fact, trying to use light-dark() in any way seems to upset Safari. I tried the following approach to providing a fallback:</p>
+<pre><code>:root {
+  color-scheme: light dark;
+  --background: pink;
+  --background: light-dark(pink, black);
+}
+body {
+  background-color: var(--background);
+}
+</code></pre>
+<p>But Safari will not show a pink background. I also tried:</p>
+<pre><code>:root {
+  color-scheme: light dark;
+  --background: light-dark(pink, black);
+}
+body {
+  background-color: pink;
+  background-color: var(--background);
+}
+</code></pre>
+<p>Still no joy. This is really annoying.</p>
+<p>The specific problem seems in using the light-dark function with a CSS custom property. Even changing where I use the light-dark() function will break Safari if using custom properties. So the following code will not work:</p>
+<pre><code>:root {
+  color-scheme: light dark;
+  --background-light: pink;
+  --background-dark: black;
+}
+body {
+  background-color: pink;
+  background-color: light-dark(pink, black);
+}
+</code></pre>
+<p>But if I rewrite the same code without the custom properties, the fallback pink appears in Safari:</p>
+<pre><code>:root {
+  color-scheme: light dark;
+  --background-light: pink;
+  --background-dark: black;
+}
+body {
+  background-color: var(--background-light);
+  background-color: light-dark(pink, black);
+}
+</code></pre>
+<p>This is so frustrating. I've tried multiple variations of use of custom properties in the light-dark() function with different fallbacks or using the @supports query, but I can get nothing to work in other browsers while also providing the proper fallback in Safari.</p>
+<p>So there it is: a great approach to light and dark mode for a website cannot be used because of Safari.</p>
+
+
+      <hr class="stripes">
+
+      
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/learned/posts/2024/2024-02-13/">About Scopus search results</a></span>
+              </li>
+            
+            
+              <li class="next">
+                <span class="label">What I Learned Next</span>
+                <span class="post-title"><a href="/learned/posts/2025/2025-01-13/">About Styling Placeholder Text</a></span>
+              </li>
+            
+          </ul>
+          <hr class="stripes">
+        
+      
+
+    </main> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2025 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+  </body> 
+</html>

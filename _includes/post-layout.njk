@@ -21,9 +21,9 @@ theme: "green-pink"
 
       <hr class="stripes">
 
-      {% if collections.post %}
-        {% set previousPost = collections.post | getPreviousCollectionItem %}
-        {% set nextPost = collections.post | getNextCollectionItem %}
+      {% if collections.article %}
+        {% set previousPost = collections.article | getPreviousCollectionItem %}
+        {% set nextPost = collections.article | getNextCollectionItem %}
         {% if nextPost or previousPost %}
           <ul class="postnav">
             {% if previousPost %}
