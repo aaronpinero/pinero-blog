@@ -29,7 +29,4 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("resources");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("fonts");
-  return {
-    pathPrefix: "/learned/"
-  };
 };
