@@ -1,0 +1,21 @@
+---
+title: Works
+description: "Work by Aaron Pinero."
+keywords: "design, graphic design, web development, front-end development, web design"
+theme: "slate-orange"
+layout: page.njk
+eleventyNavigation:
+  key: Work
+  order: 1
+---
+<ul class="work-items">
+  {% for work in collections.work %}
+  <li class="{{ work.data.mainclass}}">
+    <div>
+      <a href="{{ work.url | url }}">{{ work.data.title }}</a>
+      <span class="tags">{{ work.data.skills }}</span>
+    </div>
+  </li>
+</ul>
+{% endfor %}
+

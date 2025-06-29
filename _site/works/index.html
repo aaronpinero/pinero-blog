@@ -3,13 +3,13 @@
   <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Aaron Pinero / About Making a Responsive CSS Grid</title>
+    <title>Aaron Pinero / Works</title>
     <meta name="author" content="Aaron Pinero" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="Work by Aaron Pinero." />
+    <meta name="keywords" content="design, graphic design, web development, front-end development, web design" />
     <link rel="stylesheet" href="/resources/css/main.css">
   </head> 
-  <body class="green-pink"> 
+  <body class="slate-orange"> 
     <a class="visually-hidden" href="#main">Skip to main content</a>
     <header id="header">
       <h1 class="logo">Aaron Pinero</h1>
@@ -21,7 +21,7 @@
             <li>
               <a href="/">Recently</a>
             </li>
-            <li>
+            <li class="active">
               <a href="/works/">Work</a>
             </li>
             <li>
@@ -37,44 +37,29 @@
     </header>
     <main id="main" class="">
 
-            <header class="post-header">
+            <header class="page-header">
         <div class="breadcrumb">
           <ul>
             <li>
               <a href="/">Aaron Pinero</a>
             </li>
-            <li>
-              <a href="/posts">Posts</a>
-            </li>
           </ul>
         </div>
-        <h1>About Making a Responsive CSS Grid</h1>
-        <div class="post-meta">What I Learned On <time datetime="2020-05-03T00:00:00.000Z">May 3, 2020</time></div>
+        <h1>Works</h1>
       </header>
-      
-      <p><span class="dropcap">I</span> stumbled across <a href="https://www.youtube.com/watch?v=2zxWEeBkjk0&amp;">this video</a> by British web developer Rachel Andrew. I don’t know what it is about developers from Britian, but they are a super-intelligent and crafty lot. The video is excellent but I’ll skip to the point and share the most useful CSS declaration I think I’ve ever seen:</p>
-<p><code>grid-template-columns:repeat(auto-fit,minmax(100px,1fr));</code></p>
-<p>This declaration for columns in a CSS grid will make up a responsive grid of cells that are at least 100px wide and filling the available horizontal space, wrapping to the next row when necessary.</p>
-<p>I highly recommend watching the entire video. It’s one of the best explanations of using CSS grid.</p>
+      <ul class="work-items">
+  
+  <li class="hsl">
+    <div>
+      <a href="/works/hsl/">The Augustus C. Long Health Sciences Library</a>
+      <span class="tags">Web Design, Design System, Custom Drupal Theme, Custom Drupal Modules</span>
+    </div>
+  </li>
+</ul>
 
 
-      <hr class="stripes">
 
-      
-        
-        
-        
-          <ul class="postnav">
-            
-            
-              <li class="next">
-                <span class="label">What I Learned Next</span>
-                <span class="post-title"><a href="/posts/2020/2020-07-03/">About Webflow Being a Thing</a></span>
-              </li>
-            
-          </ul>
-        
-      
+
 
     </main> 
     <footer id="footer">

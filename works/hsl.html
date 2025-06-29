@@ -1,0 +1,44 @@
+---
+title: The Augustus C. Long Health Sciences Library
+skills: Web Design, Design System, Custom Drupal Theme, Custom Drupal Modules
+mainclass: hsl
+---
+<p>The Augustus C. Long Health Sciences Library provides access to research resources, research assistance, and information management education for the students and staff of Columbia University Irving Medical Center (CUIMC) and the clinical staff of NewYork-Presbyterian Hospital. In my capacity as Web Services Manager, I design, develop, and maintain the Library’s three Drupal 10 websites.</p>
+<h2>Web Design</h2>
+<p>The Library website design embraces the CUIMC brand and basic web design conventions while retaining a unique character through creative use of secondary and accent colors available in the brand guidelines. The design is clean, efficient, accessible and includes a subtle bit of playfulness.</p>
+<figure class="full">
+  <img alt="the Health Sciences Library website home page" src="hsl/hsl-home.webp">
+  <figcaption>Health Sciences Library home page.</figcaption>
+</figure>
+<p>The playfulness reveals itself in the website’s footer, where seasonal animations appear in the background. The following video shows how the animation changes over the course of a year.</p>
+<figure>
+  <video controls width="100%">
+    <source src="hsl/seasons.mov" type="video/mp4" />
+  </video>
+  <figcaption>Seasonal animations in the footer of the Library website.</figcaption>
+</figure>
+<h2>Design System</h2>
+<p>The Health Sciences Library website is the basis for a design system built using <a href="https://fractal.build">Fractal</a> and a highly customized subset of the <a href="https://getbootstrap.com">Bootstrap</a> framework. Bootstrap was selected because of it’s wide usage and familiarity. Fractal is a tool for building and presenting design systems, similar to Storybook but with much simpler tooling requirements. The Health Sciences Library design system is used to provide consistent branding and user experience to the Library's other websites and web-based platforms and simplify front-end maintenance.</p>
+<h2>Custom Drupal Theme</h2>
+<p>The design system is the basis for a custom Drupal theme. Each of the three websites maintained by the Health Sciences Library use the same base theme which builds upon the design system components. Each website also has custom subtheme – dependent on the base theme – that provides site-specific design and templates.</p>
+<p>Development and maintenance of the custom themes is performed using NodeJS and several NPM packages to compile SCSS files into CSS stylesheets and SVG images into web fonts.</p>
+<div class="figures row centered">
+  <figure>
+    <img alt="A screen shot of the Archives and Special Collections website" loading="lazy" src="hsl/hsl-asc.webp" style="--height: min(525px, 32vw);">
+    <figcaption>Archives and Special Collections website</figcaption>
+  </figure>
+  <figure>
+    <img alt="A screen shot of the CUIMC Publications website" loading="lazy" src="hsl/hsl-pubs.webp" style="--height: min(525px, 32vw);">
+    <figcaption>CUIMC Publications website</figcaption>
+  </figure>
+</div>
+<h2>Custom Drupal Modules</h2>
+<p>I've developed several custom Drupal modules to provide additional features for the Health Sciences Library website. These modules include:</p>
+<ul>
+  <li><strong>Google Analytics Data API integration</strong> to provide automatically updated lists of most visited resources and most frequent search terms.</li>
+  <li><strong>Zendesk API integration</strong> to create service desk tickets from Drupal Webform submissions.</li>
+  <li><strong>LibApps API integration</strong> to provide class and special event information on the website.</li> 
+  <li><strong>PubMed, Web of Science, and Scopus API integration</strong> to enhance the website search.</li>
+  <li><strong>Elsevier CiteScore API integration</strong> to provide additional information about journals in our catalog.</li>
+  <li><strong>Decision tree</strong> user interfacefor the Contact page to route requests to the appropriate staff members.</li>
+</ul>
