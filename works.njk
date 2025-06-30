@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 <ul class="work-items">
   {% for work in collections.work %}
-  <li class="{{ work.data.mainclass}}">
+  <li class="{{ work.data.theme}}">
     <div>
       <a href="{{ work.url | url }}">{{ work.data.title }}</a>
       <span class="tags">{{ work.data.skills }}</span>
