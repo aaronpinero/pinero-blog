@@ -4,12 +4,13 @@ description: "Work by Aaron Pinero."
 keywords: "design, graphic design, web development, front-end development, web design"
 theme: "slate-orange"
 layout: page.njk
+css: "/resources/css/works.css"
 eleventyNavigation:
   key: Works
   order: 1
 ---
 <ul class="work-items">
-  {% for work in collections.work %}
+  {% for work in collections.sortedWorks %}
   <li class="{{ work.data.theme}}">
     <div>
       <a href="{{ work.url | url }}">{{ work.data.title }}</a>
@@ -18,4 +19,3 @@ eleventyNavigation:
   </li>
   {% endfor %}
 </ul>
-

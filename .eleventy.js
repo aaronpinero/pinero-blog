@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
       return b.date - a.date;
     });
   });
+  eleventyConfig.addCollection('sortedWorks', function(collectionApi) {
+    return collectionApi.getFilteredByTag("work").sort(function (a, b) {
+      return a.data.ordinal - b.data.ordinal;
+    });
+  });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("resources");
   eleventyConfig.addPassthroughCopy("css");

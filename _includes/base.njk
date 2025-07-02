@@ -8,6 +8,9 @@
     <meta name="description" content="{{ description }}" />
     <meta name="keywords" content="{{ keywords }}" />
     <link rel="stylesheet" href="{{ '/resources/css/main.css' | url }}">
+    {% if css %}
+    <link rel="stylesheet" href="{{ css | url }}">
+    {% endif %}
   </head> 
   <body class="{{ theme }}"> 
     <a class="visually-hidden" href="#main">Skip to main content</a>
