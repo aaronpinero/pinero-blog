@@ -19,3 +19,162 @@
   --color-fg: oklch(0.72 0.13 83);
   --color-fg-max: oklch(0.97 0.012 302);
 }
+
+figure {
+  margin-bottom: 2rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 2rem;
+  img, video {
+    box-sizing: border-box;
+    background-image: repeating-linear-gradient(45deg, var(--color-fg-pattern) 0px, var(--color-fg-pattern) 1px, transparent 0px, transparent 50%);
+    background-repeat: repeat;
+    background-size: 8px 8px;
+    display: block;
+    height: auto;
+    padding: 2rem;
+    width: 100%;
+  }
+  figcaption {
+    color: var(--color-text-mute);
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 1rem;
+  }
+  main & {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50rem;
+    &.full {
+      @media (min-width: 992px) {
+        max-width: 90rem;
+      }
+    }
+  }
+  main .figures.row & {
+    @media (min-width: 992px) {
+      display: table;
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: none;
+      img {
+        height: var(--height);
+        width: auto;
+      }
+      figcaption {
+        caption-side: bottom;
+        display: table-caption;
+      }
+    }
+  }
+  main .figures.tiles & {
+    @media (min-width:480px) {
+      display: table;
+      margin: 0px;
+      max-width: none;
+      img {
+        height: auto;
+        width: 100%;
+      }
+      figcaption {
+        caption-side: bottom;
+        display: table-caption;
+      }
+    }
+  }
+}
+
+#main.work {
+  & > header {
+    margin-bottom: 2rem;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 2rem;
+    padding: clamp(4rem, calc(8.42vw + 2.32rem), 8rem) clamp(1rem, calc(4.21vw + 2.5px), 3rem);
+    position: relative;
+    text-align: center;
+
+    &::before {
+      background-size: max(640px, 125%);
+      background-position: top 35% center;
+      background-repeat: no-repeat;
+      content: "";
+      height: 100%;
+      left: 0px;
+      mix-blend-mode: var(--banner-mix-mode);
+      opacity: var(--banner-opacity);
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      z-index: -1;
+    }
+    &.jha::before {
+      background-image: url('../images/work/jha/jha-logomark.svg');
+    }
+    &.owl::before {
+      background-image: url('../images/work/owl/owl-logomark.svg');
+    }
+    &.hsl::before,
+    &.pub::before {
+      background-image: url('../images/work/hsl/hsl-logo.svg');
+      background-size: auto 400%;
+      background-position: top 33% left 15%;
+    }
+    &::after {
+      background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 1px, transparent 0px, transparent 50%);
+      background-size: 8px 8px;
+      background-repeat: repeat;
+      content: "";
+      height: 100%;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      z-index: 0;
+    }
+    h1 {
+      color: var(--color-fg-max);
+      font-family: var(--font-head);
+      font-size: clamp(3rem, calc(2.58rem + 2.1vw), 4rem);
+      font-weight: normal;
+      letter-spacing: 0.01em;
+      line-height: 1;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      position: relative;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    .skills {
+      line-height: 1.25;
+      margin-top: 0;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .figures.row {
+    @media (min-width: 992px) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90rem;
+      &.centered {
+        column-gap: 4rem;
+        justify-content: center;
+      }
+    }
+  }
+  .figures.tiles {
+    @media (min-width: 480px) {
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50rem;
+    }
+  }
+}

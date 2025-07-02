@@ -16,7 +16,7 @@
 @property --banner-opacity {
   syntax: "<number>";
   inherits: false;
-  initial-value: 0.25;
+  initial-value: 0.2;
 }
 @property --max-content-width {
   syntax: "<length-percentage>";
@@ -36,8 +36,8 @@ body {
   --color-link-decoration-hover: color-mix(in oklch, var(--color-fg), var(--color-fg-max) 40%);
   --font-body: "IBM Plex Sans", Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   --font-head: "League Gothic";
-  --banner-mix-mode: overlay;
-  --banner-opacity: 0.25;
+  --banner-mix-mode: soft-light;
+  --banner-opacity: 0.2;
   --max-content-width: 50rem;
 }
 
