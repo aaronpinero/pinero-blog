@@ -55,14 +55,14 @@
   <li class="jha">
     <div>
       <a href="/works/jha/">Jeffrey Hoffman and Associates</a>
-      <span class="tags">Branding &amp;amp; Identity, Web Design, Print Design</span>
+      <span class="tags">Branding &amp; Identity, Web Design, Print Design</span>
     </div>
   </li>
   
   <li class="owl">
     <div>
       <a href="/works/owl/">The Purple Owl Dispensary</a>
-      <span class="tags">Branding &amp;amp; Identity, Web Design, Print Design</span>
+      <span class="tags">Branding &amp; Identity, Web Design, Print Design</span>
     </div>
   </li>
   
@@ -73,7 +73,7 @@
     </div>
   </li>
   
-  <li class="hsl">
+  <li class="pub">
     <div>
       <a href="/works/pub/">Columbia University Medical Center Publications</a>
       <span class="tags">Custom Drupal Theme, Custom Drupal Modules, Natural Language Processing</span>
@@ -81,7 +81,16 @@
   </li>
   
 </ul>
-
+<script>
+  var workitems = document.querySelectorAll('.work-items li');
+  workitems.forEach((item) => {
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      var url = this.querySelector('a').getAttribute('href');
+      window.location.href = url;
+    });
+  });
+</script>
 
 
     </main> 

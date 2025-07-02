@@ -19,3 +19,13 @@ eleventyNavigation:
   </li>
   {% endfor %}
 </ul>
+<script>
+  var workitems = document.querySelectorAll('.work-items li');
+  workitems.forEach((item) => {
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      var url = this.querySelector('a').getAttribute('href');
+      window.location.href = url;
+    });
+  });
+</script>

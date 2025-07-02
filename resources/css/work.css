@@ -1,0 +1,21 @@
+/*
+ * THEMES
+ */
+.hsl,
+.pub {
+  --color-bg: oklch(0.32 0.04 257);
+  --color-fg: oklch(0.73 0.14 53);
+  --color-fg-max: oklch(0.97 0.012 257);
+}
+
+.jha {
+  --color-bg: oklch(0.32 0.005 44);
+  --color-fg: oklch(0.75 0.11 144);
+  --color-fg-max: oklch(0.97 0.012 44);
+}
+
+.owl {
+  --color-bg: oklch(0.32 0.02 302);
+  --color-fg: oklch(0.72 0.13 83);
+  --color-fg-max: oklch(0.97 0.012 302);
+}
