@@ -25,10 +25,20 @@ module.exports = function (eleventyConfig) {
       return b.date - a.date;
     });
   });
+  eleventyConfig.addCollection('latestPosts', function(collectionApi) {
+    return collectionApi.getFilteredByTag("post").sort(function (a, b) {
+      return b.date - a.date;
+    }).slice(0,5);
+  });
   eleventyConfig.addCollection('sortedWorks', function(collectionApi) {
     return collectionApi.getFilteredByTag("work").sort(function (a, b) {
       return a.data.ordinal - b.data.ordinal;
     });
+  });
+  eleventyConfig.addCollection('latestWorks', function(collectionApi) {
+    return collectionApi.getFilteredByTag("work").sort(function (a, b) {
+      return a.data.ordinal - b.data.ordinal;
+    }).slice(0,2);
   });
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("resources");

@@ -1,0 +1,57 @@
+#main > header {
+  padding-bottom: 0rem;
+  h1 {
+    span {
+      display: block;
+    }
+    span.preamble {
+      font-size: 1.5rem;
+    }
+    span.name {
+      font-size: clamp(4rem, calc(1.47rem + 12.63vw), 10rem);
+    }
+  }
+}
+section.intro {
+  text-align: center;
+  font-size: 1rem;
+  .description {
+    font-size: clamp(1.25rem, calc(0.93rem + 1.58vw), 2rem);
+    margin-block-end: 2rem;
+    margin-block-start: 1rem;
+    margin-inline: auto;
+    max-width: 28ch;
+    strong {
+      white-space: nowrap;
+    }
+  }
+}
+section {
+  h1 {
+    color: var(--color-fg-max);
+    font-family: var(--font-head);
+    font-size: clamp(3rem, calc(2.16rem + 4.21vw), 5rem);
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    line-height: 1;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: relative;
+    text-align: center; 
+    text-transform: uppercase;
+    z-index: 1;
+  }
+}
+section + section {
+  &::before {
+    background-image: repeating-linear-gradient(45deg, var(--color-fg-pattern) 0px, var(--color-fg-pattern) 1px, transparent 0px, transparent 50%);
+    background-repeat: repeat;
+    background-size: 8px 8px;
+    content: "";
+    display: block;
+    height: 2rem;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+    width: 100%;
+  }
+}
