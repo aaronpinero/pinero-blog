@@ -20,7 +20,7 @@
           
           <ul>
             <li>
-              <a href="/">Recently</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/works/">Works</a>
@@ -61,7 +61,7 @@
       
         <li>
           <a
-            href="/learned/posts/"
+            href="/posts/"
              aria-current="page"
           >
             <span class="visually-hidden">Page </span>1
@@ -70,7 +70,7 @@
       
         <li>
           <a
-            href="/learned/posts/1/"
+            href="/posts/1/"
             
           >
             <span class="visually-hidden">Page </span>2
@@ -79,7 +79,7 @@
       
         <li>
           <a
-            href="/learned/posts/2/"
+            href="/posts/2/"
             
           >
             <span class="visually-hidden">Page </span>3
@@ -88,7 +88,7 @@
       
         <li>
           <a
-            href="/learned/posts/3/"
+            href="/posts/3/"
             
           >
             <span class="visually-hidden">Page </span>4
@@ -97,7 +97,7 @@
       
         <li>
           <a
-            href="/learned/posts/4/"
+            href="/posts/4/"
             
           >
             <span class="visually-hidden">Page </span>5
@@ -107,7 +107,7 @@
       
       <li>
         
-          <a href="/learned/posts/1/" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
+          <a href="/posts/1/" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
         
       </li>
     </ul>
@@ -289,7 +289,7 @@
       
         <li>
           <a
-            href="/learned/posts/"
+            href="/posts/"
              aria-current="page"
           >
             <span class="visually-hidden">Page </span>1
@@ -298,7 +298,7 @@
       
         <li>
           <a
-            href="/learned/posts/1/"
+            href="/posts/1/"
             
           >
             <span class="visually-hidden">Page </span>2
@@ -307,7 +307,7 @@
       
         <li>
           <a
-            href="/learned/posts/2/"
+            href="/posts/2/"
             
           >
             <span class="visually-hidden">Page </span>3
@@ -316,7 +316,7 @@
       
         <li>
           <a
-            href="/learned/posts/3/"
+            href="/posts/3/"
             
           >
             <span class="visually-hidden">Page </span>4
@@ -325,7 +325,7 @@
       
         <li>
           <a
-            href="/learned/posts/4/"
+            href="/posts/4/"
             
           >
             <span class="visually-hidden">Page </span>5
@@ -335,7 +335,7 @@
       
       <li>
         
-          <a href="/learned/posts/1/" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
+          <a href="/posts/1/" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
         
       </li>
     </ul>
@@ -364,5 +364,16 @@
         </li>
       </ul>
     </footer>
+    <script>
+      var mainmenubtn = document.querySelector('#mainmenubtn');
+      var mainmenuclose = document.querySelector('#mainmenuclose');
+      var mainmenu = document.querySelector('#mainmenu');
+      mainmenubtn.addEventListener('click', function(e){
+        mainmenu.showModal();
+      });
+      mainmenuclose.addEventListener('click', function(e){
+        mainmenu.close();
+      });
+    </script>
   </body> 
 </html>

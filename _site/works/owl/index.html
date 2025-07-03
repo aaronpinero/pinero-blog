@@ -22,7 +22,7 @@
           
           <ul>
             <li>
-              <a href="/">Recently</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/works/">Works</a>
@@ -58,16 +58,16 @@
 <p>The Purple Owl Dispensary is a woman-owned adult-use legal cannabis dispensary in New York State catering to a suburban population. The client aimed to establish a brand that would be inviting to older, female, and inexperienced cannabis consumers. Key ideas included traditional, down-to-earth, homey, warm, comfortable, and nature.</p>
 <h2>Branding &amp; Identity</h2>
 <figure>
-  <img alt="the official logo The Purple Owl Dispensary" src="owl/owl-logo.svg">
+  <img alt="the official logo The Purple Owl Dispensary" src="/resources/images/work/owl/owl-logo.svg">
   <figcaption>The Purple Owl logo</figcaption>
 </figure>
 <div class="figures row centered">
   <figure>
-    <img alt="the official logomark for The Purple Owl Dispensary" src="owl/owl-logomark.svg" style="--height: min(550px, 32vw);">
+    <img alt="the official logomark for The Purple Owl Dispensary" src="/resources/images/work/owl/owl-logomark.svg" style="--height: min(550px, 32vw);">
     <figcaption>The Owl logo mark</figcaption>
   </figure>
   <figure>
-    <img alt="an alternate logo for The Purple Owl Dispensary" src="owl/owl-logo-alt.svg" style="--height: min(550px, 32vw);">
+    <img alt="an alternate logo for The Purple Owl Dispensary" src="/resources/images/work/owl/owl-logo-alt.svg" style="--height: min(550px, 32vw);">
     <figcaption>Alternate Purple Owl logo in the primary brand color</figcaption>
   </figure>
 </div>
@@ -76,30 +76,30 @@
 <p>Design began with an exploration of textures and the creation of original illustrated elements. These were used to craft a home page concept. The home page concept was not implemented in full, but some of the graphic elements and textures were incorporated into other work.</p>
 <div class="figures tiles">
   <figure>
-    <img alt="A image of a decorative pattern" src="owl/owl-pattern-01.png" width="400" height="400">
+    <img alt="A image of a decorative pattern" src="/resources/images/work/owl/owl-pattern-01.png" width="400" height="400">
   </figure>
   <figure>
-    <img alt="A image of another decorative pattern" src="owl/owl-pattern-02.png" width="400" height="400">
+    <img alt="A image of another decorative pattern" src="/resources/images/work/owl/owl-pattern-02.png" width="400" height="400">
   </figure>
   <figure>
-    <img alt="An illustration of a decorative frame" src="owl/owl-frame.svg" width="240" height="240">
+    <img alt="An illustration of a decorative frame" src="/resources/images/work/owl/owl-frame.svg" width="240" height="240">
   </figure>
   <figure>
-    <img alt="An illustration of a tree with purple leaves" src="owl/owl-tree.svg" width="702" height="492" style="aspect-ratio:1/1; object-position:top right; object-fit:cover;">
+    <img alt="An illustration of a tree with purple leaves" src="/resources/images/work/owl/owl-tree.svg" width="702" height="492" style="aspect-ratio:1/1; object-position:top right; object-fit:cover;">
   </figure>
 </div>
 <figure>
-  <img alt="a screen capture of the first draft Purple Owl website home page design" src="owl/owl-website-v1.png" loading="lazy" width="1600" height="1608" style="aspect-ratio:13/16; object-fit:cover; object-position: top center;">
+  <img alt="a screen capture of the first draft Purple Owl website home page design" src="/resources/images/work/owl/owl-website-v1.png" loading="lazy" width="1600" height="1608" style="aspect-ratio:13/16; object-fit:cover; object-position: top center;">
   <figcaption>Initial website home page idea</figcaption>
 </figure>
 <h2>Print Design</h2>
 <div class="figures row centered">
   <figure>
-    <img alt="Front side of a promotional postcard" loading="lazy" src="owl/owl-postcard-front.png" style="--height: min(975px, 38vw);">
+    <img alt="Front side of a promotional postcard" loading="lazy" src="/resources/images/work/owl/owl-postcard-front.png" style="--height: min(975px, 38vw);">
     <figcaption>Design for the front of a promotional postcard</figcaption>
   </figure>
   <figure>
-    <img alt="Photo of the finished banner" loading="lazy" src="owl/owl-postcard-back.png" style="--height: min(975px, 38vw);">
+    <img alt="Photo of the finished banner" loading="lazy" src="/resources/images/work/owl/owl-postcard-back.png" style="--height: min(975px, 38vw);">
     <figcaption>Design for the rear of a promotional postcard</figcaption>
   </figure>
 </div>
@@ -126,5 +126,16 @@
         </li>
       </ul>
     </footer>
+    <script>
+      var mainmenubtn = document.querySelector('#mainmenubtn');
+      var mainmenuclose = document.querySelector('#mainmenuclose');
+      var mainmenu = document.querySelector('#mainmenu');
+      mainmenubtn.addEventListener('click', function(e){
+        mainmenu.showModal();
+      });
+      mainmenuclose.addEventListener('click', function(e){
+        mainmenu.close();
+      });
+    </script>
   </body> 
 </html>

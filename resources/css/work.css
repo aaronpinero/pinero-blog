@@ -146,6 +146,7 @@ figure {
       z-index: 1;
     }
     .skills {
+      font-weight: bold;
       line-height: 1.25;
       margin-top: 0;
       margin-bottom: 0;

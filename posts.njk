@@ -18,7 +18,7 @@ pagination:
     <ul>
       <li>
         {% if page.url != pagination.href.first %}
-          <a href="/learned{{ pagination.href.previous }}" title="Previous" class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></a>
+          <a href="{{ pagination.href.previous }}" title="Previous" class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></a>
         {% else %}
           <span class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></span>
         {% endif %}
@@ -27,7 +27,7 @@ pagination:
       {% for pageEntry in pagination.pages %}
         <li>
           <a
-            href="/learned{{ pagination.hrefs[ loop.index0 ] }}"
+            href="{{ pagination.hrefs[ loop.index0 ] }}"
             {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}
           >
             <span class="visually-hidden">Page </span>{{ loop.index }}
@@ -37,7 +37,7 @@ pagination:
       
       <li>
         {% if page.url != pagination.href.last %}
-          <a href="/learned{{ pagination.href.next }}" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
+          <a href="{{ pagination.href.next }}" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
         {% else %}
           <span class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></span>
         {% endif %}
@@ -67,7 +67,7 @@ pagination:
     <ul>
       <li>
         {% if page.url != pagination.href.first %}
-          <a href="/learned{{ pagination.href.previous }}" title="Previous" class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></a>
+          <a href="{{ pagination.href.previous }}" title="Previous" class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></a>
         {% else %}
           <span class="previous"><span class="picons-regular-angle"></span> <span class="visually-hidden">Previous</span></span>
         {% endif %}
@@ -76,7 +76,7 @@ pagination:
       {% for pageEntry in pagination.pages %}
         <li>
           <a
-            href="/learned{{ pagination.hrefs[ loop.index0 ] }}"
+            href="{{ pagination.hrefs[ loop.index0 ] }}"
             {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}
           >
             <span class="visually-hidden">Page </span>{{ loop.index }}
@@ -86,7 +86,7 @@ pagination:
       
       <li>
         {% if page.url != pagination.href.last %}
-          <a href="/learned{{ pagination.href.next }}" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
+          <a href="{{ pagination.href.next }}" title="Next" class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></a>
         {% else %}
           <span class="next"><span class="picons-regular-angle"></span> <span class="visually-hidden">Next</span></span>
         {% endif %}

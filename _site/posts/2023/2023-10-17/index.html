@@ -20,7 +20,7 @@
           
           <ul>
             <li>
-              <a href="/">Recently</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/works/">Works</a>
@@ -129,5 +129,16 @@
         </li>
       </ul>
     </footer>
+    <script>
+      var mainmenubtn = document.querySelector('#mainmenubtn');
+      var mainmenuclose = document.querySelector('#mainmenuclose');
+      var mainmenu = document.querySelector('#mainmenu');
+      mainmenubtn.addEventListener('click', function(e){
+        mainmenu.showModal();
+      });
+      mainmenuclose.addEventListener('click', function(e){
+        mainmenu.close();
+      });
+    </script>
   </body> 
 </html>
