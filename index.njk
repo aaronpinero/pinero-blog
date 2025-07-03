@@ -58,5 +58,16 @@ eleventyNavigation:
     {% endif %}
   {%- endfor -%}
   </div>
-  <p class="more"><a href="/works">See all posts</a></p>
+  <p class="more"><a href="/posts">See all posts</a></p>
 </section>
+
+<script>
+  var workitems = document.querySelectorAll('.work-items li');
+  workitems.forEach((item) => {
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      var url = this.querySelector('a').getAttribute('href');
+      window.location.href = url;
+    });
+  });
+</script>

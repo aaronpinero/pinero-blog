@@ -114,14 +114,14 @@ figure {
     &.owl::before {
       background-image: url('../images/work/owl/owl-logomark.svg');
     }
-    &.hsl::before,
+    &.hsl::before {
+      background-image: url('../images/work/hsl/hsl-logomark.svg');
+    }
     &.pub::before {
-      background-image: url('../images/work/hsl/hsl-logo.svg');
-      background-size: auto 400%;
-      background-position: top 33% left 15%;
+      background-image: url('../images/work/pub/pub-logomark.svg');
     }
     &::after {
-      background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 1px, transparent 0px, transparent 50%);
+      background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 2px, transparent 0px, transparent 50%);
       background-size: 8px 8px;
       background-repeat: repeat;
       content: "";

@@ -11,7 +11,7 @@ eleventyNavigation:
 ---
 <ul class="work-items">
   {% for work in collections.sortedWorks %}
-  <li class="{{ work.data.theme}}">
+  <li class="{{ work.data.theme}}" style="--logo: url('/resources/images/work/{{ work.data.theme }}/{{ work.data.theme }}-logomark.svg');">
     <div>
       <a href="{{ work.url | url }}">{{ work.data.title }}</a>
       <span class="tags">{{ work.data.skills }}</span>

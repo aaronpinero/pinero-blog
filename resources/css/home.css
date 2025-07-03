@@ -28,6 +28,8 @@ section.intro {
   }
 }
 section {
+  margin-inline: auto;
+  max-width: 90rem;
   h1 {
     color: var(--color-fg-max);
     font-family: var(--font-head);
@@ -59,54 +61,46 @@ section + section {
 .work-items {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(max(min(100%,360px),40vw), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(max(min(100%,35ch),40vw), 1fr));
   list-style: none;
   margin: 4rem auto;
   max-width: 90rem;
   padding: 0;
   li {
-    aspect-ratio: 4 / 3;
-    @media (min-width: 960px) {
-      aspect-ratio: 5 / 3;
-    }
-    box-sizing: border-box;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
     background-image: repeating-linear-gradient(45deg, var(--color-fg-pattern) 0px, var(--color-fg-pattern) 1px, transparent 0px, transparent 50%);
     background-size: 8px 8px;
+    background-position: top 0% left 0%;
     background-repeat: repeat;
-    border-radius: 4px;
-    padding: 1rem;
-    place-content: center;
+    container-name: item;
+    container-type: inline-size;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2rem;
     position: relative;
-    text-align: center;
-    &::before {
-      background-color: var(--color-bg);
-      bottom: 1rem;
-      content: "";
-      display: block;
-      left: 1rem;
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-    }
   }
   li + li {
     margin-top: 0px;
   }
   li div {
+    aspect-ratio: 3 / 3;
+    @container item (min-width: 25ch) {
+      aspect-ratio: 4 / 3;
+    }
+    @container item (min-width: 35ch) {
+      aspect-ratio: 5 / 3;
+    }
+    background-color: var(--color-bg);
     box-sizing: border-box;
-    cursor: pointer;
-    height: calc(100% - 2rem);
+    overflow: hidden;
     padding: 2rem;
     place-content: center;
     position: relative;
     text-align: center;
   }
   li div::before {
+    --banner-mix-mode: lighten;
     background-image: var(--logo);
-    background-size: 150%;
+    background-size: auto 220%;
     background-position: center center;
     background-repeat: no-repeat;
     content: "";
@@ -121,8 +115,7 @@ section + section {
     z-index: 1;
   }
   li div::after {
-    --color-item-pattern: var(--color-bg-pattern);
-    background-image: repeating-linear-gradient(45deg, var(--color-item-pattern) 0px, var(--color-item-pattern) 1px, transparent 0px, transparent 50%);
+    background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 2px, transparent 0px, transparent 50%);
     background-size: 8px 8px;
     background-position: top 0% left 0%;
     background-repeat: repeat;
@@ -152,6 +145,9 @@ section + section {
   li:hover::after {
     transform: translateX(-50%) rotate(-45deg) scaleX(2) scaleY(2);
   }
+  li:hover div::before {
+    background-size: auto 200%;
+  }
   li:hover a {
     color: var(--color-link-hover);
   }
@@ -166,7 +162,10 @@ section + section {
   }
   li a {
     font-family: var(--font-head);
-    font-size: clamp(2.25rem, calc(1.87rem + 1.88vw), 3rem);
+    font-size: 2rem;
+    @container item (min-width: 40ch) {
+      font-size: 3rem;
+    }
     letter-spacing: 0.01em;
     line-height: 1;
     text-transform: uppercase;
@@ -179,5 +178,12 @@ section + section {
     margin-top: 0.5rem;
     transition: color 0.25s;
   }
-
 } 
+
+p.more {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-transform: uppercase;
+}

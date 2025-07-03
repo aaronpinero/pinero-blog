@@ -13,17 +13,6 @@
  * THEME
  */
 
-@property --banner-opacity {
-  syntax: "<number>";
-  inherits: false;
-  initial-value: 0.2;
-}
-@property --max-content-width {
-  syntax: "<length-percentage>";
-  inherits: false;
-  initial-value: 50rem;
-}
-
 body {
   --color-backdrop: oklch(from var(--color-bg) l c h / 0.9);
   --color-bg-pattern: oklch(from var(--color-bg) calc(l - 0.045) c h);
@@ -36,7 +25,7 @@ body {
   --color-link-decoration-hover: color-mix(in oklch, var(--color-fg), var(--color-fg-max) 40%);
   --font-body: "IBM Plex Sans", Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   --font-head: "League Gothic";
-  --banner-mix-mode: soft-light;
+  --banner-mix-mode: multiply;
   --banner-opacity: 0.2;
   --max-content-width: 50rem;
 }
@@ -48,7 +37,7 @@ body {
 }
 
 .brown-blue {
-  --color-bg: oklch(0.32 0.02 75);
+  --color-bg: oklch(0.32 0.01 75);
   --color-fg: oklch(0.71 0.1 255);
   --color-fg-max: oklch(0.97 0.02 75);
 }
@@ -589,21 +578,23 @@ footer#footer {
     text-align: center;
     &::before {
       background-color: var(--color-bg);
-      bottom: 1rem;
+      bottom: 2rem;
       content: "";
       display: block;
-      left: 1rem;
+      left: 2rem;
       position: absolute;
-      right: 1rem;
-      top: 1rem;
+      right: 2rem;
+      top: 2rem;
     }
     .post-meta {
       font-family: var(--font-head);
       font-size: 1.5rem;
       letter-spacing: 0.01em;
+      line-height: 1;
       text-transform: uppercase;
     }
     .post-title {
+      margin-block: 0.25rem;
     }
   }
   article.micro {

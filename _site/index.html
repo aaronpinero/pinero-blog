@@ -82,6 +82,12 @@
   <h1>Recent Posts</h1>
   <div class="allposts">
       <article class="post micro">
+        <div class="post-meta"><time datetime="2025-07-03T00:00:00.000Z">July 3, 2025</time> – 5:13pm</div>
+        <p>F1 might be the best Jerry Bruckheimer movie I have ever seen. It is also a very entertaining movie to watch. It deserves the theather experience if you have a nice theater near you.</p>
+
+      </article>
+    
+      <article class="post micro">
         <div class="post-meta"><time datetime="2025-07-02T00:00:00.000Z">July 2, 2025</time> – 11:47am</div>
         <p>Chris Coyier may have posted the <a href="https://frontendmasters.com/blog/quantity-query-carousel/?utm_source=ishadeed&utm_medium=email&utm_campaign=smart-layouts-gap-decorations-and-a-few-links">coolest thing I have seen in a long time</a>. I had no idea about the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-button">::scroll-button() pseudo-element</a>, but now I am really hoping it doesn't take Apple an eternity to implement this in Safari.</p>
 
@@ -104,15 +110,20 @@
         <p>The folks at OddBird built the wonderful color contrast checker <a href="https://www.oddcontrast.com/">OddContrast</a>. Unlike the limited <a href="https://webaim.org/resources/contrastchecker/">WebAIM Contrast Checker</a>, this one allows you to enter in colors in any color format and to optionally limit colors selections by a color gamut. Great for working with oklch colors.</p>
 
       </article>
-    
-      <article class="post article">
-        <div class="post-meta">What I Learned On <time datetime="2025-03-10T00:00:00.000Z">March 10, 2025</time></div>
-        <h2 class="post-title"><a href="/posts/2025/2025-03-10/">About OKLCH Colors</a></h2>
-        <p>This blows my mind and changes how I will do things.</p>
-      </article>
     </div>
-  <p class="more"><a href="/works">See all posts</a></p>
+  <p class="more"><a href="/posts">See all posts</a></p>
 </section>
+
+<script>
+  var workitems = document.querySelectorAll('.work-items li');
+  workitems.forEach((item) => {
+    item.addEventListener('click', function(e){
+      e.preventDefault();
+      var url = this.querySelector('a').getAttribute('href');
+      window.location.href = url;
+    });
+  });
+</script>
 
     </main> 
     <footer id="footer">

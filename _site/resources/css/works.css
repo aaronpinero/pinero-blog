@@ -4,32 +4,46 @@
 #main > .work-items {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(max(min(100%,360px),40vw), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(max(min(100%,35ch),40vw), 1fr));
   list-style: none;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   max-width: 90rem;
   padding: 0;
   li {
+    background-image: repeating-linear-gradient(45deg, var(--color-fg-pattern) 0px, var(--color-fg-pattern) 1px, transparent 0px, transparent 50%);
+    background-size: 8px 8px;
+    background-position: top 0% left 0%;
+    background-repeat: repeat;
+    container-name: item;
+    container-type: inline-size;
     cursor: pointer;
     overflow: hidden;
+    padding: 2rem;
     position: relative;
   }
   li + li {
     margin-top: 0px;
   }
   li div {
-    aspect-ratio: 4 / 3;
-    @media (min-width: 960px) {
+    aspect-ratio: 3 / 3;
+    @container item (min-width: 25ch) {
+      aspect-ratio: 4 / 3;
+    }
+    @container item (min-width: 35ch) {
       aspect-ratio: 5 / 3;
     }
-    cursor: pointer;
-    padding: 1rem;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 2rem;
     place-content: center;
     position: relative;
     text-align: center;
+    transition: height 0.25s;
   }
   li div::before {
-    background-size: 150%;
+    background-image: var(--logo);
+    background-size: auto 220%;
     background-position: center center;
     background-repeat: no-repeat;
     content: "";
@@ -41,27 +55,10 @@
     top: 0px;
     transition: background-size 0.33s ease-in-out, background-position 0.33s ease-in-out;
     width: 100%;
-    z-index: -1;
-  }
-  li.jha div::before {
-    background-image: url('../images/work/jha/jha-logomark.svg');
-  }
-  li.owl div::before {
-    background-image: url('../images/work/owl/owl-logomark.svg');
-  }
-  li.hsl div::before {
-    background-image: url('../images/work/hsl/hsl-logo.svg');
-    background-position: bottom 25% right 27%;
-    background-size: auto 300%;
-  }
-  li.pub div::before {
-    background-image: url('../images/work/hsl/hsl-logo.svg');
-    background-position: top 30% left 10%;
-    background-size: auto 400%;
+    z-index: 1;
   }
   li div::after {
-    --color-item-pattern: var(--color-bg-pattern);
-    background-image: repeating-linear-gradient(45deg, var(--color-item-pattern) 0px, var(--color-item-pattern) 1px, transparent 0px, transparent 50%);
+    background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 2px, transparent 0px, transparent 50%);
     background-size: 8px 8px;
     background-position: top 0% left 0%;
     background-repeat: repeat;
@@ -92,15 +89,7 @@
     transform: translateX(-50%) rotate(-45deg) scaleX(2) scaleY(2);
   }
   li:hover div::before {
-    background-size: 133%;
-  }
-  li.hsl:hover div::before {
-    background-position: bottom 24.5% right 26.5%;
-    background-size: auto 266%;
-  }
-  li.pub:hover div::before {
-    background-position: top 30% left 9%;
-    background-size: auto 333%;
+    background-size: auto 200%;
   }
   li:hover a {
     color: var(--color-link-hover);
@@ -116,7 +105,10 @@
   }
   li a {
     font-family: var(--font-head);
-    font-size: clamp(2.25rem, calc(1.87rem + 1.88vw), 3rem);
+    font-size: 2rem;
+    @container item (min-width: 40ch) {
+      font-size: 3rem;
+    }
     letter-spacing: 0.01em;
     line-height: 1;
     text-transform: uppercase;
@@ -129,4 +121,4 @@
     margin-top: 0.5rem;
     transition: color 0.25s;
   }
-}
+} 
