@@ -2,7 +2,7 @@
 title: Home
 description: "Aaron Pinero is a graphic designer, web developer, and technical lead."
 keywords: "design, graphic design, web development, front-end development, web design"
-theme: "slate-orange"
+theme: "gray-red"
 layout: base.njk
 css: "/resources/css/home.css"
 eleventyNavigation:
@@ -29,7 +29,7 @@ eleventyNavigation:
   <h1>Recent Works</h1>
   <ul class="work-items">
     {% for work in collections.latestWorks %}
-    <li class="{{ work.data.theme}}">
+    <li class="{{ work.data.theme}}" style="--logo: url('/resources/images/work/{{ work.data.theme }}/{{ work.data.theme }}-logomark.svg');">
       <div>
         <a href="{{ work.url | url }}">{{ work.data.title }}</a>
         <span class="tags">{{ work.data.skills }}</span>
@@ -37,10 +37,12 @@ eleventyNavigation:
     </li>
     {% endfor %}
   </ul>
+  <p class="more"><a href="/works">See all works</a></p>
 </section>
 
 <section class="recentposts">
   <h1>Recent Posts</h1>
+  <div class="allposts">
   {%- for post in collections.latestPosts -%}
     {% if post.data.title %}
       <article class="post article">
@@ -55,4 +57,6 @@ eleventyNavigation:
       </article>
     {% endif %}
   {%- endfor -%}
+  </div>
+  <p class="more"><a href="/works">See all posts</a></p>
 </section>

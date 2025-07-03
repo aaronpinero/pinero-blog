@@ -59,6 +59,12 @@ body {
   --color-fg-max: oklch(0.22 0.01 157);
 }
 
+.gray-red {
+  --color-bg: oklch(0.9 0.015 255);
+  --color-fg: oklch(0.54 0.21 7);
+  --color-fg-max: oklch(0.3 0.01 255);
+}
+
 body {
   background-color: var(--color-bg);
   background-image: repeating-linear-gradient(-45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 1px, transparent 0px, transparent 50%);
