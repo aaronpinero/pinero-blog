@@ -1,9 +1,6 @@
 @import "normalize.css" layer(normalize);
 @import "../fonts/league/stylesheet.css" layer(fonts);
 @import "../fonts/ibm-plex-sans/css/ibm-plex-sans-default.min.css" layer(fonts);
-@import "../fonts/fontawesome/css/fontawesome.min.css" layer(fonts);
-@import "../fonts/fontawesome/css/brands.min.css" layer(fonts);
-@import "../fonts/fontawesome/css/sharp-regular.min.css" layer(fonts);
 @import "../fonts/picons/picons-regular.css" layer(fonts);
 @view-transition {
   navigation: auto;
@@ -337,8 +334,10 @@ footer#footer {
     text-decoration-color: var(--color-link-decoration-hover);
     text-decoration-thickness: 2px;
   }
-  [class^="fa-"] {
-    margin-right: 0.2em;
+  [class^="picons-"] {
+    font-size: 75%;
+    display: inline-block;
+    margin-inline: 0.25em;
   }
 }
 #mainmenuclose {
@@ -361,6 +360,10 @@ footer#footer {
   &:hover {
     background-color: var(--color-link-hover);
     color: var(--color-bg);
+  }
+  [class^="picons-"] {
+    font-size: 75%;
+    display: inline-block;
   }
 }
 #mainmenu {
