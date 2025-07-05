@@ -1,6 +1,8 @@
 @import "normalize.css" layer(normalize);
 @import "../fonts/league/stylesheet.css" layer(fonts);
 @import "../fonts/ibm-plex-sans/css/ibm-plex-sans-default.min.css" layer(fonts);
+@import "../fonts/fontawesome/css/fontawesome.min.css" layer(fonts);
+@import "../fonts/fontawesome/css/brands.min.css" layer(fonts);
 @import "../fonts/picons/picons-regular.css" layer(fonts);
 @view-transition {
   navigation: auto;

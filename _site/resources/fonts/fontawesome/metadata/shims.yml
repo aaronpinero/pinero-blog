@@ -1,0 +1,12 @@
+---
+close:
+  name: xmark
+linkedin-square:
+  name: linkedin
+  prefix: fab
+navicon:
+  name: bars
+remove:
+  name: xmark
+reorder:
+  name: bars
