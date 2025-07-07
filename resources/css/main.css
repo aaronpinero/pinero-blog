@@ -141,6 +141,15 @@ blockquote {
 .no-break {
   white-space: nowrap;
 }
+.dropcap {
+  display:inline-block;
+  float:left;
+  font-size:400%;
+  font-weight:bold;
+  line-height:100%;
+  margin:0 0.25em 0 0.125em;
+  text-align:center;
+}
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
