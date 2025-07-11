@@ -98,7 +98,6 @@ section + section {
     text-align: center;
   }
   li div::before {
-    --banner-mix-mode: lighten;
     background-image: var(--logo);
     background-size: auto 220%;
     background-position: center center;

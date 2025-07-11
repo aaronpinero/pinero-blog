@@ -33,6 +33,11 @@ body {
   --color-bg: oklch(0.40 0.03 256);
   --color-fg: oklch(0.79 0.16 65);
   --color-fg-max: oklch(0.96 0.02 256);
+  /* @media (prefers-color-scheme: light) {
+    --color-bg: oklch(0.92 0.03 256);
+    --color-fg: oklch(0.51 0.263 65);
+    --color-fg-max: oklch(0.14 0.02 256);
+  } */
 }
 
 .brown-blue {
@@ -41,16 +46,16 @@ body {
   --color-fg-max: oklch(0.97 0.02 75);
 }
 
-.green-pink {
-  --color-bg: oklch(0.93 0.012 157);
-  --color-fg: oklch(0.6 0.23 336);
-  --color-fg-max: oklch(0.22 0.01 157);
+.purple-green {
+  --color-bg: oklch(0.29 0.06 285);
+  --color-fg: oklch(0.7 0.14 158);
+  --color-fg-max: oklch(0.91 0.045 285);
 }
 
 .gray-red {
-  --color-bg: oklch(0.9 0.015 255);
-  --color-fg: oklch(0.54 0.21 7);
-  --color-fg-max: oklch(0.3 0.01 255);
+  --color-bg: oklch(0.3 0.01 255);
+  --color-fg: oklch(0.7 0.21 20);
+  --color-fg-max: oklch(0.9 0.01 255);
 }
 
 body {
