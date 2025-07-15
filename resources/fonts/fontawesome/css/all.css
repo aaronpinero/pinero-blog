@@ -426,13 +426,8 @@
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
-.fa-bars { --fa: "\f0c9"; --fa--fa: "\f0c9\f0c9"; }
-.fa-close { --fa: "\f00d"; --fa--fa: "\f00d\f00d"; }
-.fa-multiply { --fa: "\f00d"; --fa--fa: "\f00d\f00d"; }
-.fa-navicon { --fa: "\f0c9"; --fa--fa: "\f0c9\f0c9"; }
-.fa-remove { --fa: "\f00d"; --fa--fa: "\f00d\f00d"; }
-.fa-times { --fa: "\f00d"; --fa--fa: "\f00d\f00d"; }
-.fa-xmark { --fa: "\f00d"; --fa--fa: "\f00d\f00d"; }
+.fa-brightness { --fa: "\e0c9"; --fa--fa: "\e0c9\e0c9"; }
+.fa-moon { --fa: "\f186"; --fa--fa: "\f186\f186"; }
 
 .sr-only,
 .fa-sr-only {
@@ -485,17 +480,17 @@ readers do not read off random characters that represent icons */
  * Copyright 2024 Fonticons, Inc.
  */
 :root, :host {
-  --fa-style-family-sharp: 'Font Awesome 6 Sharp';
-  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 6 Sharp'; }
+  --fa-style-family-classic: 'Font Awesome 6 Pro';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Pro'; }
 
 @font-face {
-  font-family: 'Font Awesome 6 Sharp';
+  font-family: 'Font Awesome 6 Pro';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   font-display: block;
-  src: url("../webfonts/fa-sharp-regular-400.woff2") format("woff2"), url("../webfonts/fa-sharp-regular-400.ttf") format("truetype"); }
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype"); }
 
-.fasr,
-.fa-regular {
-  font-weight: 400; }
+.fas,
+.fa-solid {
+  font-weight: 900; }
 

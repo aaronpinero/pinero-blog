@@ -1,14 +1,17 @@
 ---
-coding:
+accessibility:
   icons:
-    - bars
-  label: Coding
-editing:
+    - brightness
+  label: Accessibility
+astronomy:
   icons:
-    - bars
-    - xmark
-  label: Editing
-mathematics:
+    - moon
+  label: Astronomy
+toggle:
   icons:
-    - xmark
-  label: Mathematics
+    - brightness
+  label: Toggle
+weather:
+  icons:
+    - moon
+  label: Weather

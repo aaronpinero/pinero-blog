@@ -26,6 +26,9 @@
               <a href="{{ entry.url | url }}">{{ entry.title }}</a>
             </li>
           {%- endfor %}
+            <li>
+              <input type="checkbox" id="color-mode-switch"/><label for="color-mode-switch">Dark/Light Mode</label>
+            </li>
           </ul>
           <button id="mainmenuclose"><i class="picons-regular-x"></i><span class="visually-hidden">Close</span></button>
         </nav>

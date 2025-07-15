@@ -1,4 +1,27 @@
 ---
+brightness:
+  changes:
+    - 6.0.0-beta1
+    - 6.0.0
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+  label: Brightness
+  search:
+    terms:
+      - bright
+      - bright button
+      - brightness
+      - display
+      - light
+      - sun
+  styles:
+    - solid
+  unicode: e0c9
+  voted: false
 codepen:
   changes:
     - 4.1.0
@@ -46,4 +69,39 @@ linkedin:
   styles:
     - brands
   unicode: f08c
+  voted: false
+moon:
+  aliases:
+    unicodes:
+      composite:
+        - 1f319
+        - 23fe
+      secondary:
+        - 10f186
+  changes:
+    - 3.2.0
+    - 5.0.0
+    - 5.11.0
+    - 5.11.1
+    - 6.0.0-beta1
+    - 6.2.0
+    - 6.3.0
+    - 6.4.0
+    - 6.5.0
+    - 6.6.0
+    - 6.7.0
+  label: Moon
+  search:
+    terms:
+      - Power Sleep Symbol
+      - contrast
+      - crescent
+      - crescent moon
+      - dark
+      - lunar
+      - moon
+      - night
+  styles:
+    - solid
+  unicode: f186
   voted: false

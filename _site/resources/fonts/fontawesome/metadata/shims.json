@@ -1,15 +1,5 @@
 [
   [
-    "remove",
-    null,
-    "xmark"
-  ],
-  [
-    "close",
-    null,
-    "xmark"
-  ],
-  [
     "linkedin-square",
     "fab",
     "linkedin"
@@ -20,14 +10,9 @@
     null
   ],
   [
-    "navicon",
-    null,
-    "bars"
-  ],
-  [
-    "reorder",
-    null,
-    "bars"
+    "moon-o",
+    "far",
+    "moon"
   ],
   [
     "drupal",
@@ -50,9 +35,9 @@
     "github"
   ],
   [
-    61641,
-    "fas",
-    "bars"
+    61830,
+    "far",
+    "moon"
   ],
   [
     61865,
