@@ -61,7 +61,10 @@ section + section {
 .work-items {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(max(min(100%,35ch),40vw), 1fr));
+  grid-template-columns: 1fr;
+  @media (min-width: 960px) {
+    grid-template-columns: 1fr 1fr;
+  }
   list-style: none;
   margin: 4rem auto;
   max-width: 90rem;
