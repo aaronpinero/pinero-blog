@@ -13,7 +13,7 @@
 
 body {
   --color-backdrop: oklch(from var(--color-bg) l c h / 0.9);
-  --color-bg-pattern: oklch(from var(--color-bg) calc(l - 0.045) c h);
+  --color-bg-pattern: oklch(from var(--color-bg) calc(l - 0.05) c h);
   --color-fg-pattern: oklch(from var(--color-fg-max) l c h / 0.33);
   --color-text-body: color-mix(in oklch, var(--color-bg), var(--color-fg-max) 75%);
   --color-text-mute: color-mix(in oklch, var(--color-bg), var(--color-fg-max) 55%);
@@ -27,22 +27,31 @@ body {
   --banner-opacity: 0.2;
   --max-content-width: 50rem;
 }
+body:has(#color-mode-switch:checked) {
+  --banner-mix-mode: soft-light;
+  --banner-opacity: 0.15;
+}
 
 .slate-orange {
-  --color-bg: oklch(0.40 0.03 256);
-  --color-fg: oklch(0.79 0.16 65);
-  --color-fg-max: oklch(0.96 0.02 256);
-  /* @media (prefers-color-scheme: light) {
-    --color-bg: oklch(0.92 0.02 256);
-    --color-fg: oklch(0.51 0.263 65);
-    --color-fg-max: oklch(0.14 0.04 256);
-  } */
+  --color-bg: oklch(0.40 0.03 255);
+  --color-fg: oklch(0.79 0.18 65);
+  --color-fg-max: oklch(0.95 0.02 255);
+}
+.slate-orange:has(#color-mode-switch:checked) {
+  --color-bg: oklch(0.88 0 65);
+  --color-fg: oklch(0.46 0.12 255);
+  --color-fg-max: oklch(0.28 0.06 65);
 }
 
 .brown-blue {
-  --color-bg: oklch(0.32 0.01 75);
-  --color-fg: oklch(0.71 0.1 255);
-  --color-fg-max: oklch(0.97 0.02 75);
+  --color-bg: oklch(0.32 0.01 100);
+  --color-fg: oklch(0.71 0.1 220);
+  --color-fg-max: oklch(0.97 0.02 100);
+}
+.brown-blue:has(#color-mode-switch:checked) {
+  --color-bg: oklch(0.88 0 100);
+  --color-fg: oklch(0.47 0.15 220);
+  --color-fg-max: oklch(0.28 0.06 100);
 }
 
 .purple-green {
@@ -50,18 +59,21 @@ body {
   --color-fg: oklch(0.7 0.14 158);
   --color-fg-max: oklch(0.91 0.045 285);
 }
+.purple-green:has(#color-mode-switch:checked) {
+  --color-bg: oklch(0.88 0 158);
+  --color-fg: oklch(0.43 0.19 285);
+  --color-fg-max: oklch(0.29 0.05 158);
+}
 
 .gray-red {
-  --color-bg: oklch(0.3 0.01 255);
-  --color-fg: oklch(0.7 0.21 20);
-  --color-fg-max: oklch(0.9 0.01 255);
+  --color-bg: oklch(0.3 0.01 220);
+  --color-fg: oklch(0.7 0.21 10);
+  --color-fg-max: oklch(0.9 0.01 220);
 }
 .gray-red:has(#color-mode-switch:checked) {
-  --color-bg: oklch(0.88 0.02 255);
-  --color-fg: oklch(0.48 0.22 20);
-  --color-fg-max: oklch(0.2 0.05 255);
-  --banner-mix-mode: screen;
-  --banner-opacity: 0.2;
+  --color-bg: oklch(0.88 0 220);
+  --color-fg: oklch(0.48 0.19 10);
+  --color-fg-max: oklch(0.29 0.05 220);
 }
 
 body {
