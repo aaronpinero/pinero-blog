@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="{{ css | url }}">
     {% endif %}
   </head> 
-  <body class="{{ theme }}"> 
+  <body class="{{ theme }}">
+    <script>
+      const saved_mode = localStorage.getItem('color-mode');
+      if (saved_mode) {
+        document.querySelector('body').classList.toggle('color-mode-light', saved_mode === 'light');
+      }
+    </script>
     <a class="visually-hidden" href="#main">Skip to main content</a>
     <header id="header">
       <h1 class="logo">Aaron Pinero</h1>
@@ -69,6 +75,16 @@
       mainmenuclose.addEventListener('click', function(e){
         mainmenu.close();
       });
+      
+      document.getElementById('color-mode-switch').addEventListener('change', function() {
+        const color_mode = this.checked ? 'light' : 'dark';
+        localStorage.setItem('color-mode', color_mode);
+        document.querySelector('body').classList.toggle('color-mode-light', color_mode === 'light');
+      });
+      const saved_color_mode = localStorage.getItem('color-mode');
+      if (saved_color_mode) {
+        document.getElementById('color-mode-switch').checked = saved_color_mode === 'light';
+      }
     </script>
   </body> 
 </html>
