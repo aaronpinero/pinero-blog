@@ -503,7 +503,7 @@ footer#footer {
   background: var(--color-fg);
   color: var(--color-bg);
   content: '\f186';
-  font-family: var(--fa-style-family-classic);
+  font-family: "Font Awesome 6 Pro";
   font-size: 1rem;
   font-weight: 900;
   left: 0.125rem;
