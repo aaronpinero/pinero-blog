@@ -1,24 +1,58 @@
 /*
  * THEMES
  */
-.hsl,
-.pub {
+body.hsl,
+body.pub {
   --color-bg: oklch(0.32 0.04 257);
   --color-fg: oklch(0.73 0.14 53);
   --color-fg-max: oklch(0.97 0.012 257);
 }
+body.hsl:has(#color-mode-switch:checked),
+body.hsl.color-mode-light {
+  --color-bg: oklch(0.88 0 257);
+  --color-fg: oklch(0.46 0.12 53);
+  --color-fg-max: oklch(0.28 0.06 257);
+  --banner-blend-mode: overlay;
+  --banner-opacity: 0.3;
+}
+body.pub:has(#color-mode-switch:checked),
+body.pub.color-mode-light {
+  --color-bg: oklch(0.88 0 257);
+  --color-fg: oklch(0.46 0.12 53);
+  --color-fg-max: oklch(0.28 0.06 257);
+  --banner-blend-mode: overlay;
+  --banner-opacity: 0.3;
+}
 
-.jha {
+
+body.jha {
   --color-bg: oklch(0.32 0.005 44);
   --color-fg: oklch(0.75 0.11 144);
   --color-fg-max: oklch(0.97 0.012 44);
 }
+body.jha:has(#color-mode-switch:checked),
+body.jha.color-mode-light {
+  --color-bg: oklch(0.88 0 44);
+  --color-fg: oklch(0.46 0.12 144);
+  --color-fg-max: oklch(0.28 0.03 44);
+  --banner-blend-mode: overlay;
+  --banner-opacity: 0.3;
+}
 
-.owl {
+body.owl {
   --color-bg: oklch(0.32 0.02 302);
   --color-fg: oklch(0.72 0.13 83);
   --color-fg-max: oklch(0.97 0.012 302);
 }
+body.owl:has(#color-mode-switch:checked),
+body.owl.color-mode-light {
+  --color-bg: oklch(0.88 0 302);
+  --color-fg: oklch(0.48 0.09 83);
+  --color-fg-max: oklch(0.28 0.1 302);
+  --banner-blend-mode: overlay;
+  --banner-opacity: 0.3;
+}
+
 
 figure {
   margin-bottom: 2rem;
@@ -143,6 +177,7 @@ figure {
       margin-top: 0px;
       position: relative;
       text-transform: uppercase;
+      view-transition-name: worktitle;
       z-index: 1;
     }
     .skills {

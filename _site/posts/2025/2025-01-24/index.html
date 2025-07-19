@@ -118,6 +118,7 @@
       </ul>
     </footer>
     <script>
+      // MENU
       var mainmenubtn = document.querySelector('#mainmenubtn');
       var mainmenuclose = document.querySelector('#mainmenuclose');
       var mainmenu = document.querySelector('#mainmenu');
@@ -128,6 +129,7 @@
         mainmenu.close();
       });
       
+      // COLOR SWITCH
       document.getElementById('color-mode-switch').addEventListener('change', function() {
         const color_mode = this.checked ? 'light' : 'dark';
         localStorage.setItem('color-mode', color_mode);
@@ -137,6 +139,25 @@
       if (saved_color_mode) {
         document.getElementById('color-mode-switch').checked = saved_color_mode === 'light';
       }
+      
+      // POST LINK TRANSITION
+      let article_links = document.querySelectorAll('.post.article h2 a, .post-nav .post-title a');
+      article_links.forEach((link) => {
+        const title = link.parentElement;
+        title.style.viewTransitionName = "none";
+        link.addEventListener("click", () => {
+          title.style.viewTransitionName = "posttitle";
+        });
+      });
+      
+      // WORK LINK TRANSITION
+      let work_links = document.querySelectorAll('.work-items li a');
+      work_links.forEach((link) => {
+        link.style.viewTransitionName = "none";
+        link.addEventListener("click", () => {
+          link.style.viewTransitionName = "worktitle";
+        });
+      });
     </script>
   </body> 
 </html>
