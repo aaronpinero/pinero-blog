@@ -505,7 +505,7 @@ footer#footer {
   content: '\f186';
   font-family: var(--fa-style-family-classic);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 900;
   left: 0.125rem;
   line-height: 1.5rem;
   position: absolute;
