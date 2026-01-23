@@ -1,0 +1,224 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About Some Modern CSS</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/resources/css/main.css">
+    
+  </head> 
+  <body class="purple-green">
+    <script>
+      const saved_mode = localStorage.getItem('color-mode');
+      if (saved_mode) {
+        document.querySelector('body').classList.toggle('color-mode-light', saved_mode === 'light');
+      }
+    </script>
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="picons-regular-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/works/">Works</a>
+            </li>
+            <li>
+              <a href="/posts/">Posts</a>
+            </li>
+            <li>
+              <a href="/resume/">Resume</a>
+            </li>
+            <li>
+              <input type="checkbox" id="color-mode-switch"/><label for="color-mode-switch">Dark/Light Mode</label>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="picons-regular-x"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main" class="">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/posts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About Some Modern CSS</h1>
+        <div class="post-meta">What I Learned On <time datetime="2026-01-23T00:00:00.000Z">January 23, 2026</time></div>
+      </header>
+      
+      <p>There has been much chatter on LinkedIn and in the Drupal Slack about the upcoming deadline for compliance with the “Department of Justice’s (Department) final rule updating its regulations for Title II of the Americans with Disabilities Act (ADA).” You can <a href="https://www.ada.gov/resources/2024-03-08-web-rule/">read about it on the ADA.gov website</a>. State and local governments representing 50k or more persons must make their websites and applications compliant with the Web Content Accessibility Guidelines (WCAG) Version 2.1, Level AA technical standard by April of this year.</p>
+<p>Columbia University, my employer, has had a similar standard for some time. They have required their websites to be compliant with the WCAG Version 2.0, Level AA standard for some years now. It is expected they will update this policy to move to either Version 2.1 or 2.2 in the near future. However, many of the technical standards that apply to the most common website content have not changed very much between versions. Web content made properly accessible and responsive to meet the older standard will likely also meet the updated standards. For more interactive or more complex web pages and web applications, there seem to be more changes.</p>
+<p>But this is a post about some of the new hotness in CSS. The way I came to this was in trying to improve the accessibility of one particular pattern on a website I maintain. And this improvement had less to do with meeting a specific technical standard and more to do with providing a good user experience. There are plenty of examples online where a pattern is in technical compliance while delivering a poor experience.</p>
+<p>It is the experience that is important, not just the compliance.</p>
+<p>I had a link on an icon. The icon is the lowercase letter “i” in a circle, indicating a source of information. I discovered there is actually a unicode character for this, ⓘ (Unicode U+2139, &quot;Information Source&quot;). The link text included the icon and visually-hidden text with the typical &quot;Learn more about [x]&quot;. In addition to this visually-hidden text, I had the same text applied as the title attribute on the link itself. I did this so that when a sighted user hovered over the icon, the browser would display the default tooltip with the text.</p>
+<p>The original HTML code looked like this:</p>
+<pre><code>&lt;a href=&quot;{$link}&quot; title=&quot;Learn more about {$resource_title}&quot;&gt;
+  ⓘ
+  &lt;span class=&quot;visually-hidden&quot;&gt;
+    Learn more about {$resource_title}
+  &lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+<p>I've known for a while this is probably not the best solution. Google Gemini described it as an anti-pattern that should be avoided since screen readers would be announcing the same text twice – once for the title attribute and once for the visually-hidden text. Gemini also says the title attribute is not good for accessibility.</p>
+<p>The pattern it recommended is as follows:</p>
+<pre><code>&lt;a href=&quot;{$link}&quot; aria-describedby=&quot;link-tooltip&quot; class=&quot;tooltip-trigger&quot;&gt;
+  ⓘ
+  &lt;span class=&quot;tooltip&quot; id=&quot;link-tooltip&quot;&gt;
+    Learn more about {$resource_title}
+  &lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+<p>This approach removes the title attribute and replaces it with the <code>aria-describedby</code> attribute which identifies the visually-hidden text as the sources of the description. In addition, this approach turns the visually-hidden text into a custom tooltip so that sighted users will be able to see the hidden text when hovering over the link.</p>
+<p>I don't know that this is perfect, but it seems pretty good. I've checked a few resource online and there is some disagreements about the best way to do this, but the solutions are similar. MDN has a <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tooltip_role">tooltip example</a> that is similar, but for a form element. Their example is associated with the tooltip ARIA role and their tooltip element has this role applied. W3C does not yet have an example, but they are working on one similar to this. In the issue notes, they suggest the tooltip element should have an <code>aria-hidden</code> attribute so the text is not announced twice by screen readers – suggesting my solution has the same problem as the original code. The <a href="https://designsystem.digital.gov/components/tooltip/">USWDS tooltip component</a> takes both of these suggestions; their solution applies the <code>aria-role</code> and <code>aria-hidden</code> attributes to the tooltip element. Maybe that’s the right way to go.</p>
+<p>Regardless, the custom tooltip requires some CSS in order to make it work. It also needs to be positioned and styled.</p>
+<h2>shape()</h2>
+<p>I want this tooltip to look a bit like the USWDS examples with the little arrow on the bottom of the tooltip. The only change would be to align the arrow to the right as my design needs right-aligned tooltips to match the layout. So it will look a little more like a chat bubble.</p>
+<p>In olden times I would have used the <a href="https://css-tricks.com/snippets/css/css-triangle/">CSS border trick</a> to create this shape, but now we can use the <code>clip-path: shape()</code> to make life easier. I've been wanting to try this for a while and this was the perfect occasion. The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape">shape function</a> is a big improvement over the path() function because it will accept percentages and allows the use of <code>calc()</code> to determine coordinate values. I was able to achieve the shape (ha ha) I wanted with some pretty simple CSS:</p>
+<pre><code>--angle-size: 1rem; 
+clip-path: shape(from 0% 0%,
+  line to 100% 0%,
+  line to 100% 100%,
+  line to calc(100% - var(--angle-size)) calc(100% - var(--angle-size)),
+  line to var(--wa-border-radius-m) calc(100% - var(--angle-size)),
+  curve to 0% calc(100% - var(--angle-size) - var(--wa-border-radius-m)) with 0% calc(100% - var(--angle-size)),
+  line to 0% 0%,
+  close);
+</code></pre>
+<p>In this example, the <code>--angle-size</code> custom property determines how large the arrow is. I have also started using design tokens from WebAwesome.</p>
+<h2>Anchor Positioning</h2>
+<p>Having properly shaped the tooltip, it was now time to position it. The usual thing to do is to use <code>position: absolute</code> and then set the top/bottom and left/right properties. However, I have seen lots of articles about anchor positioning, so I thought I would give it a try.</p>
+<p>Anchor positioning was not easy to grasp. I understand naming an anchor and then setting the <code>position-anchor</code> property on the tooltip. I even understood the anchor scope issue which was important for my case because I have multiple elements with the same anchor name. But my first attempts to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#using_inset_properties_with_anchor_function_values">use the <code>anchor()</code> function with the inset properties</a> failed. I'm not sure if I did something wrong or I was using a browser that doesn't fully support the entire anchor positioning feature. I just couldn't make it work.</p>
+<p>I was successful using <code>position-area</code>. It helped that MDN provided a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#setting_a_position-area">helpful visualization</a> for how <code>position-area</code> works. Using a combination of <code>position-area</code> and <code>margin</code>, I was able to get my tooltips positioned where I needed them to be.</p>
+<p>There are two things I <em>really, really</em> like about anchor positioning that make it superior to old-fashioned absolute positioning:</p>
+<ol>
+<li>The anchor doesn't have to be the parent or an ancestor element of the element being positioned. You can specify whatever anchor you want. That is powerful.</li>
+<li>The <code>anchor-size()</code> function allows sizing the positioned element relative to the size of the anchor. That is extremely useful for elements that need to be responsive.</li>
+</ol>
+<p>I look forward to using this approach to positioning in the future. However, there is one thing that might stop me: Firefox.</p>
+<h2>@supports</h2>
+<p>Both Firefox and Safari seem to lag far behind Chrome and Edge in supporting new CSS standards. Firefox is worse. As of writing this, Firefox is the blocker for both <code>shape()</code> and <code>anchor-position</code> becoming <a href="https://web.dev/baseline">Baseline</a>. While one could argue that the user base for Firefox is quite small and dropping – especially for my audience – but many of the staff members I work with, including my supervisor, use Firefox as their daily driver. So its something I need to consider. Even worse, they are using machines managed by an IT department. They will not be running the latest version.</p>
+<p>Enter <code>@supports</code>.</p>
+<p>I had completely forgotten about feature queries until I sat down to figure out how to address my issue with Firefox. Then I remembered: CSS now has a way to check for feature support and <strong>it is Baseline</strong>! It will work in Firefox.</p>
+<p>Feature queries are an excellent tool. Progressive enhancement couldn't get much easier.</p>
+<pre><code>@supports (clip-path: shape(from 0% 0%, line to 100% 0%, close)) {
+  .tooltip {
+    clip-path: shape(from 0% 0%,
+      line to 100% 0%,
+      line to 100% 100%,
+      ...
+      close);
+  }
+}
+@supports (position-area: top span-left) {
+  .tooltip {
+    bottom: unset;
+    max-width: calc(anchor-size(--tooltip-anchor width) + 2rem);
+    position-anchor: --tooltip-anchor;
+    position-area: top span-left;
+    right:unset
+  }
+}
+</code></pre>
+<h2>Summing it up</h2>
+<p>This was such a little thing. Our Google Analytics says visitors rarely use these information links – maybe once a day (tops!) for a website that gets thousands of page views a day. But web accessibility is not a destination, it's a journey. And the best way to comply with the spirit of the law is to demonstrate that accessibility is constantly being assessed and improved. Even better, I got to put a few new CSS tools in my toolbox. And that is also worth the effort.</p>
+
+
+      <hr class="stripes">
+
+      
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/posts/2025/2025-07-06/">About Making the Impossible Possible</a></span>
+              </li>
+            
+            
+          </ul>
+        
+      
+
+    </main> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2025 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+    <script>
+      // MENU
+      var mainmenubtn = document.querySelector('#mainmenubtn');
+      var mainmenuclose = document.querySelector('#mainmenuclose');
+      var mainmenu = document.querySelector('#mainmenu');
+      mainmenubtn.addEventListener('click', function(e){
+        mainmenu.showModal();
+      });
+      mainmenuclose.addEventListener('click', function(e){
+        mainmenu.close();
+      });
+      
+      // COLOR SWITCH
+      document.getElementById('color-mode-switch').addEventListener('change', function() {
+        const color_mode = this.checked ? 'light' : 'dark';
+        localStorage.setItem('color-mode', color_mode);
+        document.querySelector('body').classList.toggle('color-mode-light', color_mode === 'light');
+      });
+      const saved_color_mode = localStorage.getItem('color-mode');
+      if (saved_color_mode) {
+        document.getElementById('color-mode-switch').checked = saved_color_mode === 'light';
+      }
+      
+      // POST LINK TRANSITION
+      let article_links = document.querySelectorAll('.post.article h2 a, .post-nav .post-title a');
+      article_links.forEach((link) => {
+        const title = link.parentElement;
+        title.style.viewTransitionName = "none";
+        link.addEventListener("click", () => {
+          title.style.viewTransitionName = "posttitle";
+        });
+      });
+      
+      // WORK LINK TRANSITION
+      let work_links = document.querySelectorAll('.work-items li a');
+      work_links.forEach((link) => {
+        link.style.viewTransitionName = "none";
+        link.addEventListener("click", () => {
+          link.style.viewTransitionName = "worktitle";
+        });
+      });
+    </script>
+  </body> 
+</html>

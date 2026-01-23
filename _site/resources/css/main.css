@@ -226,6 +226,11 @@ hr.stripes {
   & > ul li + li {
     margin-top: 0.5rem;
   }
+  pre:has(code) {
+    overflow: auto;
+    padding: 1rem;
+    background-color: oklch(from var(--color-text-body) l c h / 0.1);
+  }
 }
 
 /*
