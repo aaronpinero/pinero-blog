@@ -1,0 +1,158 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aaron Pinero / About How We&#39;re Not There Yet</title>
+    <meta name="author" content="Aaron Pinero" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="/resources/css/main.css">
+    
+  </head> 
+  <body class="purple-green">
+    <script>
+      const saved_mode = localStorage.getItem('color-mode');
+      if (saved_mode) {
+        document.querySelector('body').classList.toggle('color-mode-light', saved_mode === 'light');
+      }
+    </script>
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+    <header id="header">
+      <h1 class="logo">Aaron Pinero</h1>
+      <button id="mainmenubtn"><i class="picons-regular-bars"></i>Menu</button>
+      <dialog id="mainmenu">
+        <nav>
+          
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/works/">Works</a>
+            </li>
+            <li>
+              <a href="/posts/">Posts</a>
+            </li>
+            <li>
+              <a href="/resume/">Resume</a>
+            </li>
+            <li>
+              <input type="checkbox" id="color-mode-switch"/><label for="color-mode-switch">Dark/Light Mode</label>
+            </li>
+          </ul>
+          <button id="mainmenuclose"><i class="picons-regular-x"></i><span class="visually-hidden">Close</span></button>
+        </nav>
+      </dialog>
+    </header>
+    <main id="main" class="">
+
+            <header class="post-header">
+        <div class="breadcrumb">
+          <ul>
+            <li>
+              <a href="/">Aaron Pinero</a>
+            </li>
+            <li>
+              <a href="/posts">Posts</a>
+            </li>
+          </ul>
+        </div>
+        <h1>About How We&#39;re Not There Yet</h1>
+        <div class="post-meta">What I Learned On <time datetime="2026-03-23T00:00:00.000Z">March 23, 2026</time></div>
+      </header>
+      
+      <p><span class="dropcap">E</span>very time I log in to LinkedIn or browse YouTube, there is another post about a wonderful workflow/use case for the large language models and machine learning tools that everyone collectively calls ‘AI’. And I am always skeptical. Today demonstrates why.</p>
+<p>I had a very simple use case. Last week I ran a survey for my co-workers. The survey presented each respondent 10 different emoji. For each emoji, I requested they use one word to describe what they thought the emoji would mean if used in a health/medical context. The survey was run using Qualtrics. Once the responses were collected, I exported the data as a CSV file. From that data I wanted a set of pie charts visualizing the count of responses received for each emoji in the survey. With everything that ‘AI’ can supposedly do for us these days, this seemed like a reasonable request.</p>
+<p>Since the data was in a CSV file, the first thing I did was open the file in Excel. My first task was to normalize the responses. The biggest variation in the responses was capitalization, so, using Copilot (our organization has a subscription), I asked to have the text in all the cells converted to lower case. Copilot could not do this because my file was a CSV and not in XLSX format. So I saved the file in the new format and repeated my request. This time, Copilot said it couldn't change the text to lowercase, but it could show me a formula to use to convert the case. Fail numberr 1. I closed the file, opened it in BBEdit (I'm on a Mac), selected all the text, and performed the case change with one command.</p>
+<p>Next I went back into Excel and asked Copilot to analyze my data and create pie charts showing the breakdown of responses. However, Copilot kept treating my data as one large chunk instead of 10 individual data sets. Fail number 2.</p>
+<p>Copilot is also <em>sluggish</em>. So I copied my CSV data, pasted it into Gemini, and asked it to create pie charts for each of the 10 response sets. To its credit, Gemini very quickly did so. I had 10 pie charts showing the breakdown of responses for each emoji. However, the charts were a little messy. I wanted to paste them into Affinity so I could clean them up and export them as PDF for a presentation. The charts Gemini created were all PNGs, making them difficult to edit. So I asked Gemini to recreate the pie charts as SVG files. And it gave me another set of PNG files. So I asked it if it could provide SVG code to download that I could open in Affinity. This time, it provided code for 10 charts in SVG code, but the charts were all wrong. The first 2 charts were accurate but the remainder of the charts were made up -- no connection to my original data. I pointed this out to Gemini and it apologized and said it would try another method for creating the pie charts. It created two charts as a sample. These charts looked good, so I asked it to create the remaining charts. The remaining 8 charts were a complete mess. Not only were they -- again -- made up and not based on my data, but they were also distorted. The pie charts were not circular but more like broken ovals.</p>
+<p>Fail number 3. So I gave up on Gemini.</p>
+<p>I went back into Excel and tried a few different prompts with Copilot. This time, I was able to craft the correct incantation that would get Copilot to treat my data as 10 individual datasets. It created the necessary pivot tables and pie charts for representing my data. The charts themselves were -- from a design perspective -- trash, but it’s Excel. It was enough to be able to copy-and-paste them into Affinity and edit them from there into something approximating a professional report.</p>
+<p>Overall, this was not a positive experience. Did I save myself any time or frustration by using machine learning tools over simply performing operations myself in Excel? I'm not sure, but I kinda doubt it. The world is unrelenting in its work to try an convince me that ‘AI’ is going to change the way we do things, but my experience regularly comes up well short of the promise.</p>
+<p>Supposedly it’s getting better all the time. But better at what? The companies that produce these tools have a single incentive: revenue. That incentive will not necessarily drive the tools to be ‘better’. Or, perhaps it’s more accurate to say that my definition of better might be quite different from an ‘AI’ company’s definition of better because our goals are fundamentally different. That’s not necessarily a problem, but it is something to keep in mind.</p>
+
+
+      <hr class="stripes">
+
+      
+        
+        
+        
+          <ul class="postnav">
+            
+              <li class="previous">
+                <span class="label">What I Learned Previously</span>
+                <span class="post-title"><a href="/posts/2026/2026-01-23/">About Some Modern CSS</a></span>
+              </li>
+            
+            
+          </ul>
+        
+      
+
+    </main> 
+    <footer id="footer">
+      <div>
+        <p><strong>Aaron Pinero</strong> is a <span class="no-break">graphic designer</span>, <span class="no-break">web developer</span>, and <span class="no-break">technical lead</span>.</p>
+        <p class="copyright small">&copy; Copyright 2026 by Aaron Pinero.</p>
+      </div>
+      <ul>
+        <li>
+          <a class="codepen" href="https://codepen.io/aaronpinero"><i class="fa-brands fa-codepen"></i>CodePen</a>
+        </li>
+        <li>
+          <a class="drupal" href="https://www.drupal.org/u/aaronpinero"><i class="fa-brands fa-drupal"></i>Drupal</a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/aaronpinero"><i class="fa-brands fa-github"></i>GitHub</a>
+        </li>
+        <li>
+          <a class="linkedin" href="https://linkedin.com/in/aaronpinero"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        </li>
+      </ul>
+    </footer>
+    <script>
+      // MENU
+      var mainmenubtn = document.querySelector('#mainmenubtn');
+      var mainmenuclose = document.querySelector('#mainmenuclose');
+      var mainmenu = document.querySelector('#mainmenu');
+      mainmenubtn.addEventListener('click', function(e){
+        mainmenu.showModal();
+      });
+      mainmenuclose.addEventListener('click', function(e){
+        mainmenu.close();
+      });
+      
+      // COLOR SWITCH
+      document.getElementById('color-mode-switch').addEventListener('change', function() {
+        const color_mode = this.checked ? 'light' : 'dark';
+        localStorage.setItem('color-mode', color_mode);
+        document.querySelector('body').classList.toggle('color-mode-light', color_mode === 'light');
+      });
+      const saved_color_mode = localStorage.getItem('color-mode');
+      if (saved_color_mode) {
+        document.getElementById('color-mode-switch').checked = saved_color_mode === 'light';
+      }
+      
+      // POST LINK TRANSITION
+      let article_links = document.querySelectorAll('.post.article h2 a, .post-nav .post-title a');
+      article_links.forEach((link) => {
+        const title = link.parentElement;
+        title.style.viewTransitionName = "none";
+        link.addEventListener("click", () => {
+          title.style.viewTransitionName = "posttitle";
+        });
+      });
+      
+      // WORK LINK TRANSITION
+      let work_links = document.querySelectorAll('.work-items li a');
+      work_links.forEach((link) => {
+        link.style.viewTransitionName = "none";
+        link.addEventListener("click", () => {
+          link.style.viewTransitionName = "worktitle";
+        });
+      });
+    </script>
+  </body> 
+</html>
