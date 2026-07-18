@@ -1,19 +1,22 @@
-const moment = require('moment');
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation"); 
-moment.locale('en');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('now', () => {
     return new Date().toUTCString();
   });
   eleventyConfig.addFilter('dateIso', date => {
-    return moment(date).toISOString();
+    return new Date(date).toISOString();
   });
   eleventyConfig.addFilter('dateReadable', date => {
-    return moment(date).utc().format('LL'); // E.g. May 31, 2019
+    return new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC'
+    });
   });
   eleventyConfig.addFilter('dateFeed', date => {
-    return moment(date).utc();
+    return new Date(date).toUTCString();
   });
   eleventyConfig.addCollection('postArchive', function(collectionApi) {
     var coll = collectionApi.getFilteredByTag("post");
