@@ -214,7 +214,7 @@ hr.stripes {
   max-width: var(--max-content-width);
 }
 #main {
-  & > :is(h2,p,ul,ol,hr,blockquote,pre),
+  & > :is(h2,h3,p,ul,ol,hr,blockquote,pre),
   iframe {
     box-sizing: border-box;
     margin-inline: auto;

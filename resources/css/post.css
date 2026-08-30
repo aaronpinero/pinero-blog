@@ -1,0 +1,6 @@
+#main h3 {
+  color: var(--color-fg-max);
+  font-family: var(--font-head);
+  font-style: italic;
+  font-weight: 400;
+}
