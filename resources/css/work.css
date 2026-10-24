@@ -12,16 +12,12 @@ body.hsl.color-mode-light {
   --color-bg: oklch(0.88 0 257);
   --color-fg: oklch(0.46 0.12 53);
   --color-fg-max: oklch(0.28 0.06 257);
-  --banner-blend-mode: overlay;
-  --banner-opacity: 0.3;
 }
 body.pub:has(#color-mode-switch:checked),
 body.pub.color-mode-light {
   --color-bg: oklch(0.88 0 257);
   --color-fg: oklch(0.46 0.12 53);
   --color-fg-max: oklch(0.28 0.06 257);
-  --banner-blend-mode: overlay;
-  --banner-opacity: 0.3;
 }
 
 
@@ -35,8 +31,6 @@ body.jha.color-mode-light {
   --color-bg: oklch(0.88 0 44);
   --color-fg: oklch(0.46 0.12 144);
   --color-fg-max: oklch(0.28 0.03 44);
-  --banner-blend-mode: overlay;
-  --banner-opacity: 0.3;
 }
 
 body.owl {
@@ -49,8 +43,6 @@ body.owl.color-mode-light {
   --color-bg: oklch(0.88 0 302);
   --color-fg: oklch(0.48 0.09 83);
   --color-fg-max: oklch(0.28 0.1 302);
-  --banner-blend-mode: overlay;
-  --banner-opacity: 0.3;
 }
 
 
@@ -155,7 +147,7 @@ figure {
       background-image: url('../images/work/pub/pub-logomark.svg');
     }
     &::after {
-      background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 2px, transparent 0px, transparent 50%);
+      background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 1px, transparent 0px, transparent 50%);
       background-size: 8px 8px;
       background-repeat: repeat;
       content: "";

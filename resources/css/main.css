@@ -27,13 +27,9 @@ body {
   --color-link-decoration-hover: oklch(from var(--color-fg) l calc(c + 0.05) calc(h - 90));
   --font-body: "IBM Plex Sans", Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
   --font-head: "League Gothic";
-  --banner-mix-mode: multiply;
-  --banner-opacity: 0.2;
+  --banner-mix-mode: normal;
+  --banner-opacity: 0.05;
   --max-content-width: 50rem;
-}
-body:has(#color-mode-switch:checked) {
-  --banner-mix-mode: soft-light;
-  --banner-opacity: 0.15;
 }
 
 body.slate-orange {
@@ -87,14 +83,16 @@ body.gray-red.color-mode-light {
 body {
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(circle at center, alpha(from var(--color-fg) / 0.25) 3%, transparent 60%),
-    radial-gradient(circle at center, alpha(from var(--color-link-hover) / 0.15) 3%, transparent 60%),
-    radial-gradient(circle at center, alpha(from var(--color-fg) / 0.15) 3%, transparent 60%),
-    radial-gradient(circle at center, alpha(from var(--color-link-hover) / 0.2) 3%, transparent 60%),
+    radial-gradient(circle at center, alpha(from var(--color-fg) / 0.2) 3%, transparent 67%),
+    radial-gradient(circle at center, alpha(from var(--color-fg-max) / 0.1) 3%, transparent 67%),
+    radial-gradient(circle at center, alpha(from var(--color-link-hover) / 0.1) 3%, transparent 67%),
+    radial-gradient(circle at center, alpha(from var(--color-fg) / 0.15) 3%, transparent 67%),
+    radial-gradient(circle at center, alpha(from var(--color-fg-max) / 0.1) 3%, transparent 67%),
+    radial-gradient(circle at center, alpha(from var(--color-link-hover) / 0.1) 3%, transparent 67%),
     repeating-linear-gradient(-45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 1px, transparent 0px, transparent 50%);
-  background-position: top -60vw left -30vw, top -40vw left, bottom -50vw left -20vw, bottom -60vw left 30vw, top left;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-  background-size: 80vw 80vw, 80vw 80vw, 80vw 80vw, 80vw 80vw, 8px 8px;
+  background-position: top -75vmax left -50vmax, top -80vmax left -25vmax, top -60vmax left, bottom -75vmax left -30vmax, bottom -60vmax left 20vmax, bottom -80vmax left, top left;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+  background-size: 100vmax 100vmax, 100vmax 100vmax, 100vmax 100vmax, 100vmax 100vmax, 100vmax 100vmax, 100vmax 100vmax, 8px 8px;
   color: var(--color-text-body);
   font-family: var(--font-body);
   font-size: 1.25rem;
@@ -103,12 +101,6 @@ body {
   margin: 0px;
   padding: clamp(1rem, calc(4.21vw + 2.5px), 3rem);
   transition: background-color 0.25s, color 0.25s;
-}
-
- {
-    background-color: hsla(79, 98%, 66%, 1);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1799 1799' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), radial-gradient(circle at 94% 95%, hsla(170, 88%, 68%, 1) 3%, transparent 76%), radial-gradient(circle at 89% 34%, hsla(263, 96%, 51%, 1) 1%, transparent 86%), radial-gradient(circle at 86% 50%, hsla(318, 80%, 65%, 1) 7%, transparent 76%), radial-gradient(circle at 89% 79%, hsla(248, 76%, 53%, 1) 7%, transparent 87%), radial-gradient(circle at 15% 44%, hsla(4, 74%, 80%, 1) 15%, transparent 81%), radial-gradient(circle at 99% 20%, hsla(75, 88%, 92%, 1) 1%, transparent 68%);
-    background-blend-mode: overlay, normal, normal, normal, normal, normal, normal;
 }
 
 /*
@@ -502,7 +494,7 @@ footer#footer {
 #color-mode-switch + label {
   background: var(--color-bg-pattern);
   border-radius: 1.5rem;
-  box-shadow: 0px 0px 2px oklch(from black l c h / 0.5) inset;
+  box-shadow: 0px 0px 3px oklch(from black l c h / 0.75) inset;
   cursor: pointer;
   display: block;
   height: 1.75rem;
@@ -532,7 +524,7 @@ footer#footer {
   background: var(--color-link-hover);
 }
 #color-mode-switch:checked + label {
-  box-shadow: 0px 0px 2px oklch(from black l c h / 0.2) inset;
+  box-shadow: 0px 0px 3px oklch(from black l c h / 0.5) inset;
 }
 #color-mode-switch:checked + label::after {
   content: '\e0c9';

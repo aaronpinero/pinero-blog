@@ -61,7 +61,7 @@
     z-index: 1;
   }
   li div::after {
-    background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 2px, transparent 0px, transparent 50%);
+    background-image: repeating-linear-gradient(45deg, var(--color-bg-pattern) 0px, var(--color-bg-pattern) 1px, transparent 0px, transparent 50%);
     background-size: 8px 8px;
     background-position: top 0% left 0%;
     background-repeat: repeat;
